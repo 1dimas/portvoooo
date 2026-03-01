@@ -1,26 +1,274 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================
+   DESIGN SYSTEM — Personal Portfolio V1
+   ============================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ---- Color Palette ---- */
+  --color-bg-primary: var(--theme-bg-primary);
+  --color-bg-secondary: var(--theme-bg-secondary);
+  --color-bg-tertiary: var(--theme-bg-tertiary);
+  --color-bg-card: var(--theme-bg-card);
+  --color-bg-card-hover: var(--theme-bg-card-hover);
+
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-text-muted: var(--theme-text-muted);
+
+  --color-accent: var(--theme-accent);
+  --color-accent-light: var(--theme-accent-light);
+  --color-accent-dark: var(--theme-accent-dark);
+  --color-accent-glow: var(--theme-accent-glow);
+
+  --color-cyan: var(--theme-cyan);
+  --color-cyan-glow: var(--theme-cyan-glow);
+
+  --color-gradient-start: var(--theme-gradient-start);
+  --color-gradient-mid: var(--theme-gradient-mid);
+  --color-gradient-end: var(--theme-gradient-end);
+
+  --color-border: var(--theme-border);
+  --color-border-hover: var(--theme-border-hover);
+
+  /* ---- Fonts ---- */
+  --font-heading: var(--font-anton), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  /* ---- Animation Durations ---- */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+
+  /* ---- Spacing ---- */
+  --section-padding-x: clamp(1.5rem, 5vw, 8rem);
+  --section-padding-y: clamp(4rem, 10vh, 8rem);
+
+  /* ---- Marquee ---- */
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* ---- Dark Mode Defaults (Base) ---- */
+    --theme-bg-primary: #000000;
+    --theme-bg-secondary: #0a0a0a;
+    --theme-bg-tertiary: #111111;
+    --theme-bg-card: #0a0a0a;
+    --theme-bg-card-hover: #151515;
+
+    --theme-text-primary: #efefef;
+    --theme-text-secondary: #a0a0a0;
+    --theme-text-muted: #6b6b6b;
+
+    --theme-accent: #ff98a2;
+    --theme-accent-light: #ffb8c0;
+    --theme-accent-dark: #cc7881;
+    --theme-accent-glow: rgba(255, 152, 162, 0.35);
+
+    --theme-cyan: #ff98a2;
+    --theme-cyan-glow: rgba(255, 152, 162, 0.3);
+
+    --theme-gradient-start: #ff98a2;
+    --theme-gradient-mid: #ffb8c0;
+    --theme-gradient-end: #cc7881;
+
+    --theme-border: rgba(255, 255, 255, 0.15);
+    --theme-border-hover: rgba(255, 255, 255, 0.3);
+  }
+
+  .light {
+    /* ---- Light Mode Color Palette ---- */
+    --theme-bg-primary: #ffffff;
+    --theme-bg-secondary: #f5f5f5;
+    --theme-bg-tertiary: #eeeeee;
+    --theme-bg-card: #ffffff;
+    --theme-bg-card-hover: #f9f9f9;
+
+    /* Extremely high contrast text for brutalist feel */
+    --theme-text-primary: #050505;
+    --theme-text-secondary: #404040;
+    --theme-text-muted: #888888;
+
+    /* Accent stays vibrant pink */
+    --theme-accent: #ff4766;
+    --theme-accent-light: #ff758c;
+    --theme-accent-dark: #cc3952;
+    --theme-accent-glow: rgba(255, 71, 102, 0.35);
+
+    /* Fallbacks for gradients and cyans mapping to new hot pink */
+    --theme-cyan: #ff4766;
+    --theme-cyan-glow: rgba(255, 71, 102, 0.35);
+    --theme-gradient-start: #ff4766;
+    --theme-gradient-mid: #ff758c;
+    --theme-gradient-end: #cc3952;
+
+    --theme-border: rgba(0, 0, 0, 0.15);
+    --theme-border-hover: rgba(0, 0, 0, 0.3);
   }
 }
 
+/* ---- Keyframes ---- */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: auto;
+  /* Lenis handles smooth scrolling */
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar but keep functionality */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* ---- Selection ---- */
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* ---- Headings ---- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* ---- Links ---- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-mid), var(--color-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top-color: rgba(255, 255, 255, 0.1);
+  /* Subtle light reflection */
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.glow-accent {
+  box-shadow: 0 0 60px rgba(108, 92, 231, 0.25), inset 0 0 20px rgba(108, 92, 231, 0.1);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 60px rgba(0, 206, 201, 0.25), inset 0 0 20px rgba(0, 206, 201, 0.1);
+}
+
+.section-container {
+  width: 100%;
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }
