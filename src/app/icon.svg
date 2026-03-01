@@ -1,0 +1,5 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" fill="#000000" />
+  <rect x="16" y="16" width="224" height="224" stroke="#ff98a2" stroke-width="24" />
+  <text x="50%" y="55%" font-family="Arial, sans-serif" font-weight="900" font-size="160" fill="#ffffff" text-anchor="middle" dominant-baseline="central">D</text>
+</svg>

@@ -27,8 +27,15 @@ export default function TerminalOverlay() {
             }
         };
 
+        const handleOpenTerminal = () => setIsOpen(true);
+
         window.addEventListener("keydown", handleKeyDown);
-        return () => window.removeEventListener("keydown", handleKeyDown);
+        window.addEventListener("open-terminal", handleOpenTerminal);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+            window.removeEventListener("open-terminal", handleOpenTerminal);
+        };
     }, [isOpen]);
 
     // Keep focus on input
@@ -62,6 +69,7 @@ export default function TerminalOverlay() {
                     <span className="text-accent">cat resume.txt <span className="text-text-muted">- Output resume details</span></span>
                     <span className="text-accent">clear <span className="text-text-muted">- Clear terminal</span></span>
                     <span className="text-accent">exit <span className="text-text-muted">- Close terminal</span></span>
+                    <span className="text-red-500 mt-2 font-bold animate-pulse">sudo <span className="text-text-muted font-normal text-xs">- DO NOT USE THIS COMMAND. CLASSIFIED.</span></span>
                 </div>
             );
         } else if (cmd === "whoami") {
@@ -75,6 +83,25 @@ export default function TerminalOverlay() {
                     <span>Role: Full Stack Engineer</span>
                     <span>Experience: Building scalable web applications, e-commerce platforms, and enterprise solutions.</span>
                     <span>Contact: type 'email' or 'github' (just kidding, use the contact form!)</span>
+                </div>
+            );
+        } else if (cmd === "sudo") {
+            output = (
+                <div className="mt-4 flex flex-col gap-2 items-start">
+                    <span className="text-red-500 font-bold uppercase tracking-widest text-lg">⚠️ SECURITY BREACH DETECTED ⚠️</span>
+                    <span className="text-text-primary">Initiating countermeasures...</span>
+                    <div className="w-full max-w-[400px] aspect-video mt-2 border-2 border-red-500 rounded bg-black overflow-hidden relative shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&modestbranding=1&rel=0"
+                            title="Never Gonna Give You Up"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="absolute inset-0"
+                        ></iframe>
+                    </div>
                 </div>
             );
         } else if (cmd === "clear") {

@@ -3,6 +3,7 @@ import { Inter, Anton } from "next/font/google";
 import "./globals.css";
 import SmoothScroller from "@/components/SmoothScroller";
 import CustomCursor from "@/components/CustomCursor";
+import TopProgressBar from "@/components/TopProgressBar";
 import { ThemeProvider } from "next-themes";
 import ThemeToggle from "@/components/ThemeToggle";
 import TerminalOverlay from "@/components/TerminalOverlay";
@@ -58,6 +59,7 @@ export default function RootLayout({
           <TerminalOverlay />
           <ThemeToggle />
           <CustomCursor />
+          <TopProgressBar />
           <SmoothScroller>{children}</SmoothScroller>
         </ThemeProvider>
       </body>

@@ -42,12 +42,12 @@ export default function HeroSection() {
                 >
 
                     {/* Massive Brutalist Typography */}
-                    <div className="flex flex-col items-center justify-center w-full max-w-[1600px] mb-8">
+                    <div className="flex flex-col items-center justify-center w-full max-w-[1600px] mb-4">
                         <motion.h1
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: [0.19, 1, 0.22, 1] }}
-                            className="text-[clamp(4rem,14vw,14rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
+                            className="text-[clamp(3rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
                         >
                             DIMAS
                         </motion.h1>
@@ -55,7 +55,7 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
-                            className="text-[clamp(4rem,14vw,14rem)] font-heading leading-[0.9] tracking-wide uppercase text-accent text-center m-0 p-0"
+                            className="text-[clamp(3rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-accent text-center m-0 p-0"
                         >
                             FULL STACK
                         </motion.h1>
@@ -63,7 +63,7 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.2, ease: [0.19, 1, 0.22, 1] }}
-                            className="text-[clamp(4rem,14vw,14rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
+                            className="text-[clamp(3rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
                         >
                             DEVELOPER
                         </motion.h1>
@@ -74,7 +74,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8, duration: 1 }}
-                        className="mt-6 text-sm md:text-lg text-text-secondary max-w-xl text-center uppercase tracking-widest font-medium"
+                        className="mt-3 text-sm md:text-base text-text-secondary max-w-xl text-center uppercase tracking-widest font-medium"
                     >
                         <ScrambleText text="Rekayasa Perangkat Lunak Berfokus Pada Performa, Konversi, dan Skalabilitas Bisnis." delay={1} />
                     </motion.div>
@@ -84,7 +84,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 1 }}
-                        className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 cursor-none"
+                        className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 cursor-none"
                     >
                         <MagneticButton>
                             <button
@@ -103,6 +103,23 @@ export default function HeroSection() {
                                 Hubungi Saya
                             </a>
                         </MagneticButton>
+                    </motion.div>
+
+                    {/* Interactive Terminal Trigger */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1.2, duration: 1 }}
+                        className="mt-6 cursor-none"
+                    >
+                        <button
+                            onClick={() => window.dispatchEvent(new Event('open-terminal'))}
+                            className="bg-bg-primary/50 backdrop-blur-sm border border-border px-6 py-2 flex items-center gap-3 hover:border-accent group transition-colors duration-300"
+                        >
+                            <span className="text-accent text-xs font-mono group-hover:animate-pulse">_</span>
+                            <span className="text-text-secondary text-xs font-mono uppercase tracking-widest group-hover:text-text-primary transition-colors">Invoke Terminal</span>
+                            <span className="text-text-muted text-[10px] bg-bg-card px-2 py-0.5 rounded border border-border">Ctrl+J</span>
+                        </button>
                     </motion.div>
 
                 </motion.div>

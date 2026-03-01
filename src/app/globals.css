@@ -157,6 +157,31 @@
 }
 
 /* ============================================
+   VIEW TRANSITION API (Circular Theme Reveal)
+   ============================================ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2147483646;
+}
+
+.dark::view-transition-old(root) {
+  z-index: 2147483646;
+}
+
+.dark::view-transition-new(root) {
+  z-index: 1;
+}
+
+/* ============================================
    BASE STYLES
    ============================================ */
 
@@ -213,23 +238,14 @@ a {
   text-decoration: none;
 }
 
-/* ---- Scrollbar ---- */
+/* ---- Scrollbar (Hidden, using custom top progress bar instead) ---- */
 ::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
+  display: none;
+  width: 0px;
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-accent-dark);
-  border-radius: 3px;
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
-}
 
 /* ============================================
    UTILITY CLASSES

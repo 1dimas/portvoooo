@@ -15,10 +15,9 @@ import {
     siTailwindcss,
     siGithub,
     siLinux,
+    siFlutter,
+    siLaravel,
 } from "simple-icons";
-
-// Custom SVG path for Next.js without the circle background
-const customNextJsPath = "M14.438 13.064l-4.945-8.083H7.018v14.038h2.38V7.3l5.337 8.783L22.25 7.153v11.95h2.378V5.064h-3.414l-6.776 7.999zM2.38 5.064v14.038h2.38V5.064H2.38z";
 
 interface TechItem {
     name: string;
@@ -26,11 +25,12 @@ interface TechItem {
 }
 
 const techRow1: TechItem[] = [
-    { name: "Next.js", icon: customNextJsPath },
+    { name: "Next.js", icon: siNextdotjs.path },
     { name: "React", icon: siReact.path },
     { name: "TypeScript", icon: siTypescript.path },
     { name: "Node.js", icon: siNodedotjs.path },
     { name: "PHP", icon: siPhp.path },
+    { name: "Flutter", icon: siFlutter.path },
 ];
 
 const techRow2: TechItem[] = [
@@ -39,6 +39,7 @@ const techRow2: TechItem[] = [
     { name: "Tailwind CSS", icon: siTailwindcss.path },
     { name: "GitHub", icon: siGithub.path },
     { name: "Linux", icon: siLinux.path },
+    { name: "Laravel", icon: siLaravel.path },
 ];
 
 function TechIcon({ item }: { item: TechItem }) {

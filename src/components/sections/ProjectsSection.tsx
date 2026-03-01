@@ -4,41 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 
-const projects = [
-    {
-        title: "Company Profile",
-        category: "Daya Tarik Instan untuk UMKM",
-        description:
-            "Website company profile modern dengan desain responsif dan animasi smooth. Dirancang untuk memberikan kesan profesional dan meningkatkan kredibilitas bisnis di mata calon pelanggan.",
-        tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-        gradient: "bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700",
-        liveUrl: "#",
-        githubUrl: "#",
-        image: "/image/profile_company_v2.png",
-    },
-    {
-        title: "SportZone",
-        category: "Full Stack E-Commerce",
-        description:
-            "Platform e-commerce lengkap dengan sistem autentikasi, manajemen produk, keranjang belanja, dan proses transaksi. Membuktikan kemampuan full stack dari frontend hingga backend dan database.",
-        tech: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "TypeScript"],
-        gradient: "bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700",
-        liveUrl: "#",
-        githubUrl: "#",
-        image: "/image/Sportzone_v3.png",
-    },
-    {
-        title: "YOMU",
-        category: "Sistem Manajemen Data Kompleks",
-        description:
-            "Aplikasi manajemen perpustakaan digital dengan fitur peminjaman buku, notifikasi real-time, chat system, dan dashboard admin. Bukti kemampuan teknikal dan pengelolaan data kompleks.",
-        tech: ["React", "NestJS", "PostgreSQL", "Prisma", "WebSocket"],
-        gradient: "bg-gradient-to-br from-orange-600 via-rose-600 to-pink-700",
-        liveUrl: "#",
-        githubUrl: "#",
-        image: "/image/YOMU.png",
-    },
-];
+import { projects } from "@/data/projects";
 
 export default function ProjectsSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -51,7 +17,7 @@ export default function ProjectsSection() {
     const x = useTransform(
         scrollYProgress,
         [0, 1],
-        ["0%", `-${(projects.length - 1) * 85}%`]
+        ["0%", `-${(projects.length - 1) * 50}%`]
     );
 
     return (
@@ -80,7 +46,7 @@ export default function ProjectsSection() {
                     {/* Horizontal Scroll Container */}
                     <motion.div
                         style={{ x }}
-                        className="flex gap-8 pl-[10vw] pr-[10vw]"
+                        className="flex gap-12 pl-[10vw] pr-[10vw]"
                     >
                         {projects.map((project, index) => (
                             <ProjectCard key={project.title} project={project} index={index} />
