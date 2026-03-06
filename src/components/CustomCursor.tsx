@@ -1,20 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const [mounted, setMounted] = useState(false);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
+    // High performance mouse tracking using Framer Motion values
+    const mouseX = useMotionValue(-100);
+    const mouseY = useMotionValue(-100);
 
+    // Smooth spring physics for the cursor
+    const springConfig = { damping: 25, stiffness: 200, mass: 0.5 };
+    const cursorX = useSpring(mouseX, springConfig);
+    const cursorY = useSpring(mouseY, springConfig);
+
+    useEffect(() => {
         // Detect mobile & touch devices
-        if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+        if (typeof window !== "undefined" && window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
             setIsTouchDevice(true);
             return;
         }
@@ -23,7 +28,8 @@ export default function CustomCursor() {
         document.body.style.cursor = "none";
 
         const updateMousePosition = (e: MouseEvent) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
+            mouseX.set(e.clientX);
+            mouseY.set(e.clientY);
             if (!isVisible) setIsVisible(true);
         };
 
@@ -65,31 +71,46 @@ export default function CustomCursor() {
             if (document.head.contains(style)) document.head.removeChild(style);
             document.body.style.cursor = "auto";
         };
-    }, [isVisible, isTouchDevice]);
+    }, [isVisible, isTouchDevice, mouseX, mouseY]);
 
-    if (!mounted || typeof window === "undefined" || isTouchDevice) return null;
+    if (isTouchDevice) return null;
 
-    const cursorSize = isHovering ? 64 : 16;
+    const size = isHovering ? 64 : 16;
 
     return (
-        <motion.div
-            className="fixed top-0 left-0 pointer-events-none z-[999] bg-white mix-blend-difference"
-            animate={{
-                x: mousePosition.x - cursorSize / 2,
-                y: mousePosition.y - cursorSize / 2,
-                width: cursorSize,
-                height: cursorSize,
-                borderRadius: isHovering ? "0%" : "50%", // Square when hovering, circle otherwise
-                rotate: isHovering ? 45 : 0, // Diamond shape on hover
-            }}
-            transition={{
-                type: "tween",
-                ease: "backOut",
-                duration: 0.15, // Fast response
-            }}
-            style={{
-                opacity: isVisible ? 1 : 0,
-            }}
-        />
+        <>
+            {/* Main Cursor Dot */}
+            <motion.div
+                className="fixed top-0 left-0 pointer-events-none z-[999] bg-white mix-blend-difference flex items-center justify-center font-bold text-black text-[10px] uppercase tracking-widest overflow-hidden"
+                style={{
+                    x: cursorX,
+                    y: cursorY,
+                    translateX: "-50%",
+                    translateY: "-50%",
+                    opacity: isVisible ? 1 : 0,
+                }}
+                animate={{
+                    width: size,
+                    height: size,
+                    borderRadius: isHovering ? "0%" : "50%",
+                    rotate: isHovering ? 90 : 0,
+                }}
+                transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20
+                }}
+            >
+                {/* Optional subtle inner text for brutalist feel when hovering */}
+                <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: isHovering ? 1 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="rotate-[-90deg] leading-none"
+                >
+                    +
+                </motion.span>
+            </motion.div>
+        </>
     );
 }

@@ -12,6 +12,7 @@ interface Star {
 
 export default function ParticleField() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const mouseRef = useRef({ x: 0, y: 0, targetX: 0, targetY: 0 });
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -57,11 +58,21 @@ export default function ParticleField() {
             }
         };
 
+        const handleMouseMove = (e: MouseEvent) => {
+            // Calculate normalized mouse position from center (-1 to 1)
+            mouseRef.current.targetX = (e.clientX - window.innerWidth / 2) * 0.5;
+            mouseRef.current.targetY = (e.clientY - window.innerHeight / 2) * 0.5;
+        };
+
         const animate = () => {
             if (!ctx || !canvas) return;
 
-            // Clear screen (remember we translated 0,0 to center, so clear from -width/2, -height/2)
+            // Clear screen
             ctx.clearRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+
+            // Smoothly interpolate current mouse position towards target
+            mouseRef.current.x += (mouseRef.current.targetX - mouseRef.current.x) * 0.05;
+            mouseRef.current.y += (mouseRef.current.targetY - mouseRef.current.y) * 0.05;
 
             angle += rotationSpeed;
             const cos = Math.cos(angle);
@@ -80,9 +91,13 @@ export default function ParticleField() {
                     star.y = (Math.random() - 0.5) * 2000;
                 }
 
+                // Apply slight parallax offset based on mouse
+                const parallaxX = (mouseRef.current.x * star.z) / 2000;
+                const parallaxY = (mouseRef.current.y * star.z) / 2000;
+
                 // 3D Rotation around Y axis
-                const rotX = star.x * cos - star.z * sin;
-                const rotZ = star.z * cos + star.x * sin;
+                const rotX = (star.x - parallaxX) * cos - star.z * sin;
+                const rotZ = star.z * cos + (star.x - parallaxX) * sin;
 
                 // 3D Projection
                 const scale = fov / (fov + rotZ);
@@ -91,11 +106,10 @@ export default function ParticleField() {
                 if (scale <= 0) continue;
 
                 const x2d = rotX * scale;
-                const y2d = star.y * scale;
+                const y2d = (star.y - parallaxY) * scale;
 
                 // Draw star
                 ctx.beginPath();
-                // Ensure radius is never mathematically negative just in case
                 ctx.arc(x2d, y2d, Math.max(0, star.size * scale), 0, Math.PI * 2);
                 ctx.fillStyle = star.color;
                 ctx.fill();
@@ -109,14 +123,18 @@ export default function ParticleField() {
         animate();
 
         window.addEventListener("resize", () => {
-            // Need to reset transform matrix before resize
             ctx.setTransform(1, 0, 0, 1, 0, 0);
             resize();
         });
 
+        if (!isMobile && !prefersReducedMotion) {
+            window.addEventListener("mousemove", handleMouseMove);
+        }
+
         return () => {
             cancelAnimationFrame(animationId);
             window.removeEventListener("resize", resize);
+            window.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
 

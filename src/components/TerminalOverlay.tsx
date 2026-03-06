@@ -66,23 +66,54 @@ export default function TerminalOverlay() {
                     <span>Available commands:</span>
                     <span className="text-accent">whoami <span className="text-text-muted">- Display owner info</span></span>
                     <span className="text-accent">skills <span className="text-text-muted">- List technical stack</span></span>
-                    <span className="text-accent">cat resume.txt <span className="text-text-muted">- Output resume details</span></span>
+                    <span className="text-accent">projects <span className="text-text-muted">- Highlighted works</span></span>
+                    <span className="text-accent">contact <span className="text-text-muted">- How to reach me</span></span>
                     <span className="text-accent">clear <span className="text-text-muted">- Clear terminal</span></span>
                     <span className="text-accent">exit <span className="text-text-muted">- Close terminal</span></span>
-                    <span className="text-red-500 mt-2 font-bold animate-pulse">sudo <span className="text-text-muted font-normal text-xs">- DO NOT USE THIS COMMAND. CLASSIFIED.</span></span>
                 </div>
             );
         } else if (cmd === "whoami") {
-            output = "dimas - Full Stack Developer & Digital Business Architect.";
-        } else if (cmd === "skills") {
-            output = "Frontend: React, Next.js, Framer Motion, Tailwind\nBackend: Node.js, NestJS, PHP, Express\nDatabase: PostgreSQL, MySQL, Prisma";
-        } else if (cmd === "cat resume.txt") {
             output = (
-                <div className="flex flex-col gap-2 border-l-2 border-accent pl-4 mt-2">
-                    <span className="font-bold">DIMAS</span>
-                    <span>Role: Full Stack Engineer</span>
-                    <span>Experience: Building scalable web applications, e-commerce platforms, and enterprise solutions.</span>
-                    <span>Contact: type 'email' or 'github' (just kidding, use the contact form!)</span>
+                <div className="flex flex-col gap-4 text-gray-300 leading-relaxed max-w-2xl">
+                    <p>Halo! Kenalin, saya <span className="text-accent font-bold">Dimas Dwi Ananda Putra (Dimm)</span>, Software Developer muda yang siap jadi partner digital bisnis Anda.</p>
+                    <p>Selain sibuk sekolah di jurusan Rekayasa Perangkat Lunak, saya punya passion besar ngebantu UMKM naik kelas lewat teknologi. Saya terbiasa ngulik website dari nol sampai jadi. Kalau lagi nggak di depan layar, biasanya saya lagi gowes cari udara segar, nonton anime detektif, atau ngeracik kopi andalan yang rasanya nggak kalah sama buatan cafe.</p>
+                    <p>Punya bisnis yang butuh website atau lagi cari rekanan IT yang asik diajak diskusi? Sini, ngobrol santai sama saya!<br />
+                        📞 <a href="https://wa.me/628998076063" className="text-blue-400 hover:underline">08998076063</a> | ✉️ <a href="mailto:dimasdwianandaputra@gmail.com" className="text-blue-400 hover:underline">dimasdwianandaputra@gmail.com</a></p>
+                </div>
+            );
+        } else if (cmd === "skills") {
+            output = (
+                <div className="flex flex-col gap-1 border-l-2 border-accent pl-4">
+                    <span className="font-bold text-white mb-2">TECH STACK:</span>
+                    <span className="text-green-400">Frontend: React, Next.js, Framer Motion, Tailwind CSS</span>
+                    <span className="text-blue-400">Backend: Node.js, NestJS, Express, PHP</span>
+                    <span className="text-yellow-400">Database: PostgreSQL, MySQL, Prisma ORM</span>
+                </div>
+            );
+        } else if (cmd === "projects") {
+            output = (
+                <div className="flex flex-col gap-2">
+                    <span className="font-bold text-white">FEATURED PROJECTS:</span>
+                    <div className="grid grid-cols-1 gap-4">
+                        <div className="border border-border p-3">
+                            <span className="text-accent font-bold">1. Website Company Profile</span> - Brutalist design untuk memukau calon klien UMKM.
+                        </div>
+                        <div className="border border-border p-3">
+                            <span className="text-accent font-bold">2. SportZone</span> - Platform E-Commerce dengan interaktivitas tinggi.
+                        </div>
+                        <div className="border border-border p-3">
+                            <span className="text-accent font-bold">3. Yomu</span> - Sistem Perpustakaan Digital dengan real-time chat & notifikasi.
+                        </div>
+                    </div>
+                </div>
+            );
+        } else if (cmd === "contact") {
+            output = (
+                <div className="flex flex-col gap-1">
+                    <span className="font-bold text-white mb-2">INITIATING SECURE CONNECTION...</span>
+                    <span>Email: <a href="mailto:dimasdwianandaputra@gmail.com" className="text-blue-400 hover:underline">dimasdwianandaputra@gmail.com</a></span>
+                    <span>WhatsApp: <a href="https://wa.me/628998076063" className="text-green-400 hover:underline">08998076063</a></span>
+                    <span className="text-text-muted italic mt-2">Status: Waiting for ping...</span>
                 </div>
             );
         } else if (cmd === "sudo") {
