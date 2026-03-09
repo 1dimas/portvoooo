@@ -57,7 +57,7 @@ export function PortalProvider({ children }: { children: ReactNode }) {
     const [otherWindows, setOtherWindows] = useState<Record<string, WindowMetrics>>({});
 
     const channelRef = useRef<BroadcastChannel | null>(null);
-    const metricsIntervalRef = useRef<number>();
+    const metricsIntervalRef = useRef<number>(-1);
 
     // 1. Initialize Broadcast Channel
     useEffect(() => {
