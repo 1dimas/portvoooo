@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import ParticleField from "@/components/animations/ParticleField";
 import MagneticButton from "@/components/MagneticButton";
 import ScrambleText from "@/components/ScrambleText";
@@ -102,6 +103,15 @@ export default function HeroSection() {
                             >
                                 Hubungi Saya
                             </a>
+                        </MagneticButton>
+
+                        <MagneticButton>
+                            <Link
+                                href="/lab"
+                                className="px-10 py-4 bg-transparent text-accent font-bold uppercase tracking-wider text-sm border-2 border-accent hover:bg-accent hover:text-bg-primary transition-colors duration-300 rounded-none cursor-none block text-center shadow-[0_0_15px_rgba(var(--accent-rgb, 139, 92, 246), 0.3)] hover:shadow-[0_0_25px_rgba(var(--accent-rgb, 139, 92, 246), 0.6)]"
+                            >
+                                /Lab Experiments
+                            </Link>
                         </MagneticButton>
                     </motion.div>
 

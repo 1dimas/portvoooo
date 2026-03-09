@@ -68,6 +68,7 @@ export default function TerminalOverlay() {
                     <span className="text-accent">skills <span className="text-text-muted">- List technical stack</span></span>
                     <span className="text-accent">projects <span className="text-text-muted">- Highlighted works</span></span>
                     <span className="text-accent">contact <span className="text-text-muted">- How to reach me</span></span>
+                    <span className="text-accent">lab <span className="text-text-muted">- Enter the experimental UI zone</span></span>
                     <span className="text-accent">clear <span className="text-text-muted">- Clear terminal</span></span>
                     <span className="text-accent">exit <span className="text-text-muted">- Close terminal</span></span>
                 </div>
@@ -116,6 +117,16 @@ export default function TerminalOverlay() {
                     <span className="text-text-muted italic mt-2">Status: Waiting for ping...</span>
                 </div>
             );
+        } else if (cmd === "lab") {
+            output = (
+                <div className="flex flex-col gap-1">
+                    <span className="text-accent font-bold">Initiating warp sequence to /lab...</span>
+                    <span className="text-text-primary">Prepare for experimental UI and interactions.</span>
+                </div>
+            );
+            setTimeout(() => {
+                window.location.href = "/lab";
+            }, 1200);
         } else if (cmd === "sudo") {
             output = (
                 <div className="mt-4 flex flex-col gap-2 items-start">
