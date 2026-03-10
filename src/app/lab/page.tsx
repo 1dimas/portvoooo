@@ -29,6 +29,13 @@ const labItems = [
         link: "/lab/sentient-ui"
     },
     {
+        title: "Neural Gesture Interface",
+        description: "Kontrol peramban tanpa menyentuh mouse. Render UI melayang dan melukis kanvas interaktif dengan melacak koordinat kerangka jari dari webcam.",
+        tech: ["MediaPipe Vision AI", "Framer Motion", "Canvas 2D"],
+        status: "Done" as const,
+        link: "/lab/neural-gesture"
+    },
+    {
         title: "Chaos Desktop",
         description: "Tiling Window Manager tribute. UI Cards berwujud fisik yang reaktif terhadap gravitasi, tabrakan, dan momentum (Hyprland style).",
         tech: ["Matter.js", "Framer Motion", "Physics"],
