@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/generate-file-tree.mjs && node scripts/generate-cosmos.mjs && prisma generate",
+    "predev": "node scripts/generate-file-tree.mjs && node scripts/generate-cosmos.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/generate-file-tree.mjs && node scripts/generate-cosmos.mjs && prisma generate",
+    "prebuild": "node scripts/generate-file-tree.mjs && node scripts/generate-cosmos.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
