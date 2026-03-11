@@ -79,8 +79,8 @@ const HolographicMenu = () => {
                         key={item}
                         ref={(el) => { itemRefs.current[idx] = el; }} // No return value
                         className={`relative px-6 py-4 border rounded cursor-none transition-colors ${isActive
-                                ? 'bg-accent/20 border-accent text-accent'
-                                : 'bg-transparent border-border text-text-muted'
+                            ? 'bg-accent/20 border-accent text-accent'
+                            : 'bg-transparent border-border text-text-muted'
                             }`}
                         animate={{
                             scale: isClicked ? 0.95 : isActive ? 1.05 : 1,
@@ -142,14 +142,18 @@ const NeuralCanvas = () => {
         const relY = cursorPos.y - rect.top;
 
         if (isPinching) {
-            ctx.strokeStyle = "rgba(var(--accent-rgb), 0.8)";
+            // Get standard text color from CSS var, default to white
+            const computedStyle = getComputedStyle(document.documentElement);
+            const textColor = computedStyle.getPropertyValue('--text-primary').trim() || '#ffffff';
+
+            ctx.strokeStyle = textColor;
             ctx.lineWidth = 4;
             ctx.lineCap = "round";
             ctx.lineJoin = "round";
 
             // Add a neon glow
             ctx.shadowBlur = 10;
-            ctx.shadowColor = "rgba(var(--accent-rgb), 1)";
+            ctx.shadowColor = `rgba(var(--accent-rgb), 0.5)`;
 
             if (lastPosRef.current) {
                 ctx.beginPath();
@@ -330,8 +334,8 @@ function NeuralDashboard() {
                             <button
                                 onClick={() => setDebugMode(p => !p)}
                                 className={`py-3 px-4 flex items-center justify-between border rounded text-xs font-mono uppercase tracking-widest transition-all pointer-events-auto ${debugMode
-                                        ? 'border-yellow-500/50 bg-yellow-500/10 text-yellow-500'
-                                        : 'border-border text-text-muted hover:border-text-muted'
+                                    ? 'border-yellow-500/50 bg-yellow-500/10 text-yellow-500'
+                                    : 'border-border text-text-muted hover:border-text-muted'
                                     }`}
                             >
                                 <span>Sensor View (Debug)</span>

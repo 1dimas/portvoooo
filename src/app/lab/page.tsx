@@ -29,6 +29,13 @@ const labItems = [
         link: "/lab/sentient-ui"
     },
     {
+        title: "The Adaptive Survivor",
+        description: "Hardware-Aware UI. Performa visual dan media merespons secara real-time terhadap level baterai dan kecepatan internet untuk menghemat daya. Eco-mode cerdas.",
+        tech: ["Battery API", "Network API", "Framer Motion"],
+        status: "Done" as const,
+        link: "/lab/adaptive-survivor"
+    },
+    {
         title: "Neural Gesture Interface",
         description: "Kontrol peramban tanpa menyentuh mouse. Render UI melayang dan melukis kanvas interaktif dengan melacak koordinat kerangka jari dari webcam.",
         tech: ["MediaPipe Vision AI", "Framer Motion", "Canvas 2D"],

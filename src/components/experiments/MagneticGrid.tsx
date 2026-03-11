@@ -35,7 +35,7 @@ function GridItem({
 }) {
     const itemRef = useRef<HTMLDivElement>(null);
     const [itemCenter, setItemCenter] = useState({ x: 0, y: 0 });
-    const [asciiChar, setAsciiChar] = useState(ASCII_CHARS[Math.floor(Math.random() * ASCII_CHARS.length)]);
+    const [asciiChar, setAsciiChar] = useState(() => ASCII_CHARS[Math.floor(Math.random() * ASCII_CHARS.length)]);
 
     // Update center position on mount and resize
     useEffect(() => {

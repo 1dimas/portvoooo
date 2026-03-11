@@ -5,8 +5,9 @@ let audioCtx: AudioContext | null = null;
 export const initAudio = () => {
     if (typeof window !== "undefined" && !audioCtx) {
         try {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-        } catch (e) {
+        } catch {
             console.warn("Web Audio API not supported");
         }
     }
@@ -34,7 +35,7 @@ export const playPop = () => {
 
         osc.start(audioCtx.currentTime);
         osc.stop(audioCtx.currentTime + 0.1);
-    } catch (e) { }
+    } catch { }
 };
 
 export const playHover = () => {
@@ -58,7 +59,7 @@ export const playHover = () => {
 
         osc.start(audioCtx.currentTime);
         osc.stop(audioCtx.currentTime + 0.05);
-    } catch (e) { }
+    } catch { }
 };
 
 export const playClick = () => {
@@ -83,5 +84,5 @@ export const playClick = () => {
 
         osc.start(audioCtx.currentTime);
         osc.stop(audioCtx.currentTime + 0.05);
-    } catch (e) { }
+    } catch { }
 };

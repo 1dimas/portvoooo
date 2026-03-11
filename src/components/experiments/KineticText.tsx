@@ -118,6 +118,7 @@ export default function KineticText({
                     clipPath: clipPathVal,
                     // Use WebKit prefix for deeper compatibility
                     WebkitClipPath: clipPathVal,
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     mixBlendMode: "var(--blend-mode)" as any,
                 }}
             >
@@ -128,6 +129,7 @@ export default function KineticText({
                         <motion.h2
                             className={`font-heading text-[clamp(4rem,15vw,12rem)] leading-none text-center uppercase tracking-tighter absolute text-red-500 opacity-80 mix-blend-screen`}
                             style={{
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 fontWeight: "var(--font-weight)" as any,
                                 x: redX,
                                 y: redY,
@@ -140,6 +142,7 @@ export default function KineticText({
                         <motion.h2
                             className={`font-heading text-[clamp(4rem,15vw,12rem)] leading-none text-center uppercase tracking-tighter absolute text-blue-500 opacity-80 mix-blend-screen`}
                             style={{
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 fontWeight: "var(--font-weight)" as any,
                                 x: blueX,
                                 y: blueY,
@@ -151,7 +154,10 @@ export default function KineticText({
                         {/* Main Body */}
                         <motion.h2
                             className={`font-heading text-[clamp(4rem,15vw,12rem)] leading-none text-center uppercase tracking-tighter absolute ${foregroundClass}`}
-                            style={{ fontWeight: "var(--font-weight)" as any }}
+                            style={{
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                                fontWeight: "var(--font-weight)" as any
+                            }}
                         >
                             {ForegroundText}
                         </motion.h2>
@@ -159,7 +165,10 @@ export default function KineticText({
                 ) : (
                     <motion.h2
                         className={`font-heading text-[clamp(4rem,15vw,12rem)] leading-none text-center uppercase tracking-tighter ${foregroundClass}`}
-                        style={{ fontWeight: "var(--font-weight)" as any }}
+                        style={{
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            fontWeight: "var(--font-weight)" as any
+                        }}
                     >
                         {ForegroundText}
                     </motion.h2>

@@ -73,17 +73,14 @@ export default function SyncEntity() {
         // If someone is grabbing it, no need to simulate physics float
         if (entityState.ownerWindowId !== null) return;
 
-        let lastTime = performance.now();
         let currentVx = entityState.velocityX;
         let currentVy = entityState.velocityY;
         let currentAbsX = entityState.absoluteX;
         let currentAbsY = entityState.absoluteY;
 
-        // Friction and bounds
         const friction = 0.98;
 
         const physicsLoop = (time: number) => {
-            lastTime = time;
 
             // We only need ONE window to calculate physics to avoid race conditions.
             // Let's make the window that is currently "observing" it the calculator?

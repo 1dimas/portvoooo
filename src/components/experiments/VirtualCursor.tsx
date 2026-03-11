@@ -5,18 +5,24 @@ import { useEffect } from "react";
 import { useGesture } from "./GestureProvider";
 
 export default function VirtualCursor() {
-    const { cursorPos, isPinching, isReady, landmarks } = useGesture();
+    const { isPinching, cursorPos, isReady } = useGesture();
 
     // Springs for ultra-smooth buttery lag-free following
     const springX = useSpring(-100, { stiffness: 400, damping: 25, mass: 0.5 });
     const springY = useSpring(-100, { stiffness: 400, damping: 25, mass: 0.5 });
 
+    // Slightly lagging trailing aura springs
+    const trailingX = useSpring(-100, { stiffness: 100, damping: 15, mass: 1 });
+    const trailingY = useSpring(-100, { stiffness: 100, damping: 15, mass: 1 });
+
     useEffect(() => {
         if (isReady && cursorPos.x !== -100) {
             springX.set(cursorPos.x);
             springY.set(cursorPos.y);
+            trailingX.set(cursorPos.x);
+            trailingY.set(cursorPos.y);
         }
-    }, [cursorPos, isReady, springX, springY]);
+    }, [cursorPos, isReady, springX, springY, trailingX, trailingY]);
 
     // Don't render until we have a lock on a hand at least once
     if (!isReady || cursorPos.x === -100) return null;
@@ -50,8 +56,8 @@ export default function VirtualCursor() {
             <motion.div
                 className="fixed top-0 left-0 w-16 h-16 rounded-full pointer-events-none z-[99] border border-accent border-dashed opacity-30"
                 style={{
-                    x: useSpring(cursorPos.x, { stiffness: 100, damping: 15, mass: 1 }),
-                    y: useSpring(cursorPos.y, { stiffness: 100, damping: 15, mass: 1 }),
+                    x: trailingX,
+                    y: trailingY,
                     translateX: "-50%",
                     translateY: "-50%"
                 }}

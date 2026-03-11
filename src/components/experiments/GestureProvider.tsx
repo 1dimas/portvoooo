@@ -36,6 +36,7 @@ export function GestureProvider({ children }: { children: ReactNode }) {
     const requestRef = useRef<number>(-1);
     const canvasRef = useRef<HTMLCanvasElement | null>(null); // Offscreen canvas for optional image processing if needed
     const lastVideoTimeRef = useRef(-1);
+    const lastLandmarkTimeRef = useRef<number>(0);
 
     const initializeMediaPipe = async () => {
         try {
@@ -83,56 +84,71 @@ export function GestureProvider({ children }: { children: ReactNode }) {
 
             // Start detection loop
             detectLoop();
-        } catch (err: any) {
+        } catch (err: unknown) {
             console.error("Failed to initialize MediaPipe", err);
-            setError(err.message || "Failed to initialize webcam or AI model");
+            const errorMessage = err instanceof Error ? err.message : String(err);
+            setError(errorMessage || "Failed to initialize webcam or AI model");
             setIsInitializing(false);
         }
     };
 
     const detectLoop = () => {
+        if (!isReady) {
+            if (requestRef.current !== -1) cancelAnimationFrame(requestRef.current);
+            return;
+        }
+
         const video = videoRef.current;
         const landmarker = handLandmarkerRef.current;
 
-        if (!video || !landmarker) return;
+        // Ensure video is valid and has dimensions
+        if (!video || !landmarker || video.readyState < 2 || video.videoWidth === 0) {
+            requestRef.current = requestAnimationFrame(detectLoop);
+            return;
+        }
 
-        // Ensure video is playing and has new frames
         if (video.currentTime !== lastVideoTimeRef.current) {
             lastVideoTimeRef.current = video.currentTime;
+
+            // eslint-disable-next-line react-hooks/purity
             const startTimeMs = performance.now();
+            const adjustedNow = Math.floor(Math.max(startTimeMs, lastLandmarkTimeRef.current + 1));
+            lastLandmarkTimeRef.current = adjustedNow;
 
-            const results = landmarker.detectForVideo(video, startTimeMs);
+            try {
+                const results = landmarker.detectForVideo(video, adjustedNow);
 
-            if (results.landmarks && results.landmarks.length > 0) {
-                const handRender = results.landmarks[0];
-                setLandmarks(handRender);
+                if (results && results.landmarks && results.landmarks.length > 0) {
+                    const handRender = results.landmarks[0];
+                    setLandmarks(handRender);
 
-                // Landmark 8: Index Finger Tip
-                // Landmark 4: Thumb Tip
-                const indexTip = handRender[8];
-                const thumbTip = handRender[4];
+                    const thumbTip = handRender[4];
+                    const indexTip = handRender[8];
 
-                if (indexTip && thumbTip) {
-                    // Map 0-1 relative coordinates to absolute window pixels
-                    // Note: MediaPipe returns coordinates where x=0 is left of camera. 
-                    // Since we mirrored the video mentally, we often need to flip X for UI interactions.
-                    const flippedX = 1 - indexTip.x;
+                    if (thumbTip && indexTip) {
+                        // Map relative coordinates to absolute screen pixels
+                        const flippedX = 1 - indexTip.x;
+                        const screenX = flippedX * window.innerWidth;
+                        const screenY = indexTip.y * window.innerHeight;
+                        setCursorPos({ x: screenX, y: screenY });
 
-                    const screenX = flippedX * window.innerWidth;
-                    const screenY = indexTip.y * window.innerHeight;
+                        const dx = indexTip.x - thumbTip.x;
+                        const dy = indexTip.y - thumbTip.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
 
-                    setCursorPos({ x: screenX, y: screenY });
-
-                    // Calculate 2D distance for pinch detection
-                    const dx = indexTip.x - thumbTip.x;
-                    const dy = indexTip.y - thumbTip.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    setIsPinching(distance < sensitivity);
+                        setIsPinching(distance < sensitivity);
+                    }
+                } else {
+                    setLandmarks(null);
+                    setIsPinching(false);
                 }
-            } else {
-                setLandmarks(null);
-                setIsPinching(false);
+            } catch (err: unknown) {
+                const errorStr = String(err);
+                if (errorStr.includes("delegate for CPU") || errorStr.includes("delegate for GPU")) {
+                    console.log("MediaPipe info (hand caught):", errorStr);
+                } else {
+                    console.warn("Gesture detection loop failed:", err);
+                }
             }
         }
 

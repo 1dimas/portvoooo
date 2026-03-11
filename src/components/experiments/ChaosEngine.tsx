@@ -27,7 +27,6 @@ const TECH_STACK = [
 export default function ChaosEngine({ gravity, bounciness, frictionAir, triggerBang }: ChaosEngineProps) {
     const sceneRef = useRef<HTMLDivElement>(null);
     const engineRef = useRef<Matter.Engine | null>(null);
-    const renderRef = useRef<Matter.Render | null>(null);
     const runnerRef = useRef<Matter.Runner | null>(null);
     const bodiesRef = useRef<Record<string, Matter.Body>>({});
 
@@ -62,7 +61,7 @@ export default function ChaosEngine({ gravity, bounciness, frictionAir, triggerB
         const items: Record<string, Matter.Body> = {};
         const initialStyles: Record<string, { x: number, y: number, angle: number }> = {};
 
-        TECH_STACK.forEach((tech, i) => {
+        TECH_STACK.forEach((tech) => {
             // Distribute randomly near top-center
             const startX = width / 2 + (Math.random() - 0.5) * 300;
             const startY = 100 + (Math.random() * 200);
@@ -96,8 +95,11 @@ export default function ChaosEngine({ gravity, bounciness, frictionAir, triggerB
         Matter.World.add(world, mouseConstraint);
 
         // Keep the mouse in sync with rendering (essential for container scrolling/resizing issues)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const mouseElement = mouseConstraint.mouse.element as any;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         mouseElement.removeEventListener("mousewheel", (mouseConstraint.mouse as any).mousewheel);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         mouseElement.removeEventListener("DOMMouseScroll", (mouseConstraint.mouse as any).mousewheel);
 
         // 6. Physics Loop Sync (Updating React State or Refs)
@@ -169,7 +171,6 @@ export default function ChaosEngine({ gravity, bounciness, frictionAir, triggerB
     useEffect(() => {
         if (!engineRef.current || triggerBang === 0) return;
 
-        const world = engineRef.current.world;
         const centerX = (sceneRef.current?.clientWidth || 0) / 2;
         const centerY = (sceneRef.current?.clientHeight || 0) / 2;
 
