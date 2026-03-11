@@ -7,16 +7,15 @@ import ScrambleText from "@/components/ScrambleText";
 import {
     siNextdotjs,
     siReact,
-    siTypescript,
     siNodedotjs,
     siPhp,
     siPostgresql,
     siPrisma,
     siTailwindcss,
-    siGithub,
-    siLinux,
-    siFlutter,
-    siLaravel,
+    siFramer,
+    siNestjs,
+    siExpress,
+    siMysql,
 } from "simple-icons";
 
 interface TechItem {
@@ -25,21 +24,20 @@ interface TechItem {
 }
 
 const techRow1: TechItem[] = [
-    { name: "Next.js", icon: siNextdotjs.path },
     { name: "React", icon: siReact.path },
-    { name: "TypeScript", icon: siTypescript.path },
+    { name: "Next.js", icon: siNextdotjs.path },
+    { name: "Framer Motion", icon: siFramer.path },
+    { name: "Tailwind CSS", icon: siTailwindcss.path },
     { name: "Node.js", icon: siNodedotjs.path },
-    { name: "PHP", icon: siPhp.path },
-    { name: "Flutter", icon: siFlutter.path },
+    { name: "NestJS", icon: siNestjs.path },
 ];
 
 const techRow2: TechItem[] = [
+    { name: "Express", icon: siExpress.path },
+    { name: "PHP", icon: siPhp.path },
     { name: "PostgreSQL", icon: siPostgresql.path },
+    { name: "MySQL", icon: siMysql.path },
     { name: "Prisma", icon: siPrisma.path },
-    { name: "Tailwind CSS", icon: siTailwindcss.path },
-    { name: "GitHub", icon: siGithub.path },
-    { name: "Linux", icon: siLinux.path },
-    { name: "Laravel", icon: siLaravel.path },
 ];
 
 function TechIcon({ item }: { item: TechItem }) {

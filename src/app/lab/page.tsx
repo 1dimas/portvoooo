@@ -9,12 +9,6 @@ import MagneticButton from "@/components/MagneticButton";
 
 const labItems = [
     {
-        title: "Liquid Distortion",
-        description: "Eksperimen WebGL menggunakan Three.js untuk menciptakan efek distorsi cairan pada gambar saat kursor digerakkan.",
-        tech: ["WebGL", "Three.js", "React Three Fiber"],
-        status: "Concept" as const,
-    },
-    {
         title: "The Cross-Window Portal",
         description: "Sihir sinkronisasi antar-jendela. Lempar objek dari Jendela A dan saksikan ia menyeberang ke Jendela B secara real-time menggunakan koordinat absolut layar.",
         tech: ["BroadcastChannel", "Framer Motion", "Math"],
@@ -62,10 +56,40 @@ const labItems = [
         tech: ["Framer Motion", "useMotionValue", "Math Physics"],
         status: "Done" as const,
         link: "/lab/magnetic-grid"
+    },
+    {
+        title: "Cymatic Geometry",
+        description: "Visualisasi partikel digital yang merespons frekuensi suara. Menggunakan Web Audio API dan Canvas berkinerja tinggi untuk membentuk pola Chladni, Lissajous, dan Spiral dari mikrofon.",
+        tech: ["Web Audio API", "Canvas 2D", "FFT Analysis"],
+        status: "Done" as const,
+        link: "/lab/cymatic-geometry"
+    },
+    {
+        title: "The Code Cosmos",
+        description: "Bentuk evolusi dari arsitektur tata surya 3D. Folder direpresentasikan sebagai planet, dan file-file di dalamnya mengorbit layaknya satelit (bulan) secara real-time.",
+        tech: ["Three.js", "React Three Fiber", "Hierarchical 3D Orbiting"],
+        status: "Done" as const,
+        link: "/lab/data-galaxy"
+    },
+    // Coming Soon / WIP Items
+    {
+        title: "Biometric Pulse Sync",
+        description: "Deteksi detak jantung (BPM) via webcam menggunakan rPPG. UI dan ritme musik akan berdenyut mengikuti detak jantung biologis Anda.",
+        tech: ["Computer Vision", "Web Audio", "Signal Processing"],
+        status: "WIP" as const,
+    },
+    {
+        title: "Holographic Parallax",
+        description: "Eksplorasi sensor gyroscope mobile untuk menciptakan efek kedalaman 3D 'look-around' yang ekstrem pada elemen UI statis.",
+        tech: ["DeviceOrientation", "Framer Motion", "3D Transforms"],
+        status: "Concept" as const,
     }
 ];
 
 export default function LabPage() {
+    const activeItems = labItems.filter(item => item.status === "Done");
+    const comingSoonItems = labItems.filter(item => item.status !== "Done");
+
     return (
         <main className="min-h-screen bg-bg-primary relative overflow-hidden selection:bg-accent selection:text-white">
             <ParticleField />
@@ -116,9 +140,9 @@ export default function LabPage() {
                     </motion.p>
                 </div>
 
-                {/* Experiments Grid */}
+                {/* Active Experiments Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {labItems.map((item, index) => (
+                    {activeItems.map((item, index) => (
                         <LabItemCard
                             key={index}
                             {...item}
@@ -126,6 +150,34 @@ export default function LabPage() {
                         />
                     ))}
                 </div>
+
+                {/* Coming Soon Divider */}
+                {comingSoonItems.length > 0 && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="mt-32 mb-16 flex items-center gap-8"
+                        >
+                            <div className="h-px flex-grow bg-gradient-to-r from-transparent via-border to-transparent" />
+                            <h2 className="text-text-muted font-mono text-xs uppercase tracking-[0.5em] whitespace-nowrap px-4 border border-border py-2 bg-bg-card">
+                                Next_Phases // Incoming_Signals
+                            </h2>
+                            <div className="h-px flex-grow bg-gradient-to-r from-transparent via-border to-transparent" />
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                            {comingSoonItems.map((item, index) => (
+                                <LabItemCard
+                                    key={`coming-${index}`}
+                                    {...item}
+                                    delay={0.2 + (index * 0.1)}
+                                />
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
         </main>
     );

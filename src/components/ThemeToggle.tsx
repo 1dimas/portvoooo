@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import MagneticButton from "./MagneticButton";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { playPop } from "@/utils/audio";
 
 
@@ -16,8 +17,15 @@ export default function ThemeToggle() {
         setMounted(true);
     }, []);
 
+    const pathname = usePathname();
+
     if (!mounted) {
         return <div className="w-12 h-12" />; // Placeholder to prevent layout shift
+    }
+
+    // Hide theme toggle exclusively for Data Galaxy since it forces a dark environment
+    if (pathname === '/lab/data-galaxy') {
+        return null;
     }
 
     const isLight = theme === "light";

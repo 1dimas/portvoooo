@@ -59,6 +59,11 @@ export function GestureProvider({ children }: { children: ReactNode }) {
 
             handLandmarkerRef.current = handLandmarker;
 
+            // Check if API is available (requires HTTPS or localhost)
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                throw new Error("Kamera tidak dapat diakses. Pastikan browser mendukung dan menggunakan koneksi aman (HTTPS/localhost).");
+            }
+
             // Start webcam
             const stream = await navigator.mediaDevices.getUserMedia({
                 video: { width: 640, height: 480, facingMode: "user" }
