@@ -80,8 +80,14 @@ const labItems = [
     },
     {
         title: "Holographic Parallax",
-        description: "Eksplorasi sensor gyroscope mobile untuk menciptakan efek kedalaman 3D 'look-around' yang ekstrem pada elemen UI statis.",
+        description: "Eksperimen sensor gyroscope mobile untuk menciptakan efek kedalaman 3D 'look-around' yang ekstrem pada elemen UI statis.",
         tech: ["DeviceOrientation", "Framer Motion", "3D Transforms"],
+        status: "Concept" as const,
+    },
+    {
+        title: "The Fragmented Reality",
+        description: "Eksperimen pemecahan elemen UI menjadi fragmen-fragmen partikel saat terkena interaksi cepat, kemudian menyatu kembali secara otomatis menggunakan algoritma attractor.",
+        tech: ["Matter.js", "Canvas API", "Framer Motion"],
         status: "Concept" as const,
     }
 ];
