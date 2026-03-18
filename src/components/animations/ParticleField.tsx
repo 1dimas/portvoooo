@@ -29,7 +29,7 @@ export default function ParticleField() {
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
         // 3D parameters (Dynamically reduced for mobile/accessibility)
-        const baseNumStars = isMobile ? 150 : 400;
+        const baseNumStars = isMobile ? 80 : 400;
         const numStars = prefersReducedMotion ? Math.min(baseNumStars, 100) : baseNumStars;
         const fov = 300;
         const speed = prefersReducedMotion ? 0.1 : 0.5;

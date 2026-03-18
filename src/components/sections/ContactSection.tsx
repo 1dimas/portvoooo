@@ -48,14 +48,13 @@ export default function ContactSection() {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="text-accent text-sm font-semibold uppercase tracking-widest">
-                        Kontak
+                        Contact
                     </span>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6 uppercase tracking-wider">
-                        Mari <span className="text-accent">Berkolaborasi</span>
+                        Let&apos;s <span className="text-accent">Collaborate</span>
                     </h2>
-                    <p className="text-text-secondary text-lg max-w-xl mx-auto mb-12 leading-relaxed">
-                        Punya ide proyek atau butuh partner digital? Jangan ragu untuk
-                        menghubungi saya. Lets build something amazing together.
+                    <p className="text-text-secondary text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed">
+                        Have a project in mind? Let&apos;s talk and build something great together.
                     </p>
                 </motion.div>
 
@@ -99,8 +98,6 @@ export default function ContactSection() {
                 >
                     <p className="text-text-muted text-sm">
                         © {new Date().getFullYear()} Dimas. Built with{" "}
-                        <span className="text-accent-light">Next.js</span>,{" "}
-                        <span className="text-accent-light">Framer Motion</span> &{" "}
                         <span className="text-accent">❤️</span>
                     </p>
                 </motion.div>

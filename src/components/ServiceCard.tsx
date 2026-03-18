@@ -21,7 +21,7 @@ export default function ServiceCard({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay }}
-            className="group relative p-8 md:p-10 bg-bg-card border-2 border-border overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:translate-x-2 hover:shadow-[-8px_8px_0px_0px_var(--color-accent)]"
+            className="group relative p-6 md:p-10 bg-bg-card border-2 border-border overflow-hidden transition-all duration-300 md:hover:-translate-y-2 md:hover:translate-x-2 md:hover:shadow-[-8px_8px_0px_0px_var(--color-accent)]"
         >
             {/* Content */}
             <div className="relative z-10">

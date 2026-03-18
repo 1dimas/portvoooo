@@ -7,6 +7,7 @@ import TopProgressBar from "@/components/TopProgressBar";
 import { ThemeProvider } from "next-themes";
 import ThemeToggle from "@/components/ThemeToggle";
 import TerminalOverlay from "@/components/TerminalOverlay";
+import AIHeroGuide from "@/components/AIHeroGuide";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -61,6 +62,7 @@ export default function RootLayout({
           <CustomCursor />
           <TopProgressBar />
           <SmoothScroller>{children}</SmoothScroller>
+          <AIHeroGuide />
         </ThemeProvider>
       </body>
     </html>

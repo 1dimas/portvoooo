@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import ParticleField from "@/components/animations/ParticleField";
 import MagneticButton from "@/components/MagneticButton";
-import ScrambleText from "@/components/ScrambleText";
 
 export default function HeroSection() {
     const containerRef = useRef<HTMLElement>(null);
@@ -30,7 +29,7 @@ export default function HeroSection() {
         <section
             id="hero"
             ref={containerRef}
-            className="relative h-[200vh] bg-bg-primary"
+            className="relative h-[150vh] md:h-[200vh] bg-bg-primary"
         >
             {/* 3D Starfield Background */}
             <ParticleField />
@@ -42,73 +41,65 @@ export default function HeroSection() {
                     className="relative z-10 w-full flex flex-col items-center justify-center px-4 md:px-6 origin-center"
                 >
 
-                    {/* Massive Brutalist Typography */}
+                    {/* Name + Role */}
                     <div className="flex flex-col items-center justify-center w-full max-w-[1600px] mb-4">
                         <motion.h1
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: [0.19, 1, 0.22, 1] }}
-                            className="text-[clamp(3rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
+                            className="text-[clamp(2.5rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
                         >
-                            DIMAS
+                            DIMAS Dwi A.P
                         </motion.h1>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 100 }}
+                        <motion.p
+                            initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
-                            className="text-[clamp(3rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-accent text-center m-0 p-0"
+                            transition={{ duration: 1, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
+                            className="text-[clamp(1rem,2.5vw,1.75rem)] font-mono leading-relaxed tracking-[0.2em] uppercase text-accent text-center mt-3"
                         >
-                            FULL STACK
-                        </motion.h1>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 100 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.2, ease: [0.19, 1, 0.22, 1] }}
-                            className="text-[clamp(3rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
-                        >
-                            DEVELOPER
-                        </motion.h1>
+                            Frontend Developer — Interactive UI
+                        </motion.p>
                     </div>
 
-                    {/* Sub-headline */}
-                    <motion.div
+                    {/* Value Proposition — instantly readable */}
+                    <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.8, duration: 1 }}
-                        className="mt-3 text-sm md:text-base text-text-secondary max-w-xl text-center uppercase tracking-widest font-medium"
+                        transition={{ delay: 0.6, duration: 1 }}
+                        className="mt-4 text-base md:text-lg text-text-secondary max-w-xl text-center tracking-wide font-medium"
                     >
-                        <ScrambleText text="Rekayasa Perangkat Lunak Berfokus Pada Performa, Konversi, dan Skalabilitas Bisnis." delay={1} />
-                    </motion.div>
+                        I build interfaces that feel alive and adaptive.
+                    </motion.p>
 
-                    {/* Brutalist CTAs in Magnetic Wrappers */}
+                    {/* CTAs */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 1, duration: 1 }}
-                        className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 cursor-none"
+                        transition={{ delay: 0.9, duration: 1 }}
+                        className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 cursor-none"
                     >
                         <MagneticButton>
                             <button
                                 onClick={scrollToProjects}
-                                className="px-10 py-4 bg-text-primary text-bg-primary font-bold uppercase tracking-wider text-sm hover:bg-accent transition-colors duration-300 rounded-none cursor-none"
+                                className="w-full sm:w-auto px-10 py-4 bg-text-primary text-bg-primary font-bold uppercase tracking-wider text-sm hover:bg-accent transition-colors duration-300 rounded-none cursor-none"
                             >
-                                Lihat Portfolio
+                                View Portfolio
                             </button>
                         </MagneticButton>
 
                         <MagneticButton>
                             <a
                                 href="#contact"
-                                className="px-10 py-4 bg-transparent text-text-primary font-bold uppercase tracking-wider text-sm border-2 border-border hover:border-accent hover:text-accent transition-colors duration-300 rounded-none cursor-none block text-center"
+                                className="w-full sm:w-auto px-10 py-4 bg-transparent text-text-primary font-bold uppercase tracking-wider text-sm border-2 border-border hover:border-accent hover:text-accent transition-colors duration-300 rounded-none cursor-none block text-center"
                             >
-                                Hubungi Saya
+                                Contact Me
                             </a>
                         </MagneticButton>
 
                         <MagneticButton>
                             <Link
                                 href="/lab"
-                                className="px-10 py-4 bg-transparent text-accent font-bold uppercase tracking-wider text-sm border-2 border-accent hover:bg-accent hover:text-bg-primary transition-colors duration-300 rounded-none cursor-none block text-center shadow-[0_0_15px_rgba(var(--accent-rgb, 139, 92, 246), 0.3)] hover:shadow-[0_0_25px_rgba(var(--accent-rgb, 139, 92, 246), 0.6)]"
+                                className="w-full sm:w-auto px-10 py-4 bg-transparent text-accent font-bold uppercase tracking-wider text-sm border-2 border-accent hover:bg-accent hover:text-bg-primary transition-colors duration-300 rounded-none cursor-none block text-center shadow-[0_0_15px_rgba(var(--accent-rgb, 139, 92, 246), 0.3)] hover:shadow-[0_0_25px_rgba(var(--accent-rgb, 139, 92, 246), 0.6)]"
                             >
                                 /Lab Experiments
                             </Link>

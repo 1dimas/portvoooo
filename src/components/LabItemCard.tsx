@@ -9,9 +9,11 @@ interface LabItemCardProps {
     link?: string;
     status: "WIP" | "Done" | "Concept";
     delay?: number;
+    useCase?: string[];
+    impact?: string[];
 }
 
-export default function LabItemCard({ title, description, tech, link, status, delay = 0 }: LabItemCardProps) {
+export default function LabItemCard({ title, description, tech, link, status, delay = 0, useCase, impact }: LabItemCardProps) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -54,9 +56,25 @@ export default function LabItemCard({ title, description, tech, link, status, de
                 <h3 className="text-2xl md:text-3xl font-heading uppercase text-text-primary mb-3 group-hover:text-accent transition-colors duration-300">
                     {title}
                 </h3>
-                <p className="text-text-secondary text-sm leading-relaxed mb-8 flex-grow">
+                <p className="text-text-secondary text-sm leading-relaxed mb-4">
                     {description}
                 </p>
+
+                {/* Use Case & Impact */}
+                {(useCase || impact) && (
+                    <div className="mb-6 flex flex-col gap-1">
+                        {useCase?.map((item, i) => (
+                            <span key={`uc-${i}`} className="text-xs text-accent/80 font-mono">
+                                → {item}
+                            </span>
+                        ))}
+                        {impact?.map((item, i) => (
+                            <span key={`im-${i}`} className="text-xs text-green-400/80 font-mono">
+                                ↑ {item}
+                            </span>
+                        ))}
+                    </div>
+                )}
 
                 {/* Tech & Link Footer */}
                 <div className="mt-auto">
@@ -70,15 +88,37 @@ export default function LabItemCard({ title, description, tech, link, status, de
 
                     {link ? (
                         <>
-                            <Link href={link} className="hidden md:inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-primary group-hover:text-accent transition-colors">
-                                <span>Initialize Routine</span>
-                                <motion.span
-                                    animate={{ x: isHovered ? 5 : 0 }}
-                                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                            <div className="hidden md:flex items-center gap-4">
+                                <Link href={link} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-primary group-hover:text-accent transition-colors">
+                                    <span>Initialize Routine</span>
+                                    <motion.span
+                                        animate={{ x: isHovered ? 5 : 0 }}
+                                        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                                    >
+                                        →
+                                    </motion.span>
+                                </Link>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        // Dispatch custom event to trigger AI with this experiment's context
+                                        window.dispatchEvent(new CustomEvent('ask-ai-lab', {
+                                            detail: {
+                                                title,
+                                                description,
+                                                tech,
+                                                useCase,
+                                                impact,
+                                                message: `Explain the "${title}" experiment`,
+                                            }
+                                        }));
+                                    }}
+                                    className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-accent/60 hover:text-accent transition-colors border border-accent/20 hover:border-accent/50 px-2 py-1"
                                 >
-                                    →
-                                </motion.span>
-                            </Link>
+                                    <span>✦</span>
+                                    <span>Ask AI</span>
+                                </button>
+                            </div>
                             <span className="inline-flex md:hidden items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-muted">
                                 <span className="opacity-50">Available on Desktop</span>
                             </span>

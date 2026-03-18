@@ -75,14 +75,14 @@ export default function TechStackSection() {
                     </span>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mt-8 mb-4 tracking-tighter uppercase font-heading cursor-default">
                         <span className="text-text-primary">
-                            <ScrambleText text="Teknologi yang" />
+                            <ScrambleText text="Tech" />
                         </span>{" "}
                         <span className="text-accent">
-                            <ScrambleText text="Saya Kuasai" />
+                            <ScrambleText text="Stack" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary font-medium text-lg max-w-2xl mx-auto leading-relaxed uppercase tracking-widest">
-                        Tools dan framework modern untuk membangun produk digital berkualitas tinggi.
+                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                        Tools and frameworks I use daily to ship quality products.
                     </p>
                 </motion.div>
 

@@ -6,10 +6,22 @@
     "type": "file",
     "extension": ".ts",
     "sizeKb": 2.74,
-    "x": -1.43612398638586,
-    "y": 1.715316461787072,
-    "z": -1.8333575151918464,
+    "x": -1.31496146907048,
+    "y": 1.3150664122798887,
+    "z": -2.9068356206445367,
     "galaxyIndex": 1
+  },
+  {
+    "id": "file_lib/ai.ts",
+    "name": "ai.ts",
+    "path": "lib/ai.ts",
+    "type": "file",
+    "extension": ".ts",
+    "sizeKb": 3.91,
+    "x": 0.5644307865570299,
+    "y": -2.891619814938887,
+    "z": -0.07324394081452507,
+    "galaxyIndex": 2
   },
   {
     "id": "file_data/cosmosTree.json",
@@ -17,11 +29,11 @@
     "path": "data/cosmosTree.json",
     "type": "file",
     "extension": ".json",
-    "sizeKb": 32.92,
-    "x": 0.3466325907226254,
-    "y": -2.8077523674682303,
-    "z": 3.3739138322759543,
-    "galaxyIndex": 2
+    "sizeKb": 36.03,
+    "x": 2.3505145498377154,
+    "y": 2.775765632286485,
+    "z": 4.722776533198211,
+    "galaxyIndex": 3
   },
   {
     "id": "file_data/fileTree.json",
@@ -29,11 +41,11 @@
     "path": "data/fileTree.json",
     "type": "file",
     "extension": ".json",
-    "sizeKb": 16.98,
-    "x": 1.966576703646839,
-    "y": 2.933358560103519,
-    "z": 6.895244110022272,
-    "galaxyIndex": 3
+    "sizeKb": 20.31,
+    "x": -3.6070984313054453,
+    "y": -0.745496292472181,
+    "z": -0.10995939883862821,
+    "galaxyIndex": 4
   },
   {
     "id": "file_data/projects.ts",
@@ -42,10 +54,10 @@
     "type": "file",
     "extension": ".ts",
     "sizeKb": 4.15,
-    "x": -3.897422543870412,
-    "y": -0.40085500024235016,
-    "z": -4.188762508106993,
-    "galaxyIndex": 4
+    "x": 4.068811811431995,
+    "y": -2.2310482414946597,
+    "z": -3.3054682034208023,
+    "galaxyIndex": 5
   },
   {
     "id": "file_components/sections/ContactSection.tsx",
@@ -53,11 +65,11 @@
     "path": "components/sections/ContactSection.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 7.08,
-    "x": 3.917174577782468,
-    "y": -1.916517178674883,
-    "z": -4.23343995957156,
-    "galaxyIndex": 5
+    "sizeKb": 6.86,
+    "x": -1.5783617510025831,
+    "y": 4.951020598594068,
+    "z": 4.110991273581762,
+    "galaxyIndex": 6
   },
   {
     "id": "file_components/sections/HeroSection.tsx",
@@ -65,11 +77,11 @@
     "path": "components/sections/HeroSection.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 7.89,
-    "x": -1.040308444770277,
-    "y": 4.717275929582881,
-    "z": -5.508520942567059,
-    "galaxyIndex": 6
+    "sizeKb": 7.34,
+    "x": -1.8828374622770867,
+    "y": -5.111470047507026,
+    "z": -3.4442978800712987,
+    "galaxyIndex": 7
   },
   {
     "id": "file_components/sections/ProjectsSection.tsx",
@@ -77,11 +89,11 @@
     "path": "components/sections/ProjectsSection.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 4.56,
-    "x": -2.6238095036102242,
-    "y": -5.00561648750713,
-    "z": -3.819983391920255,
-    "galaxyIndex": 7
+    "sizeKb": 4.74,
+    "x": 5.288701373890916,
+    "y": 1.5944389360454791,
+    "z": -0.23990587562204135,
+    "galaxyIndex": 8
   },
   {
     "id": "file_components/sections/ServicesSection.tsx",
@@ -89,11 +101,11 @@
     "path": "components/sections/ServicesSection.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 5.11,
-    "x": 5.001501138428544,
-    "y": 2.5417661593631196,
-    "z": 3.0024126430262204,
-    "galaxyIndex": 8
+    "sizeKb": 5.09,
+    "x": -5.15956652139204,
+    "y": 2.5987742325739025,
+    "z": -4.204651631124326,
+    "galaxyIndex": 9
   },
   {
     "id": "file_components/sections/TechStackSection.tsx",
@@ -101,11 +113,11 @@
     "path": "components/sections/TechStackSection.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 4.23,
-    "x": -5.830487402889242,
-    "y": 2.869316551891005,
-    "z": 6.995828561550187,
-    "galaxyIndex": 9
+    "sizeKb": 4.18,
+    "x": 2.2987480150677184,
+    "y": -5.71222378788741,
+    "z": -4.271450179446947,
+    "galaxyIndex": 10
   },
   {
     "id": "file_components/sections/ZoomTransitionSection.tsx",
@@ -113,11 +125,11 @@
     "path": "components/sections/ZoomTransitionSection.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 1.28,
-    "x": 2.5965789872697242,
-    "y": -5.72051202580389,
-    "z": -3.0216118476332827,
-    "galaxyIndex": 10
+    "sizeKb": 1.43,
+    "x": 1.6291838628437951,
+    "y": 6.8380644655932805,
+    "z": -4.693992209229041,
+    "galaxyIndex": 11
   },
   {
     "id": "file_components/experiments/AdaptiveElement.tsx",
@@ -126,10 +138,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 5.46,
-    "x": 2.1516200261567806,
-    "y": 6.947569035311632,
-    "z": -0.10605073910306062,
-    "galaxyIndex": 11
+    "x": -5.815902980575112,
+    "y": -3.2001709642441094,
+    "z": -0.9321466111546035,
+    "galaxyIndex": 12
   },
   {
     "id": "file_components/experiments/AdaptiveWrapper.tsx",
@@ -138,10 +150,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.21,
-    "x": -5.572842659459177,
-    "y": -3.529369920041361,
-    "z": 0.05813650624618111,
-    "galaxyIndex": 12
+    "x": 7.048702068829902,
+    "y": -1.1166269385987067,
+    "z": 2.396396321053331,
+    "galaxyIndex": 13
   },
   {
     "id": "file_components/experiments/AudioEngine.ts",
@@ -150,10 +162,10 @@
     "type": "file",
     "extension": ".ts",
     "sizeKb": 4.31,
-    "x": 7.3995622572780935,
-    "y": -1.6277442097645163,
-    "z": 5.664607625845717,
-    "galaxyIndex": 13
+    "x": -3.807153487433637,
+    "y": 6.0734026253150954,
+    "z": 6.054270469357706,
+    "galaxyIndex": 14
   },
   {
     "id": "file_components/experiments/ChaosEngine.tsx",
@@ -162,10 +174,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 10.26,
-    "x": -4.607073608337673,
-    "y": 5.83570288139137,
-    "z": -3.9733627735472936,
-    "galaxyIndex": 14
+    "x": -1.2778076189408711,
+    "y": -7.324181837213548,
+    "z": -3.25800983031656,
+    "galaxyIndex": 15
   },
   {
     "id": "file_components/experiments/CosmosCanvas.tsx",
@@ -174,10 +186,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.17,
-    "x": -1.2154496785308666,
-    "y": -7.105740083860949,
-    "z": -5.207612483538587,
-    "galaxyIndex": 15
+    "x": 5.804693684788289,
+    "y": 5.1827816446735655,
+    "z": 3.934738389874102,
+    "galaxyIndex": 16
   },
   {
     "id": "file_components/experiments/CosmosController.tsx",
@@ -186,10 +198,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.36,
-    "x": 6.050966709816153,
-    "y": 5.281850661680094,
-    "z": -6.340708095124176,
-    "galaxyIndex": 16
+    "x": -8.221054659585707,
+    "y": 0.8172134642230353,
+    "z": 3.531030220402592,
+    "galaxyIndex": 17
   },
   {
     "id": "file_components/experiments/CymaticCanvas.tsx",
@@ -198,10 +210,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 9.57,
-    "x": -8.69099743487779,
-    "y": 0.055032725253508885,
-    "z": -4.239036276292397,
-    "galaxyIndex": 17
+    "x": 6.38330230721234,
+    "y": -6.219227601601472,
+    "z": 4.4777478146678735,
+    "galaxyIndex": 18
   },
   {
     "id": "file_components/experiments/FrequencyMapper.ts",
@@ -210,10 +222,10 @@
     "type": "file",
     "extension": ".ts",
     "sizeKb": 5.86,
-    "x": 6.148508544927086,
-    "y": -5.629698610247216,
-    "z": -1.3646223870902872,
-    "galaxyIndex": 18
+    "x": -0.4061602991257396,
+    "y": 8.783879228205473,
+    "z": -4.93508364429478,
+    "galaxyIndex": 19
   },
   {
     "id": "file_components/experiments/GalaxyCanvas.tsx",
@@ -222,10 +234,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 6.11,
-    "x": -0.20217780163448404,
-    "y": 9.148820214111847,
-    "z": -4.598854642067977,
-    "galaxyIndex": 19
+    "x": -5.549994515830679,
+    "y": -6.389631143484288,
+    "z": 0.6199494362170763,
+    "galaxyIndex": 20
   },
   {
     "id": "file_components/experiments/GestureProvider.tsx",
@@ -234,10 +246,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 6.45,
-    "x": -6.1473322520927125,
-    "y": -6.9564236121098,
-    "z": 4.290031835839111,
-    "galaxyIndex": 20
+    "x": 9.500594480630895,
+    "y": 1.1031675682857838,
+    "z": -0.9000810007948095,
+    "galaxyIndex": 21
   },
   {
     "id": "file_components/experiments/InstancedStars.tsx",
@@ -246,10 +258,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 4.2,
-    "x": 9.198308455185195,
-    "y": 1.2512558640718108,
-    "z": 5.6028498002982685,
-    "galaxyIndex": 21
+    "x": -7.202376756375804,
+    "y": 5.259144106706683,
+    "z": 4.168657584247089,
+    "galaxyIndex": 22
   },
   {
     "id": "file_components/experiments/KineticText.tsx",
@@ -258,10 +270,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 8.29,
-    "x": -7.562612139167237,
-    "y": 5.5675346232273055,
-    "z": 5.750704183796956,
-    "galaxyIndex": 22
+    "x": 1.88161154879159,
+    "y": -8.888582230837889,
+    "z": -4.159366006646666,
+    "galaxyIndex": 23
   },
   {
     "id": "file_components/experiments/MagneticGrid.tsx",
@@ -270,10 +282,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 9.71,
-    "x": 2.077552189789397,
-    "y": -9.002699738090435,
-    "z": 2.01474917606219,
-    "galaxyIndex": 23
+    "x": 4.971514900004237,
+    "y": 8.670249870372068,
+    "z": -1.9141380099683096,
+    "galaxyIndex": 24
   },
   {
     "id": "file_components/experiments/PipStyleSync.ts",
@@ -282,10 +294,10 @@
     "type": "file",
     "extension": ".ts",
     "sizeKb": 1.63,
-    "x": 4.701585738158198,
-    "y": 8.438285174469334,
-    "z": -6.251961719646108,
-    "galaxyIndex": 24
+    "x": -9.591114388703764,
+    "y": -3.39945543664394,
+    "z": 3.73684614083426,
+    "galaxyIndex": 25
   },
   {
     "id": "file_components/experiments/PlanetFolder.tsx",
@@ -294,10 +306,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.77,
-    "x": -9.078974744540375,
-    "y": -3.041533539908665,
-    "z": -5.0805996135507145,
-    "galaxyIndex": 25
+    "x": 9.666744213980063,
+    "y": -4.318397759748968,
+    "z": 5.91620464325689,
+    "galaxyIndex": 26
   },
   {
     "id": "file_components/experiments/PortalManager.tsx",
@@ -306,10 +318,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 9.34,
-    "x": 9.404450263775123,
-    "y": -4.126106989490307,
-    "z": -0.8320509822291909,
-    "galaxyIndex": 26
+    "x": -3.519995951183449,
+    "y": 9.338056219650683,
+    "z": 6.1220056771054585,
+    "galaxyIndex": 27
   },
   {
     "id": "file_components/experiments/SatelliteFile.tsx",
@@ -318,10 +330,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 2.28,
-    "x": -3.916619999781829,
-    "y": 10.178411412177617,
-    "z": 0.8522431289792007,
-    "galaxyIndex": 27
+    "x": -3.9655254688497497,
+    "y": -10.270754066735146,
+    "z": -2.1786672049382436,
+    "galaxyIndex": 28
   },
   {
     "id": "file_components/experiments/SyncEntity.tsx",
@@ -330,10 +342,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 10.61,
-    "x": -3.3029680107803014,
-    "y": -9.658964028053628,
-    "z": 4.446821868571803,
-    "galaxyIndex": 28
+    "x": 10.06386949099424,
+    "y": 5.452241712548743,
+    "z": -0.8342816775880828,
+    "galaxyIndex": 29
   },
   {
     "id": "file_components/experiments/VirtualCursor.tsx",
@@ -342,10 +354,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 2.9,
-    "x": 9.938316865670828,
-    "y": 4.896651687954335,
-    "z": 4.417083911517092,
-    "galaxyIndex": 29
+    "x": -10.103462483438483,
+    "y": 2.491505131797926,
+    "z": 6.311661108915585,
+    "galaxyIndex": 30
   },
   {
     "id": "file_components/experiments/useHardwareOracle.tsx",
@@ -354,10 +366,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 5.63,
-    "x": -10.487102574831727,
-    "y": 2.6672874148729817,
-    "z": 3.917268537836792,
-    "galaxyIndex": 30
+    "x": 5.875520839790586,
+    "y": -9.837105652288502,
+    "z": -1.6763891392777688,
+    "galaxyIndex": 31
   },
   {
     "id": "file_components/experiments/useSentient.tsx",
@@ -366,10 +378,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.79,
-    "x": 6.170375729752266,
-    "y": -8.914852115935371,
-    "z": -0.6881449692586291,
-    "galaxyIndex": 31
+    "x": 2.4357721026635173,
+    "y": 11.349963407223582,
+    "z": -5.849769356568806,
+    "galaxyIndex": 32
   },
   {
     "id": "file_components/animations/ParticleField.tsx",
@@ -378,10 +390,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 4.95,
-    "x": 2.2705088252276346,
-    "y": 11.503431995447603,
-    "z": 5.09769735298733,
-    "galaxyIndex": 32
+    "x": -8.866359463125612,
+    "y": -7.025708770484322,
+    "z": 5.896603668421673,
+    "galaxyIndex": 33
   },
   {
     "id": "file_components/animations/TextReveal.tsx",
@@ -390,10 +402,22 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 1.4,
-    "x": -9.005150218240466,
-    "y": -7.103455151425702,
-    "z": -0.4678370629017139,
-    "galaxyIndex": 33
+    "x": 11.987827638922676,
+    "y": -0.6646140641602352,
+    "z": -5.649856777806134,
+    "galaxyIndex": 34
+  },
+  {
+    "id": "file_components/AIHeroGuide.tsx",
+    "name": "AIHeroGuide.tsx",
+    "path": "components/AIHeroGuide.tsx",
+    "type": "file",
+    "extension": ".tsx",
+    "sizeKb": 12.35,
+    "x": -8.044846562839664,
+    "y": 8.895569286207385,
+    "z": -0.32108076832624677,
+    "galaxyIndex": 35
   },
   {
     "id": "file_components/CustomCursor.tsx",
@@ -402,10 +426,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 4.12,
-    "x": 11.35545445413564,
-    "y": -0.7671204372967015,
-    "z": -5.030271199969884,
-    "galaxyIndex": 34
+    "x": 0.25159758553489636,
+    "y": -11.917436587049963,
+    "z": -4.816112273004901,
+    "galaxyIndex": 36
   },
   {
     "id": "file_components/InfiniteLoopTrigger.tsx",
@@ -414,10 +438,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 0.87,
-    "x": -8.123037128341913,
-    "y": 8.921799949881025,
-    "z": 1.0908290816323385,
-    "galaxyIndex": 35
+    "x": 8.265323092716987,
+    "y": 9.090497731408648,
+    "z": 0.19123245124920168,
+    "galaxyIndex": 37
   },
   {
     "id": "file_components/InfiniteMarquee.tsx",
@@ -426,10 +450,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 1.37,
-    "x": -0.03482374133499721,
-    "y": -11.910316833152573,
-    "z": 3.2965050545282204,
-    "galaxyIndex": 36
+    "x": -12.327858979813747,
+    "y": -1.2288845845343612,
+    "z": -0.8571798185802937,
+    "galaxyIndex": 38
   },
   {
     "id": "file_components/LabItemCard.tsx",
@@ -437,11 +461,11 @@
     "path": "components/LabItemCard.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 5.32,
-    "x": 8.298191418846,
-    "y": 9.334174329025958,
-    "z": 0.28528111408805623,
-    "galaxyIndex": 37
+    "sizeKb": 7.51,
+    "x": 10.096023156127586,
+    "y": -7.3230068570244224,
+    "z": -5.094286867856179,
+    "galaxyIndex": 39
   },
   {
     "id": "file_components/MagneticButton.tsx",
@@ -450,10 +474,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 1.75,
-    "x": -12.09365118882427,
-    "y": -1.1764868160240327,
-    "z": -4.328377141875702,
-    "galaxyIndex": 38
+    "x": -2.3802123830032103,
+    "y": 12.231920885345586,
+    "z": 4.455399841389918,
+    "galaxyIndex": 40
   },
   {
     "id": "file_components/Preloader.tsx",
@@ -462,10 +486,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.26,
-    "x": 10.14696883592153,
-    "y": -7.243868115843783,
-    "z": -5.482051388948921,
-    "galaxyIndex": 39
+    "x": -6.483785093593114,
+    "y": -11.044080193774688,
+    "z": -1.5731871351290814,
+    "galaxyIndex": 41
   },
   {
     "id": "file_components/ProjectCard.tsx",
@@ -474,10 +498,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 7.31,
-    "x": -2.2439777730812542,
-    "y": 12.775248527678565,
-    "z": -2.1891303741849097,
-    "galaxyIndex": 40
+    "x": 12.810095710845863,
+    "y": 3.4990274380176793,
+    "z": 2.2741004556261,
+    "galaxyIndex": 42
   },
   {
     "id": "file_components/ScrambleText.tsx",
@@ -486,10 +510,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 2.69,
-    "x": -6.654132882269662,
-    "y": -10.857079098261776,
-    "z": -2.913618466339536,
-    "galaxyIndex": 41
+    "x": -11.50944628040636,
+    "y": 5.782279727634882,
+    "z": 5.308354614769535,
+    "galaxyIndex": 43
   },
   {
     "id": "file_components/ScrollingBanner.tsx",
@@ -498,10 +522,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 1.62,
-    "x": 12.262207356785206,
-    "y": 3.5470195982282946,
-    "z": 2.82189396632014,
-    "galaxyIndex": 42
+    "x": 4.527576851453302,
+    "y": -12.495047738658428,
+    "z": 1.4358786918496382,
+    "galaxyIndex": 44
   },
   {
     "id": "file_components/ServiceCard.tsx",
@@ -509,11 +533,11 @@
     "path": "components/ServiceCard.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 1.6,
-    "x": -11.521002306637373,
-    "y": 6.394753824203308,
-    "z": 5.319813047664193,
-    "galaxyIndex": 43
+    "sizeKb": 1.61,
+    "x": 5.247238783926381,
+    "y": 12.637058305115858,
+    "z": -3.9482496390786865,
+    "galaxyIndex": 45
   },
   {
     "id": "file_components/SmoothScroller.tsx",
@@ -522,10 +546,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 0.43,
-    "x": 4.47982481497476,
-    "y": -12.423484248116221,
-    "z": -0.8045231293516043,
-    "galaxyIndex": 44
+    "x": -12.107595734035035,
+    "y": -5.8318369901373375,
+    "z": -4.059947859258136,
+    "galaxyIndex": 46
   },
   {
     "id": "file_components/TerminalOverlay.tsx",
@@ -533,11 +557,11 @@
     "path": "components/TerminalOverlay.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 11.97,
-    "x": 5.2484210422617465,
-    "y": 12.668781591345677,
-    "z": 1.618112393274652,
-    "galaxyIndex": 45
+    "sizeKb": 13.63,
+    "x": 13.167270504565547,
+    "y": -4.189246606365474,
+    "z": -2.574812589587483,
+    "galaxyIndex": 47
   },
   {
     "id": "file_components/ThemeToggle.tsx",
@@ -546,10 +570,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 5.43,
-    "x": -12.460130599837397,
-    "y": -5.801358402326443,
-    "z": 1.7858113347732325,
-    "galaxyIndex": 46
+    "x": -6.726435582657092,
+    "y": 11.81993704213908,
+    "z": 3.1605920181360943,
+    "galaxyIndex": 48
   },
   {
     "id": "file_components/TopProgressBar.tsx",
@@ -558,10 +582,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 0.46,
-    "x": 13.123496258754823,
-    "y": -3.9310600385956262,
-    "z": -5.038551300456428,
-    "galaxyIndex": 47
+    "x": -2.72186621798759,
+    "y": -13.626205113369085,
+    "z": 5.81855851648662,
+    "galaxyIndex": 49
   },
   {
     "id": "file_components/ZoomableImage.tsx",
@@ -570,10 +594,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.91,
-    "x": -7.044645288960125,
-    "y": 12.352837314838522,
-    "z": 4.614527500652989,
-    "galaxyIndex": 48
+    "x": 11.40060680410342,
+    "y": 8.295746119405575,
+    "z": 0.29919256188934906,
+    "galaxyIndex": 50
   },
   {
     "id": "file_app/projects/[slug]/page.tsx",
@@ -582,10 +606,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 7.21,
-    "x": -3.004595575511672,
-    "y": -13.951970072196184,
-    "z": 1.7844835327124944,
-    "galaxyIndex": 49
+    "x": -13.865804997685068,
+    "y": 2.1495414884198816,
+    "z": 0.030786291519774994,
+    "galaxyIndex": 51
   },
   {
     "id": "file_app/lab/sentient-ui/page.tsx",
@@ -594,10 +618,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 10.51,
-    "x": 12.002504337849835,
-    "y": 7.656095595303878,
-    "z": 3.4682499904865804,
-    "galaxyIndex": 50
+    "x": 9.581769614252412,
+    "y": -11.09172363583138,
+    "z": 3.1366090391392185,
+    "galaxyIndex": 52
   },
   {
     "id": "file_app/lab/neural-gesture/page.tsx",
@@ -606,10 +630,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 17.92,
-    "x": -14.829836059295479,
-    "y": 1.551039610783701,
-    "z": -5.538510799723099,
-    "galaxyIndex": 51
+    "x": 0.9001867124446552,
+    "y": 14.991515650595407,
+    "z": 2.1886574866384483,
+    "galaxyIndex": 53
   },
   {
     "id": "file_app/lab/magnetic-grid/page.tsx",
@@ -618,10 +642,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 10.3,
-    "x": 8.592711958813423,
-    "y": -10.45048590246624,
-    "z": -3.841168527042722,
-    "galaxyIndex": 52
+    "x": -9.975796466798403,
+    "y": -11.02181295988285,
+    "z": -4.715193726723537,
+    "galaxyIndex": 54
   },
   {
     "id": "file_app/lab/kinetic-typography/page.tsx",
@@ -630,10 +654,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 8.92,
-    "x": 0.573232899687903,
-    "y": 14.11074475160609,
-    "z": -1.0368096746872766,
-    "galaxyIndex": 53
+    "x": 14.877271061655343,
+    "y": 0.6812361633698225,
+    "z": -5.685425812655393,
+    "galaxyIndex": 55
   },
   {
     "id": "file_app/lab/data-galaxy/page.tsx",
@@ -642,10 +666,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 5.27,
-    "x": -10.159824547596848,
-    "y": -9.8504968372789,
-    "z": 0.03231156820890657,
-    "galaxyIndex": 54
+    "x": -11.744438848628114,
+    "y": 10.01789044683486,
+    "z": 2.1050184693133343,
+    "galaxyIndex": 56
   },
   {
     "id": "file_app/lab/cymatic-geometry/page.tsx",
@@ -654,10 +678,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 10.67,
-    "x": 14.47725019280817,
-    "y": 0.4322299385252985,
-    "z": -3.263899557974267,
-    "galaxyIndex": 55
+    "x": 2.821750458953261,
+    "y": -14.918787354082907,
+    "z": -1.4040023969202418,
+    "galaxyIndex": 57
   },
   {
     "id": "file_app/lab/cross-window/page.tsx",
@@ -666,10 +690,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 7.5,
-    "x": -10.950123524048186,
-    "y": 9.059398044970164,
-    "z": 3.4314594667821194,
-    "galaxyIndex": 56
+    "x": 8.76806254932796,
+    "y": 12.26216513111301,
+    "z": -1.4784734278279381,
+    "galaxyIndex": 58
   },
   {
     "id": "file_app/lab/chaos-desktop/page.tsx",
@@ -678,10 +702,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 6.87,
-    "x": 1.7592822335245986,
-    "y": -15.074276340012359,
-    "z": 4.199409689895236,
-    "galaxyIndex": 57
+    "x": -14.867572002901762,
+    "y": -3.14835242664266,
+    "z": -2.6415364374230124,
+    "galaxyIndex": 59
   },
   {
     "id": "file_app/lab/adaptive-survivor/page.tsx",
@@ -690,10 +714,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 16.65,
-    "x": 8.028296127766483,
-    "y": 13.1415494780859,
-    "z": 1.5777761974067595,
-    "galaxyIndex": 58
+    "x": 14.041791557866793,
+    "y": -8.266800545487758,
+    "z": -5.124577690724529,
+    "galaxyIndex": 60
   },
   {
     "id": "file_app/lab/page.tsx",
@@ -701,11 +725,11 @@
     "path": "app/lab/page.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 8.88,
-    "x": -14.842185068845339,
-    "y": -3.5997446886870246,
-    "z": -0.015207443929628972,
-    "galaxyIndex": 59
+    "sizeKb": 10.32,
+    "x": -5.163296000412036,
+    "y": 14.659038906056951,
+    "z": -5.132442323542911,
+    "galaxyIndex": 61
   },
   {
     "id": "file_app/globals.css",
@@ -713,11 +737,11 @@
     "path": "app/globals.css",
     "type": "file",
     "extension": ".css",
-    "sizeKb": 6.54,
-    "x": 13.246021529222194,
-    "y": -7.578190111242569,
-    "z": -3.9903728102116274,
-    "galaxyIndex": 60
+    "sizeKb": 7.17,
+    "x": -6.339227402007539,
+    "y": -14.134761844863545,
+    "z": -1.6361724520177916,
+    "galaxyIndex": 62
   },
   {
     "id": "file_app/icon.svg",
@@ -726,10 +750,10 @@
     "type": "file",
     "extension": ".svg",
     "sizeKb": 0.4,
-    "x": -4.96502435252297,
-    "y": 15.007891138717095,
-    "z": 3.991467520685398,
-    "galaxyIndex": 61
+    "x": 14.84551654234362,
+    "y": 5.9751750880086725,
+    "z": 4.38934163036247,
+    "galaxyIndex": 63
   },
   {
     "id": "file_app/layout.tsx",
@@ -737,11 +761,11 @@
     "path": "app/layout.tsx",
     "type": "file",
     "extension": ".tsx",
-    "sizeKb": 1.85,
-    "x": -6.420292975112714,
-    "y": -14.112347379240413,
-    "z": 3.4711382126947834,
-    "galaxyIndex": 62
+    "sizeKb": 1.92,
+    "x": -15.212900890030618,
+    "y": 5.284687882048308,
+    "z": 2.8982550363717965,
+    "galaxyIndex": 64
   },
   {
     "id": "file_app/opengraph-image.tsx",
@@ -750,10 +774,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 3.03,
-    "x": 14.710237853996906,
-    "y": 6.13470917536678,
-    "z": -2.38563074645659,
-    "galaxyIndex": 63
+    "x": 7.578342723906582,
+    "y": -14.102559098820281,
+    "z": -0.36895922731763897,
+    "galaxyIndex": 65
   },
   {
     "id": "file_app/page.tsx",
@@ -762,10 +786,10 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 1.03,
-    "x": -15.342102822135605,
-    "y": 5.5904707264807145,
-    "z": -1.085755545763155,
-    "galaxyIndex": 64
+    "x": 4.138204455051645,
+    "y": 15.91838301149122,
+    "z": 2.926881393649235,
+    "galaxyIndex": 66
   },
   {
     "id": "file_app/template.tsx",
@@ -774,9 +798,9 @@
     "type": "file",
     "extension": ".tsx",
     "sizeKb": 0.44,
-    "x": 7.6625179192202655,
-    "y": -13.951484568372715,
-    "z": 3.531733269595116,
-    "galaxyIndex": 65
+    "x": -13.798354690298163,
+    "y": -9.099548372722118,
+    "z": 4.350496865016565,
+    "galaxyIndex": 67
   }
 ]

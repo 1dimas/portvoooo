@@ -12,11 +12,11 @@ export default function Home() {
     <main className="relative bg-bg-primary overflow-clip">
       <Preloader />
       <HeroSection />
-      <div className="h-32 md:h-48" />
+      <div className="h-16 md:h-48" />
       <ServicesSection />
-      <div className="h-32 md:h-48" />
+      <div className="h-16 md:h-48" />
       <ProjectsSection />
-      <div className="h-32 md:h-48" />
+      <div className="h-16 md:h-48" />
       <ZoomTransitionSection />
       <TechStackSection />
       <ScrollingBanner text="AVAILABLE FOR FREELANCE • MARI BERKOLABORASI • LET'S BUILD SOMETHING GREAT" />

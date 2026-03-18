@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { sendAIMessage } from "@/lib/ai";
 
 export default function TerminalOverlay() {
     const [isOpen, setIsOpen] = useState(false);
@@ -68,6 +69,7 @@ export default function TerminalOverlay() {
                     <span className="text-accent">skills <span className="text-text-muted">- List technical stack</span></span>
                     <span className="text-accent">projects <span className="text-text-muted">- Highlighted works</span></span>
                     <span className="text-accent">contact <span className="text-text-muted">- How to reach me</span></span>
+                    <span className="text-accent">ask &lt;question&gt; <span className="text-text-muted">- Ask the AI assistant</span></span>
                     <span className="text-accent">lab <span className="text-text-muted">- Enter the experimental UI zone</span></span>
                     <span className="text-accent">clear <span className="text-text-muted">- Clear terminal</span></span>
                     <span className="text-accent">exit <span className="text-text-muted">- Close terminal</span></span>
@@ -154,8 +156,41 @@ export default function TerminalOverlay() {
             setIsOpen(false);
             setInput("");
             return;
+        } else if (cmd.startsWith("ask ")) {
+            // AI command — handle async
+            const question = cmd.slice(4).trim();
+            if (!question) {
+                setHistory(prev => [...prev, { command: cmd, output: "Usage: ask <your question>" }]);
+                setInput("");
+                return;
+            }
+
+            // Add typing indicator
+            setHistory(prev => [...prev, { command: cmd, output: "✦ thinking..." }]);
+            setInput("");
+
+            sendAIMessage(question, "terminal").then(response => {
+                setHistory(prev => {
+                    const updated = [...prev];
+                    // Replace the last "thinking..." entry
+                    updated[updated.length - 1] = {
+                        command: cmd,
+                        output: (
+                            <div className="flex flex-col gap-1">
+                                <span className="text-accent text-xs font-bold">✦ AI RESPONSE:</span>
+                                <span className="text-gray-300">{response.reply}</span>
+                                {response.suggestion && (
+                                    <span className="text-text-muted text-xs mt-1">→ {response.suggestion}</span>
+                                )}
+                            </div>
+                        ),
+                    };
+                    return updated;
+                });
+            });
+            return;
         } else {
-            output = `Command not found: ${cmd}. Type 'help' for available commands.`;
+            output = `Command not found: ${cmd}. Type 'help' for available commands, or 'ask <question>' to use AI.`;
         }
 
         if (cmd !== "") {

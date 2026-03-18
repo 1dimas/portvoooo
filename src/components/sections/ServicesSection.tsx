@@ -89,15 +89,15 @@ export default function ServicesSection() {
                     className="text-center mb-20"
                 >
                     <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default">
-                        <ScrambleText text="Ekspertise Eksekusi" />
+                        <ScrambleText text="What I Build" />
                     </span>
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-6 tracking-wider uppercase text-text-primary cursor-default">
-                        <ScrambleText text="Arsitektur" /> <span className="text-accent underline decoration-4 underline-offset-8">
-                            <ScrambleText text="Solusi Digital" />
+                        <ScrambleText text="Digital" /> <span className="text-accent underline decoration-4 underline-offset-8">
+                            <ScrambleText text="Services" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary font-medium text-lg max-w-2xl mx-auto leading-relaxed uppercase tracking-widest">
-                        Bukan sekadar menulis kode. Saya membangun infrastruktur digital berkekuatan tinggi untuk mendominasi pasar.
+                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                        End-to-end solutions from design to deployment. Performance-focused web applications built for real business impact.
                     </p>
                 </motion.div>
 
