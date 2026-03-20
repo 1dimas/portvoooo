@@ -2,7 +2,6 @@
  * Guide prompt — injects real portfolio data for hero context.
  */
 
-// Real project data injected into prompt
 const PORTFOLIO_DATA = {
   projects: [
     {

@@ -2,11 +2,12 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { sendAIMessage } from "@/lib/ai";
+import { sendAIMessage } from "@/lib/ai/ai";
 
 interface Message {
     role: "user" | "ai";
     text: string;
+    suggestion?: string;
 }
 
 const QUICK_ACTIONS = [
@@ -20,7 +21,6 @@ export default function AIHeroGuide() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [suggestion, setSuggestion] = useState<string | undefined>();
     const scrollRef = useRef<HTMLDivElement>(null);
 
     // Auto-scroll to bottom
@@ -51,8 +51,7 @@ export default function AIHeroGuide() {
                 impact: detail.impact,
             });
 
-            setMessages(prev => [...prev, { role: "ai", text: response.reply }]);
-            setSuggestion(response.suggestion);
+            setMessages(prev => [...prev, { role: "ai", text: response.reply, suggestion: response.suggestion }]);
             setIsLoading(false);
         };
 
@@ -67,7 +66,6 @@ export default function AIHeroGuide() {
         setMessages(prev => [...prev, userMsg]);
         setInput("");
         setIsLoading(true);
-        setSuggestion(undefined);
 
         // Build previous messages for memory
         const previousMessages = messages.slice(-4).map(m => ({
@@ -77,8 +75,7 @@ export default function AIHeroGuide() {
 
         const response = await sendAIMessage(message.trim(), "hero", undefined, previousMessages);
 
-        setMessages(prev => [...prev, { role: "ai", text: response.reply }]);
-        setSuggestion(response.suggestion);
+        setMessages(prev => [...prev, { role: "ai", text: response.reply, suggestion: response.suggestion }]);
         setIsLoading(false);
     };
 
@@ -176,18 +173,29 @@ export default function AIHeroGuide() {
 
                             {/* Chat messages */}
                             {messages.map((msg, i) => (
-                                <div
-                                    key={i}
-                                    className={`text-sm leading-relaxed ${
-                                        msg.role === "user"
-                                            ? "text-accent font-medium text-right"
-                                            : "text-text-primary"
-                                    }`}
-                                >
-                                    {msg.role === "ai" && (
-                                        <span className="text-accent text-xs mr-1">✦</span>
+                                <div key={i} className="flex flex-col gap-2">
+                                    <div
+                                        className={`text-sm leading-relaxed ${
+                                            msg.role === "user"
+                                                ? "text-accent font-medium text-right"
+                                                : "text-text-primary"
+                                        }`}
+                                    >
+                                        {msg.role === "ai" && (
+                                            <span className="text-accent text-xs mr-1">✦</span>
+                                        )}
+                                        {msg.text}
+                                    </div>
+                                    {msg.suggestion && (
+                                        <motion.button
+                                            initial={{ opacity: 0, y: 5 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            onClick={() => handleSuggestionClick(msg.suggestion!)}
+                                            className="px-3 py-1.5 bg-accent/10 border border-accent/20 text-accent text-[10px] font-mono uppercase tracking-wider hover:bg-accent/20 transition-colors rounded-sm w-fit self-start"
+                                        >
+                                            → {msg.suggestion}
+                                        </motion.button>
                                     )}
-                                    {msg.text}
                                 </div>
                             ))}
 
@@ -213,17 +221,6 @@ export default function AIHeroGuide() {
                                 </div>
                             )}
 
-                            {/* Smart Suggestion */}
-                            {suggestion && !isLoading && (
-                                <motion.button
-                                    initial={{ opacity: 0, y: 5 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    onClick={() => handleSuggestionClick(suggestion)}
-                                    className="mt-2 px-3 py-2 bg-accent/10 border border-accent/30 text-accent text-xs font-mono uppercase tracking-wider hover:bg-accent/20 transition-colors rounded-sm w-full text-left"
-                                >
-                                    → {suggestion}
-                                </motion.button>
-                            )}
                         </div>
 
                         {/* Input — SECONDARY (chat is secondary to actions) */}

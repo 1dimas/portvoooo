@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { sendAIMessage } from "@/lib/ai";
+import { sendAIMessage } from "@/lib/ai/ai";
 
 export default function TerminalOverlay() {
     const [isOpen, setIsOpen] = useState(false);
@@ -157,31 +157,24 @@ export default function TerminalOverlay() {
             setInput("");
             return;
         } else if (cmd.startsWith("ask ")) {
-            // AI command — handle async
             const question = cmd.slice(4).trim();
             if (!question) {
                 setHistory(prev => [...prev, { command: cmd, output: "Usage: ask <your question>" }]);
                 setInput("");
                 return;
             }
-
-            // Add typing indicator
             setHistory(prev => [...prev, { command: cmd, output: "✦ thinking..." }]);
             setInput("");
 
             sendAIMessage(question, "terminal").then(response => {
                 setHistory(prev => {
                     const updated = [...prev];
-                    // Replace the last "thinking..." entry
                     updated[updated.length - 1] = {
                         command: cmd,
                         output: (
                             <div className="flex flex-col gap-1">
                                 <span className="text-accent text-xs font-bold">✦ AI RESPONSE:</span>
                                 <span className="text-gray-300">{response.reply}</span>
-                                {response.suggestion && (
-                                    <span className="text-text-muted text-xs mt-1">→ {response.suggestion}</span>
-                                )}
                             </div>
                         ),
                     };

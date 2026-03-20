@@ -9,6 +9,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import TerminalOverlay from "@/components/TerminalOverlay";
 import AIHeroGuide from "@/components/AIHeroGuide";
 
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
