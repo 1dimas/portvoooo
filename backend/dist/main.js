@@ -7,11 +7,13 @@ async function bootstrap() {
     app.enableCors({
         origin: [
             'http://localhost:3000',
+            'http://localhost:3001',
             'https://portvoooo.vercel.app',
         ],
     });
-    await app.listen(3001);
-    console.log(`Backend is running on: ${await app.getUrl()}`);
+    const port = process.env.PORT || 3001;
+    await app.listen(port);
+    console.log(`Backend is running on port: ${port}`);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

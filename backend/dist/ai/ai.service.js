@@ -19,7 +19,7 @@ const terminal_prompt_1 = require("./prompts/terminal.prompt");
 let AiService = class AiService {
     configService;
     apiKey;
-    apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+    apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
     constructor(configService) {
         this.configService = configService;
         this.apiKey = this.configService.get('GEMINI_API_KEY');
