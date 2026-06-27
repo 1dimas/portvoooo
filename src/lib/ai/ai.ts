@@ -56,14 +56,18 @@ export async function sendAIMessage(
   }
 
   try {
-    const response = await fetch('/api/ai', {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+    const response = await fetch(`${apiUrl}/ai`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         feature,
         message,
         context,
-        previousMessages,
+        history: previousMessages?.map(msg => ({
+          role: msg.role === 'user' ? 'user' : 'model',
+          parts: [{ text: msg.text }],
+        })),
       }),
     });
 

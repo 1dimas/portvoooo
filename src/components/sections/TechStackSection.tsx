@@ -43,7 +43,7 @@ const techRow2: TechItem[] = [
 function TechIcon({ item }: { item: TechItem }) {
     return (
         <div className="flex flex-col items-center gap-4 px-8 md:px-12 group cursor-default pointer-events-auto">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-none flex items-center justify-center text-text-secondary border-2 border-border group-hover:text-accent group-hover:border-accent group-hover:-translate-y-2 transition-all duration-500 relative overflow-hidden pointer-events-none">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-none flex items-center justify-center text-text-secondary border-2 border-border group-hover:text-accent group-hover:border-accent group-hover:scale-[1.08] transition-all duration-500 relative overflow-hidden pointer-events-none">
                 {/* Icon wrapper to ensure uniform sizing */}
                 <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14">
                     <svg role="img" viewBox="0 0 24 24" className="w-10 h-10" fill="currentColor">
@@ -87,7 +87,7 @@ export default function TechStackSection() {
                 </motion.div>
 
                 {/* Marquee Rows */}
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-8 py-4">
                     <InfiniteMarquee speed={120}>
                         {techRow1.map((tech) => (
                             <TechIcon key={tech.name} item={tech} />
