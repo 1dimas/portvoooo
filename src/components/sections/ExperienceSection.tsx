@@ -1,7 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView, useScroll, useSpring } from "framer-motion";
 import ScrambleText from "@/components/ScrambleText";
+import CountUp from "@/components/reactbits/CountUp";
 import { experiences, type Experience } from "@/data/experience";
 
 /**
@@ -22,34 +24,56 @@ function getTypeClasses(type: Experience["type"]) {
     }
 }
 
-function ExperienceItem({
-    exp,
-    index,
-    isLast,
-}: {
-    exp: Experience;
-    index: number;
-    isLast: boolean;
-}) {
+/** Angka kunci — hook visual supaya pembaca berhenti dulu sebelum membaca isinya */
+function StatRow({ stats }: { stats: NonNullable<Experience["stats"]> }) {
+    return (
+        <div className="grid grid-cols-3 border-2 border-border divide-x-2 divide-border mt-5">
+            {stats.map((stat) => (
+                <div key={stat.label} className="py-4 px-2 text-center">
+                    {/* CountUp mengisi angka secara imperatif — sediakan teks utuh untuk screen reader */}
+                    <span className="sr-only">
+                        {stat.value}
+                        {stat.suffix} {stat.label}
+                    </span>
+                    <span
+                        aria-hidden
+                        className="block font-heading font-black text-3xl md:text-5xl text-accent leading-none tabular-nums"
+                    >
+                        <CountUp to={stat.value} duration={1.6} />
+                        {stat.suffix}
+                    </span>
+                    <span
+                        aria-hidden
+                        className="block text-[10px] font-mono uppercase tracking-widest text-text-muted mt-2"
+                    >
+                        {stat.label}
+                    </span>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+function ExperienceItem({ exp, index }: { exp: Experience; index: number }) {
+    const itemRef = useRef<HTMLLIElement>(null);
+    // Node menyala begitu entry-nya masuk area baca, lalu tetap menyala.
+    const isReached = useInView(itemRef, { once: true, margin: "0px 0px -35% 0px" });
+
     return (
         <motion.li
+            ref={itemRef}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
             className="relative pl-8 md:pl-12 pb-10 last:pb-0"
         >
-            {/* Timeline rail — omitted on the final item so the line stops at the last node */}
-            {!isLast && (
-                <span
-                    aria-hidden
-                    className="absolute left-[7px] top-4 bottom-0 w-px bg-border"
-                />
-            )}
-            {/* Node */}
+            {/* Node timeline */}
             <span
                 aria-hidden
-                className="absolute left-0 top-2.5 w-3.5 h-3.5 border-2 border-accent bg-bg-primary rotate-45"
+                className={`absolute left-0 top-2.5 w-3.5 h-3.5 border-2 rotate-45 transition-colors duration-500 ${
+                    isReached ? "bg-accent border-accent" : "bg-bg-primary border-border"
+                }`}
             />
 
             <article className="group bg-bg-card border-2 border-border p-5 md:p-6 transition-all duration-300 hover:border-accent hover:shadow-[-4px_4px_0px_0px_var(--color-accent)]">
@@ -86,8 +110,10 @@ function ExperienceItem({
                     {exp.description}
                 </p>
 
+                {exp.stats && exp.stats.length > 0 && <StatRow stats={exp.stats} />}
+
                 {exp.highlights.length > 0 && (
-                    <ul className="mt-4 space-y-2">
+                    <ul className="mt-5 space-y-2">
                         {exp.highlights.map((point) => (
                             <li
                                 key={point}
@@ -148,6 +174,19 @@ function ExperienceItem({
 }
 
 export default function ExperienceSection() {
+    const listRef = useRef<HTMLOListElement>(null);
+
+    // Rail terisi mengikuti posisi scroll — memberi rasa maju tanpa menyentuh teks.
+    const { scrollYProgress } = useScroll({
+        target: listRef,
+        offset: ["start 70%", "end 70%"],
+    });
+    const railProgress = useSpring(scrollYProgress, {
+        stiffness: 120,
+        damping: 30,
+        restDelta: 0.001,
+    });
+
     return (
         <section id="experience" className="relative section-container">
             <div className="absolute inset-0 bg-bg-primary" />
@@ -177,14 +216,20 @@ export default function ExperienceSection() {
                 </motion.div>
 
                 {/* Timeline */}
-                <ol className="relative">
+                <ol ref={listRef} className="relative">
+                    {/* Track statis */}
+                    <span
+                        aria-hidden
+                        className="absolute left-[7px] top-4 bottom-4 w-0.5 bg-border"
+                    />
+                    {/* Isian yang mengikuti scroll */}
+                    <motion.span
+                        aria-hidden
+                        style={{ scaleY: railProgress }}
+                        className="absolute left-[7px] top-4 bottom-4 w-0.5 bg-accent origin-top"
+                    />
                     {experiences.map((exp, index) => (
-                        <ExperienceItem
-                            key={exp.id}
-                            exp={exp}
-                            index={index}
-                            isLast={index === experiences.length - 1}
-                        />
+                        <ExperienceItem key={exp.id} exp={exp} index={index} />
                     ))}
                 </ol>
             </div>

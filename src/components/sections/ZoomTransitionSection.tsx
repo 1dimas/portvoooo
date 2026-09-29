@@ -1,12 +1,22 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function ZoomTransitionSection() {
     const containerRef = useRef<HTMLElement>(null);
-    // Detect mobile for reduced animation
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+    // Zoom dikurangi di layar kecil. Dibaca lewat matchMedia + listener supaya
+    // ikut berubah saat rotate/resize, dan tidak menyentuh `window` saat render.
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const mq = window.matchMedia("(max-width: 767px)");
+        const sync = (e: MediaQueryList | MediaQueryListEvent) => setIsMobile(e.matches);
+        sync(mq);
+        mq.addEventListener("change", sync);
+        return () => mq.removeEventListener("change", sync);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
@@ -27,7 +37,7 @@ export default function ZoomTransitionSection() {
                     className="relative z-10 origin-center flex items-center justify-center px-4"
                 >
                     <h2 className="text-[clamp(3rem,8vw,10rem)] font-heading uppercase text-text-primary text-center leading-[0.8] tracking-tighter m-0 p-0">
-                        BEYOND<br />THE CODE
+                        UNDER<br />THE HOOD
                     </h2>
                 </motion.div>
 

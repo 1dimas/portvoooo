@@ -16,6 +16,8 @@ import {
     siNestjs,
     siExpress,
     siMysql,
+    siSupabase,
+    siMariadb,
 } from "simple-icons";
 
 interface TechItem {
@@ -35,7 +37,9 @@ const techRow1: TechItem[] = [
 const techRow2: TechItem[] = [
     { name: "Express", icon: siExpress.path },
     { name: "PHP", icon: siPhp.path },
+    { name: "Supabase", icon: siSupabase.path },
     { name: "PostgreSQL", icon: siPostgresql.path },
+    { name: "MariaDB", icon: siMariadb.path },
     { name: "MySQL", icon: siMysql.path },
     { name: "Prisma", icon: siPrisma.path },
 ];

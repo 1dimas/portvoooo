@@ -13,6 +13,8 @@ export interface Experience {
     highlights: string[];
     /** Modul/fitur dalam sistem — dirender sebagai chip grid, bukan bullet */
     modules?: string[];
+    /** Angka kunci — dirender sebagai stat row dengan animasi hitung naik */
+    stats?: { value: number; suffix?: string; label: string }[];
     tech: string[];
 }
 
@@ -40,7 +42,7 @@ export const experiences: Experience[] = [
         period: "2024",
         type: "Internship",
         description:
-            "Membangun platform e-commerce lengkap dari nol sebagai proyek PKL industri — mencakup keseluruhan alur belanja, dari katalog produk sampai pembayaran terotomasi, dikerjakan hingga seluruh alur berfungsi penuh di lingkungan pengembangan.",
+            "Membangun platform e-commerce lengkap dari nol sebagai proyek PKL industri — dari katalog produk sampai pembayaran terotomasi, dikerjakan hingga seluruh alur berfungsi penuh di lingkungan pengembangan.",
         highlights: [
             "Membangun platform e-commerce end-to-end: katalog produk, keranjang, checkout, hingga alur pemesanan",
             "Mengintegrasikan payment gateway Midtrans sehingga transaksi dapat diverifikasi dan diproses otomatis tanpa konfirmasi manual",
@@ -70,14 +72,17 @@ export const experiences: Experience[] = [
         type: "Full-time",
         confidential: true,
         description:
-            "Bergabung di divisi IT yang baru dibentuk, mengembangkan dan memelihara ERP internal perusahaan bersama tim. Fokus utama pada integrasi AI, migrasi database, dan infrastruktur server yang menjalankan sistem di produksi.",
+            "Developer di divisi IT yang baru dibentuk. Fokus pada integrasi AI, migrasi database, dan infrastruktur server yang menjalankan ERP perusahaan di produksi.",
+        stats: [
+            { value: 14, label: "Modul" },
+            { value: 80, label: "Karyawan" },
+            { value: 35, label: "Level Role" },
+        ],
         highlights: [
-            "Mengembangkan dan memelihara ERP internal 14 modul bersama tim — sistem produksi yang digunakan 80 karyawan dengan 35 level hak akses berbeda",
-            "Mengintegrasikan asisten AI berbasis DeepSeek yang terhubung ke data operasional — mampu menjawab pertanyaan lintas modul (absensi, inventaris, penjualan), menyusun laporan, dan memberi rekomendasi berbasis data aktual",
-            "Memimpin migrasi database dari Supabase ke PostgreSQL self-hosted, memindahkan operasional perusahaan ke infrastruktur mandiri",
-            "Menyiapkan dan mengelola mini server Linux sebagai host sistem internal, menangani deployment serta maintenance di level SQL maupun sistem operasi",
-            "Menjaga sistem tetap stabil di produksi lewat optimasi query dan perbaikan berkelanjutan pada modul yang sudah berjalan",
-            "Bekerja dengan pola arsitektur yang konsisten (Next.js + Supabase) sehingga penambahan modul baru dapat dilakukan cepat tanpa mengorbankan keseragaman sistem",
+            "Mengembangkan dan memelihara ERP internal bersama tim — sistem produksi yang dipakai seluruh divisi perusahaan",
+            "Mengintegrasikan asisten AI DeepSeek yang terhubung ke data operasional: menjawab pertanyaan lintas modul, menyusun laporan, dan memberi rekomendasi",
+            "Memimpin migrasi database dari Supabase ke PostgreSQL self-hosted",
+            "Menyiapkan dan mengelola mini server Linux sebagai host sistem — menangani deployment serta optimasi query di produksi",
         ],
         modules: [
             "Akuntansi & Cashflow",
