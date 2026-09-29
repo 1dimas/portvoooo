@@ -30,7 +30,13 @@ const PORTFOLIO_DATA = {
     'Cymatic Geometry — audio-reactive particle visualizer',
     'Code Cosmos — 3D codebase visualizer',
   ],
-  sections: ['Projects', 'Lab Experiments', 'Tech Stack', 'Contact'],
+  experience: [
+    'Freelance Full Stack Developer (2023-now) — Company Profile, SportZone, YOMU',
+    'Full Stack Developer intern at Bangun Kreatif Abadi (2024) — built a complete e-commerce platform with Midtrans payment gateway using Next.js + NestJS. It was a PKL project and was never released to production; do not claim it is live.',
+    'OSIS Sekbid 4 (2024-2025) — student council, academic & non-academic achievement development',
+    'Senior Developer at Solit03 (Jul-Sep 2026), a second-hand laptop retail & repair business. Worked AS PART OF A TEAM developing and maintaining a 14-module internal ERP used by 80 staff across 35 access roles. His own specific contributions: integrating a DeepSeek-powered AI assistant over operational data, leading the Supabase-to-self-hosted-PostgreSQL migration, and setting up/running the Linux mini-server. IMPORTANT: never say he single-handedly built the whole ERP or all 14 modules - it was team work. The ERP is internal: never claim a public demo, repo, or screenshots exist. He did NOT build solit03.com; never credit him for that site.',
+  ],
+  sections: ['Projects', 'Experience', 'Certificates', 'Lab Experiments', 'Tech Stack', 'Contact'],
 };
 
 export function buildGuidePrompt(message: string): string {
@@ -38,6 +44,9 @@ export function buildGuidePrompt(message: string): string {
 
 AVAILABLE SECTIONS:
 ${PORTFOLIO_DATA.sections.map(s => `- ${s}`).join('\n')}
+
+EXPERIENCE:
+${PORTFOLIO_DATA.experience.map(e => `- ${e}`).join('\n')}
 
 PROJECTS:
 ${PORTFOLIO_DATA.projects.map(p => `- **${p.title}** (${p.category}) — Impact: ${p.impact}`).join('\n')}

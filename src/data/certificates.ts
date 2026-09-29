@@ -21,7 +21,7 @@ export const certificates: Certificate[] = [
         description:
             "Sertifikasi dasar yang memvalidasi pemahaman tentang konsep data inti, data relasional dan non-relasional di cloud, serta analitik beban kerja menggunakan Microsoft Azure.",
         category: "Cloud & Data",
-        image: "/image/SERTIFIKAT/azure data fundamental.jpg",
+        image: "/image/SERTIFIKAT/azure-data-fundamentals.jpg",
         span: "large",
         credentialUrl: "https://learn.microsoft.com/credentials/browse/",
     },
@@ -33,7 +33,7 @@ export const certificates: Certificate[] = [
         description:
             "Sertifikasi kompetensi global yang memvalidasi keahlian teknis tingkat lanjut dalam menggunakan aplikasi produktivitas kantor Microsoft Office.",
         category: "Productivity",
-        image: "/image/SERTIFIKAT/Microsoft Office Specialist.jpg",
+        image: "/image/SERTIFIKAT/microsoft-office-specialist.jpg",
         span: "medium",
     },
     {
@@ -44,7 +44,7 @@ export const certificates: Certificate[] = [
         description:
             "Sertifikat penyelesaian program Praktik Kerja Lapangan (PKL) industri sebagai bukti kompetensi dan pengalaman kerja praktis langsung di lapangan.",
         category: "Experience",
-        image: "/image/SERTIFIKAT/PKL.jpg",
+        image: "/image/SERTIFIKAT/pkl.jpg",
         span: "large",
     },
     {
@@ -55,7 +55,7 @@ export const certificates: Certificate[] = [
         description:
             "Penghargaan atas kontribusi penting dalam perancangan, pengembangan, dan implementasi aplikasi SISFOSARPRAS untuk digitalisasi manajemen aset sekolah.",
         category: "Web Development",
-        image: "/image/SERTIFIKAT/SISFOSARPRAS.jpg",
+        image: "/image/SERTIFIKAT/sisfosarpras.jpg",
         span: "medium",
     },
     {
@@ -66,7 +66,7 @@ export const certificates: Certificate[] = [
         description:
             "Sertifikat kepengurusan aktif OSIS periode 2024/2025 atas kontribusi kepemimpinan, kepanitiaan, dan dedikasi penuh dalam berbagai kegiatan sekolah.",
         category: "Leadership",
-        image: "/image/SERTIFIKAT/Sertifikat Organisasi Intra Sekolah_2025",
+        image: "/image/SERTIFIKAT/osis-2025.jpg",
         span: "small",
     },
     {
@@ -77,7 +77,7 @@ export const certificates: Certificate[] = [
         description:
             "Hasil resmi pengukuran profil psikologi menggunakan model DISC untuk menilai gaya perilaku (Dominance, Influence, Steadiness, Conscientiousness).",
         category: "Soft Skills",
-        image: "/image/SERTIFIKAT/DISC.jpg",
+        image: "/image/SERTIFIKAT/disc-assessment.jpg",
         span: "small",
     },
     {
@@ -88,8 +88,8 @@ export const certificates: Certificate[] = [
         description:
             "Sertifikat kompetensi keahlian resmi yang menyatakan tingkat kompetensi teknis yang diakui secara nasional berdasarkan standar kerja yang berlaku.",
         category: "Competency",
-        image: "/image/SERTIFIKAT/certificate of copetency.jpg",
-        backImage: "/image/SERTIFIKAT/tampak belakang certificate of company.jpg",
+        image: "/image/SERTIFIKAT/certificate-of-competency.jpg",
+        backImage: "/image/SERTIFIKAT/certificate-of-competency-back.jpg",
         span: "medium",
     },
 ];

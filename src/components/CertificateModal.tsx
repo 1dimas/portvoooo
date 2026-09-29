@@ -12,19 +12,28 @@ interface CertificateModalProps {
 
 /** Retro/Cyberpunk image component with skeleton loader and hover zoom */
 function CertificateImage({ src, alt }: { src: string; alt: string }) {
-    const [isLoading, setIsLoading] = useState(true);
+    const [status, setStatus] = useState<"loading" | "loaded" | "error">("loading");
 
     useEffect(() => {
-        setIsLoading(true);
+        setStatus("loading");
     }, [src]);
 
     return (
         <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[360px] bg-black/40 overflow-hidden flex items-center justify-center border border-border/30 rounded-sm">
-            {isLoading && (
+            {status === "loading" && (
                 <div className="absolute inset-0 flex items-center justify-center bg-bg-card z-10">
                     <div className="flex flex-col items-center gap-2">
                         <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
                         <span className="text-[10px] font-mono text-text-muted tracking-widest uppercase">LOADING DECRYPTED IMAGE</span>
+                    </div>
+                </div>
+            )}
+            {status === "error" && (
+                <div className="absolute inset-0 flex items-center justify-center bg-bg-card z-10 px-4">
+                    <div className="flex flex-col items-center gap-2 text-center">
+                        <span className="text-2xl text-accent">⚠</span>
+                        <span className="text-[10px] font-mono text-accent tracking-widest uppercase">DECRYPTION FAILED</span>
+                        <span className="text-[10px] font-mono text-text-muted break-all">{src.split("?")[0]}</span>
                     </div>
                 </div>
             )}
@@ -33,7 +42,8 @@ function CertificateImage({ src, alt }: { src: string; alt: string }) {
                 src={src}
                 alt={alt}
                 className="w-full h-full object-contain transition-transform duration-500 hover:scale-102"
-                onLoad={() => setIsLoading(false)}
+                onLoad={() => setStatus("loaded")}
+                onError={() => setStatus("error")}
             />
             {/* Light scanline effect on image */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_4px,3px_100%]" />

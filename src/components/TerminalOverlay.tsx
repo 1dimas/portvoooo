@@ -116,6 +116,8 @@ export default function TerminalOverlay() {
                     <span className="font-bold text-white mb-2">INITIATING SECURE CONNECTION...</span>
                     <span>Email: <a href="mailto:dimasdwianandaputra@gmail.com" className="text-blue-400 hover:underline">dimasdwianandaputra@gmail.com</a></span>
                     <span>WhatsApp: <a href="https://wa.me/628998076063" className="text-green-400 hover:underline">08998076063</a></span>
+                    <span>LinkedIn: <a href="https://www.linkedin.com/in/dimas-dwi-ananda-putra-4224a9298" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">linkedin.com/in/dimas-dwi-ananda-putra</a></span>
+                    <span>GitHub: <a href="https://github.com/1dimas" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">github.com/1dimas</a></span>
                     <span className="text-text-muted italic mt-2">Status: Waiting for ping...</span>
                 </div>
             );

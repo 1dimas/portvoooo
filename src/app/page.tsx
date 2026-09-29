@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
 import CertificatesSection from "@/components/sections/CertificatesSection";
 import ZoomTransitionSection from "@/components/sections/ZoomTransitionSection";
 import TechStackSection from "@/components/sections/TechStackSection";
@@ -17,6 +18,8 @@ export default function Home() {
       <ServicesSection />
       <div className="h-16 md:h-48" />
       <ProjectsSection />
+      <div className="h-16 md:h-48" />
+      <ExperienceSection />
       <div className="h-16 md:h-48" />
       <CertificatesSection />
       <div className="h-16 md:h-48" />
