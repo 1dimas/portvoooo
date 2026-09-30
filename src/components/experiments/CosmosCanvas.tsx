@@ -41,7 +41,7 @@ interface CosmosCanvasProps {
     timeScale: number;
 }
 
-export default function CosmosCanvas({ data, bloomEnabled, onNodeSelect, viewMode, timeScale }: CosmosCanvasProps) {
+export default function CosmosCanvas({ data, bloomEnabled, onNodeSelect, timeScale }: CosmosCanvasProps) {
     // Generate star field locally so we don't re-render it unnecessarily
     const bgStars = useMemo(() => {
         return <Stars radius={100} depth={50} count={3000} factor={4} saturation={0} fade speed={1} />;

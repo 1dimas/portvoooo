@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, type ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
 import { SatelliteNode, PlanetNode } from './CosmosCanvas';
 
@@ -44,7 +44,7 @@ export function SatelliteFile({ file, onSelect, timeScale }: SatelliteFileProps)
         }
     });
 
-    const handleFileClick = (e: any) => {
+    const handleFileClick = (e: ThreeEvent<MouseEvent>) => {
         e.stopPropagation();
         onSelect(file);
     };

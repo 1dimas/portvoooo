@@ -1,9 +1,16 @@
-import React, { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import React, { useMemo, useRef } from 'react';
+import { useFrame, type ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
 import { SatelliteFile } from './SatelliteFile';
 import { PlanetNode, SatelliteNode } from './CosmosCanvas';
 import { Line } from '@react-three/drei';
+
+/** Hash stabil string -> hue 0..1, supaya warna planet konsisten antar render. */
+function hueFromId(id: string) {
+    let hash = 0;
+    for (let i = 0; i < id.length; i++) hash = (hash * 31 + id.charCodeAt(i)) | 0;
+    return (Math.abs(hash) % 360) / 360;
+}
 
 interface PlanetFolderProps {
     node: PlanetNode;
@@ -33,13 +40,17 @@ export function PlanetFolder({ node, isRoot = false, onSelect, timeScale }: Plan
         }
     });
 
-    const handlePlanetClick = (e: any) => {
+    const handlePlanetClick = (e: ThreeEvent<MouseEvent>) => {
         e.stopPropagation();
         onSelect(node);
     };
 
-    // Calculate dynamic color based on children count or depth
-    const planetColor = isRoot ? "#ffaa00" : new THREE.Color().setHSL(Math.random(), 0.8, 0.4);
+    // Warna diturunkan dari id folder, bukan Math.random(): satu folder selalu dapat
+    // warna yang sama, dan render tidak lagi memanggil fungsi impure.
+    const planetColor = useMemo(
+        () => (isRoot ? new THREE.Color("#ffaa00") : new THREE.Color().setHSL(hueFromId(node.id), 0.8, 0.4)),
+        [isRoot, node.id]
+    );
 
     return (
         <group ref={groupRef}>

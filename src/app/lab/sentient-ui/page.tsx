@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import MagneticButton from "@/components/MagneticButton";
 import { SentientProvider, useSentient } from "@/components/experiments/useSentient";
 import AdaptiveElement from "@/components/experiments/AdaptiveElement";
+import { useMounted } from "@/lib/useMounted";
 
 const DUMMY_LIBRARIES = [
     { id: "lib-react", name: "React", desc: "A JavaScript library for building user interfaces", category: "Frontend" },
@@ -178,11 +178,8 @@ function SentientDashboard() {
 }
 
 export default function SentientUIPage() {
-    const [isMounted, setIsMounted] = useState(false);
+    const isMounted = useMounted();
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     if (!isMounted) return null;
 

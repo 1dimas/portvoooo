@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import MagneticButton from "@/components/MagneticButton";
 import { PortalProvider, usePortalManager } from "@/components/experiments/PortalManager";
 import SyncEntity from "@/components/experiments/SyncEntity";
+import { useMounted } from "@/lib/useMounted";
 
 function PortalDashboard() {
     const {
@@ -133,11 +133,8 @@ function PortalDashboard() {
 }
 
 export default function CrossWindowPage() {
-    const [isMounted, setIsMounted] = useState(false);
+    const isMounted = useMounted();
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     if (!isMounted) return null;
 

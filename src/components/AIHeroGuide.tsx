@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { sendAIMessage } from "@/lib/ai/ai";
 
@@ -17,6 +18,7 @@ const QUICK_ACTIONS = [
 ];
 
 export default function AIHeroGuide() {
+    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
@@ -81,7 +83,7 @@ export default function AIHeroGuide() {
 
     const handleSuggestionClick = (sug: string) => {
         if (sug === "Explore Lab") {
-            window.location.href = "/lab";
+            router.push("/lab");
         } else if (sug === "View Projects") {
             document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
             setIsOpen(false);

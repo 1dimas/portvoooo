@@ -1,21 +1,17 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import MagneticButton from "./MagneticButton";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { playPop } from "@/utils/audio";
+import { useMounted } from "@/lib/useMounted";
 
 
 export default function ThemeToggle() {
-    const [mounted, setMounted] = useState(false);
+    const mounted = useMounted();
     const { theme, setTheme } = useTheme();
 
-    // Prevent hydration mismatch
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const pathname = usePathname();
 

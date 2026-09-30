@@ -6,12 +6,14 @@ import { useEffect, useRef, useState } from "react";
 import MagneticButton from "@/components/MagneticButton";
 import { GestureProvider, useGesture } from "@/components/experiments/GestureProvider";
 import VirtualCursor from "@/components/experiments/VirtualCursor";
+import { useMounted } from "@/lib/useMounted";
+
+const menuItems = ["Initialize", "Calibrate", "Access Mainframe", "Self Destruct"];
 
 const HolographicMenu = () => {
     const { isPinching, cursorPos, isReady } = useGesture();
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-    const menuItems = ["Initialize", "Calibrate", "Access Mainframe", "Self Destruct"];
 
     // A simple hit-test simulation since we aren't using real cursor events
     // Wait, the "VirtualCursor" is just a visual overlay. To make standard DOM elements
@@ -45,6 +47,9 @@ const HolographicMenu = () => {
             }
         }
 
+        // `hit` dihitung dari getBoundingClientRect(), yang baru valid setelah layout —
+        // jadi memang tidak bisa diturunkan saat render.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setHoveredItem(hit);
 
         // Simulate click
@@ -392,11 +397,8 @@ function NeuralDashboard() {
 }
 
 export default function NeuralGesturePage() {
-    const [isMounted, setIsMounted] = useState(false);
+    const isMounted = useMounted();
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     if (!isMounted) return null;
 

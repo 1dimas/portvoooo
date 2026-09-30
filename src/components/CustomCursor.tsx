@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useIsTouchDevice } from "@/lib/useMediaQuery";
 
 export default function CustomCursor() {
     const [isHovering, setIsHovering] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const [isTouchDevice, setIsTouchDevice] = useState(false);
+    const isTouchDevice = useIsTouchDevice();
 
     // High performance mouse tracking using Framer Motion values
     const mouseX = useMotionValue(-100);
@@ -18,11 +19,8 @@ export default function CustomCursor() {
     const cursorY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
-        // Detect mobile & touch devices
-        if (typeof window !== "undefined" && window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-            setIsTouchDevice(true);
-            return;
-        }
+        // Kursor kustom tidak masuk akal di perangkat sentuh.
+        if (isTouchDevice) return;
 
         // Hide default cursor globally
         document.body.style.cursor = "none";

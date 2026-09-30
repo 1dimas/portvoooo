@@ -43,9 +43,9 @@ function getStarColor(extension: string): THREE.Color {
     return c;
 }
 
-export function InstancedStars({ data, onStarClick, hoveredStarId }: InstancedStarsProps) {
+export function InstancedStars({ data, onStarClick }: InstancedStarsProps) {
     const meshRef = useRef<THREE.InstancedMesh>(null);
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [, setHoveredIndex] = useState<number | null>(null);
 
     // Precalculate matrices and colors
     // useMemo prevents recalculating positions on every re-render (e.g. when HUD changes)

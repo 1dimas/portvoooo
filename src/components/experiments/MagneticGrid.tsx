@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 // The types of visuals we can render in the grid
@@ -20,14 +20,13 @@ interface MagneticGridProps {
 const ASCII_CHARS = ['0', '1', '!', '@', '#', '$', '%', '&', '*', '+', '=', '?', '>', '<', '~'];
 
 function GridItem({
-    x, y,
     mouseX, mouseY,
     mode, visualMode,
     power, intensity,
     damping, stiffness
 }: {
     x: number, y: number,
-    mouseX: any, mouseY: any,
+    mouseX: MotionValue<number>, mouseY: MotionValue<number>,
     mode: "attract" | "repel",
     visualMode: VisualMode,
     power: number, intensity: number,

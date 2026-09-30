@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, ImageIcon, ExternalLink } from "lucide-react";
-import MagneticButton from "./MagneticButton";
 import Image from "next/image";
 import Link from "next/link";
 import { Project } from "@/data/projects";

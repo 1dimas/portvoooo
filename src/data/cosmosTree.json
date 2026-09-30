@@ -29,17 +29,17 @@
                   "path": "app/lab/adaptive-survivor/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 16.98,
-                  "orbitRadius": 4.272267505433564,
-                  "orbitAngle": 3.283548497499926,
-                  "orbitSpeed": 0.37064492216456635
+                  "sizeKb": 16.92,
+                  "orbitRadius": 3.092312033073512,
+                  "orbitAngle": 2.85242366483602,
+                  "orbitSpeed": 0.3714710252600297
                 }
               ],
               "radius": 1,
-              "orbitRadius": 31.065052442706403,
-              "orbitAngle": 1.9408580337223877,
-              "orbitSpeed": 0.05759881207721774,
-              "totalSizeKb": 16.98,
+              "orbitRadius": 47.42735453814391,
+              "orbitAngle": 5.564640072770337,
+              "orbitSpeed": 0.05553718287375563,
+              "totalSizeKb": 16.92,
               "hasRings": false
             },
             {
@@ -55,17 +55,17 @@
                   "path": "app/lab/chaos-desktop/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 7,
-                  "orbitRadius": 2.3842582535008967,
-                  "orbitAngle": 4.236237992250798,
-                  "orbitSpeed": 0.5882352941176471
+                  "sizeKb": 6.95,
+                  "orbitRadius": 4.156780827895224,
+                  "orbitAngle": 4.774289174562589,
+                  "orbitSpeed": -0.5899705014749262
                 }
               ],
               "radius": 1,
-              "orbitRadius": 37.7696828485071,
-              "orbitAngle": 4.616014966023013,
-              "orbitSpeed": 0.03903155354557178,
-              "totalSizeKb": 7,
+              "orbitRadius": 58.710686305401495,
+              "orbitAngle": 5.563944472601083,
+              "orbitSpeed": -0.022108880875131468,
+              "totalSizeKb": 6.95,
               "hasRings": false
             },
             {
@@ -81,17 +81,17 @@
                   "path": "app/lab/cross-window/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 7.64,
-                  "orbitRadius": 2.9829812295459908,
-                  "orbitAngle": 5.295700127126054,
-                  "orbitSpeed": -0.5668934240362812
+                  "sizeKb": 7.56,
+                  "orbitRadius": 4.452328445200052,
+                  "orbitAngle": 1.6124032516188458,
+                  "orbitSpeed": 0.5694760820045558
                 }
               ],
               "radius": 1,
-              "orbitRadius": 64.68431231650777,
-              "orbitAngle": 3.396702155752084,
-              "orbitSpeed": -0.013528448863337187,
-              "totalSizeKb": 7.64,
+              "orbitRadius": 38.81849016625835,
+              "orbitAngle": 0.0770844059844361,
+              "orbitSpeed": -0.028904727783887488,
+              "totalSizeKb": 7.56,
               "hasRings": false
             },
             {
@@ -108,15 +108,15 @@
                   "type": "file",
                   "extension": ".tsx",
                   "sizeKb": 10.87,
-                  "orbitRadius": 3.324006419346129,
-                  "orbitAngle": 3.646607265059895,
-                  "orbitSpeed": -0.47915668423574515
+                  "orbitRadius": 2.7961029953534684,
+                  "orbitAngle": 2.9472962526852027,
+                  "orbitSpeed": 0.47915668423574515
                 }
               ],
               "radius": 1,
-              "orbitRadius": 50.67330159162055,
-              "orbitAngle": 1.4063884011448864,
-              "orbitSpeed": 0.010359598677295991,
+              "orbitRadius": 54.475863099970574,
+              "orbitAngle": 4.030640788376968,
+              "orbitSpeed": -0.04408275680247598,
               "totalSizeKb": 10.87,
               "hasRings": false
             },
@@ -134,15 +134,15 @@
                   "type": "file",
                   "extension": ".tsx",
                   "sizeKb": 5.38,
-                  "orbitRadius": 4.5976685092558,
-                  "orbitAngle": 6.070176206309846,
-                  "orbitSpeed": 0.6501950585175553
+                  "orbitRadius": 2.71682716908227,
+                  "orbitAngle": 4.418198066205636,
+                  "orbitSpeed": -0.6501950585175553
                 }
               ],
               "radius": 1,
-              "orbitRadius": 38.81469462265686,
-              "orbitAngle": 4.2216640311966245,
-              "orbitSpeed": -0.05387418136392546,
+              "orbitRadius": 32.9016508960613,
+              "orbitAngle": 4.392780271175213,
+              "orbitSpeed": 0.01848677073441324,
               "totalSizeKb": 5.38,
               "hasRings": false
             },
@@ -159,17 +159,17 @@
                   "path": "app/lab/kinetic-typography/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 9.08,
-                  "orbitRadius": 4.5868408895753685,
-                  "orbitAngle": 2.3339991921158885,
-                  "orbitSpeed": -0.5241090146750524
+                  "sizeKb": 9.09,
+                  "orbitRadius": 2.9538844405559526,
+                  "orbitAngle": 3.3299593576469997,
+                  "orbitSpeed": 0.5238344683080147
                 }
               ],
               "radius": 1,
-              "orbitRadius": 56.505982553336636,
-              "orbitAngle": 3.1078211149615593,
-              "orbitSpeed": 0.05128213578769046,
-              "totalSizeKb": 9.08,
+              "orbitRadius": 37.7590174614983,
+              "orbitAngle": 5.312633737687948,
+              "orbitSpeed": 0.015771366485462648,
+              "totalSizeKb": 9.09,
               "hasRings": false
             },
             {
@@ -185,17 +185,17 @@
                   "path": "app/lab/magnetic-grid/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 10.48,
-                  "orbitRadius": 4.82094256710622,
-                  "orbitAngle": 3.840439985106276,
-                  "orbitSpeed": 0.48828125
+                  "sizeKb": 10.46,
+                  "orbitRadius": 4.906230394720102,
+                  "orbitAngle": 1.5111632630395233,
+                  "orbitSpeed": 0.48875855327468226
                 }
               ],
               "radius": 1,
-              "orbitRadius": 45.00474337684474,
-              "orbitAngle": 3.7045561346845357,
-              "orbitSpeed": -0.029257834284547986,
-              "totalSizeKb": 10.48,
+              "orbitRadius": 27.96719874225601,
+              "orbitAngle": 4.592057697831497,
+              "orbitSpeed": 0.01569159125357097,
+              "totalSizeKb": 10.46,
               "hasRings": false
             },
             {
@@ -211,17 +211,17 @@
                   "path": "app/lab/neural-gesture/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 18.32,
-                  "orbitRadius": 3.489469584310731,
-                  "orbitAngle": 3.8564199176964142,
-                  "orbitSpeed": -0.3531073446327684
+                  "sizeKb": 18.49,
+                  "orbitRadius": 3.0348846438092068,
+                  "orbitAngle": 4.826610198305709,
+                  "orbitSpeed": 0.35100035100035104
                 }
               ],
               "radius": 1,
-              "orbitRadius": 56.15758325098152,
-              "orbitAngle": 1.0832821069730258,
-              "orbitSpeed": -0.02497843772410702,
-              "totalSizeKb": 18.32,
+              "orbitRadius": 33.43849750714647,
+              "orbitAngle": 3.3404330071594464,
+              "orbitSpeed": 0.010654004876440951,
+              "totalSizeKb": 18.49,
               "hasRings": false
             },
             {
@@ -237,17 +237,17 @@
                   "path": "app/lab/sentient-ui/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 10.7,
-                  "orbitRadius": 3.7545714883234718,
-                  "orbitAngle": 3.234501653850777,
-                  "orbitSpeed": 0.48309178743961356
+                  "sizeKb": 10.62,
+                  "orbitRadius": 3.3718444554421185,
+                  "orbitAngle": 4.424523893445014,
+                  "orbitSpeed": 0.4849660523763337
                 }
               ],
               "radius": 1,
-              "orbitRadius": 22.354860411835304,
-              "orbitAngle": 5.412014012672496,
-              "orbitSpeed": 0.049080077982422116,
-              "totalSizeKb": 10.7,
+              "orbitRadius": 56.489785745605715,
+              "orbitAngle": 3.885611460196354,
+              "orbitSpeed": -0.03585268395179792,
+              "totalSizeKb": 10.62,
               "hasRings": false
             }
           ],
@@ -259,16 +259,16 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 5.24,
-              "orbitRadius": 3.485468227850503,
-              "orbitAngle": 3.557342368319379,
+              "orbitRadius": 4.874648258620982,
+              "orbitAngle": 2.0676443362671306,
               "orbitSpeed": 0.6561679790026247
             }
           ],
           "radius": 1.5811388300841898,
-          "orbitRadius": 58.577509650180666,
-          "orbitAngle": 0.07905088982088032,
-          "orbitSpeed": -0.05589087470182096,
-          "totalSizeKb": 101.69,
+          "orbitRadius": 34.84858104087729,
+          "orbitAngle": 0.7873954786994358,
+          "orbitSpeed": 0.057511742248037005,
+          "totalSizeKb": 101.58,
           "hasRings": false
         },
         {
@@ -290,26 +290,26 @@
                   "path": "app/projects/[slug]/page.tsx",
                   "type": "file",
                   "extension": ".tsx",
-                  "sizeKb": 7.35,
-                  "orbitRadius": 3.3039491019974676,
-                  "orbitAngle": 5.721868534813449,
-                  "orbitSpeed": 0.5763688760806917
+                  "sizeKb": 7.36,
+                  "orbitRadius": 2.288804697160616,
+                  "orbitAngle": 4.148181662993833,
+                  "orbitSpeed": -0.5760368663594471
                 }
               ],
               "radius": 1,
-              "orbitRadius": 25.079593149652705,
-              "orbitAngle": 5.990311839102038,
-              "orbitSpeed": 0.059517691591560624,
-              "totalSizeKb": 7.35,
+              "orbitRadius": 21.85465117079673,
+              "orbitAngle": 3.6305307544069625,
+              "orbitSpeed": 0.013436514992529593,
+              "totalSizeKb": 7.36,
               "hasRings": false
             }
           ],
           "satelliteFiles": [],
           "radius": 1,
-          "orbitRadius": 45.67152589279598,
-          "orbitAngle": 1.860842032519934,
-          "orbitSpeed": 0.04146329768265497,
-          "totalSizeKb": 7.35,
+          "orbitRadius": 59.05848970541287,
+          "orbitAngle": 2.7337266989253473,
+          "orbitSpeed": -0.05357433597350818,
+          "totalSizeKb": 7.36,
           "hasRings": false
         }
       ],
@@ -321,9 +321,9 @@
           "type": "file",
           "extension": ".css",
           "sizeKb": 7.47,
-          "orbitRadius": 4.329575974913657,
-          "orbitAngle": 5.062990494368102,
-          "orbitSpeed": -0.5724098454493418
+          "orbitRadius": 4.62228557686034,
+          "orbitAngle": 3.461975349483354,
+          "orbitSpeed": 0.5724098454493418
         },
         {
           "id": "app/icon.svg",
@@ -332,9 +332,9 @@
           "type": "file",
           "extension": ".svg",
           "sizeKb": 0.4,
-          "orbitRadius": 3.6525693448783048,
-          "orbitAngle": 5.928332787495319,
-          "orbitSpeed": -0.9615384615384615
+          "orbitRadius": 5.204201175729332,
+          "orbitAngle": 1.2768086584174445,
+          "orbitSpeed": 0.9615384615384615
         },
         {
           "id": "app/layout.tsx",
@@ -343,8 +343,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 2.05,
-          "orbitRadius": 2.659158897835144,
-          "orbitAngle": 3.5232829397277357,
+          "orbitRadius": 4.748772947981989,
+          "orbitAngle": 2.679487298419382,
           "orbitSpeed": 0.8298755186721991
         },
         {
@@ -354,8 +354,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 3.09,
-          "orbitRadius": 5.772120996955007,
-          "orbitAngle": 6.055607736058646,
+          "orbitRadius": 4.062919805404387,
+          "orbitAngle": 3.719091669339797,
           "orbitSpeed": -0.7639419404125286
         },
         {
@@ -365,8 +365,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 1.46,
-          "orbitRadius": 3.603281982358117,
-          "orbitAngle": 4.535432157782259,
+          "orbitRadius": 5.301101228427184,
+          "orbitAngle": 3.9867990797385073,
           "orbitSpeed": -0.8726003490401395
         },
         {
@@ -376,16 +376,16 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 0.46,
-          "orbitRadius": 3.9636254350297513,
-          "orbitAngle": 0.36768097523776905,
-          "orbitSpeed": 0.9560229445506692
+          "orbitRadius": 4.878564687744292,
+          "orbitAngle": 5.789392771770593,
+          "orbitSpeed": -0.9560229445506692
         }
       ],
       "radius": 1.4142135623730951,
-      "orbitRadius": 47.13088489514439,
-      "orbitAngle": 4.918475462866991,
-      "orbitSpeed": -0.050053156381978776,
-      "totalSizeKb": 123.97,
+      "orbitRadius": 44.07783714116678,
+      "orbitAngle": 4.916817874789319,
+      "orbitSpeed": -0.05147371890242058,
+      "totalSizeKb": 123.87,
       "hasRings": true
     },
     {
@@ -408,9 +408,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 5.09,
-              "orbitRadius": 3.702480913325874,
-              "orbitAngle": 3.8202050873280027,
-              "orbitSpeed": -0.6626905235255136
+              "orbitRadius": 2.2500971728459325,
+              "orbitAngle": 4.613887271168768,
+              "orbitSpeed": 0.6626905235255136
             },
             {
               "id": "components/animations/TextReveal.tsx",
@@ -419,15 +419,15 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 1.46,
-              "orbitRadius": 4.622674180377532,
-              "orbitAngle": 4.4771988172460375,
+              "orbitRadius": 3.799971567256635,
+              "orbitAngle": 2.448866169334115,
               "orbitSpeed": -0.8726003490401395
             }
           ],
           "radius": 1,
-          "orbitRadius": 27.67830734361068,
-          "orbitAngle": 2.3215526768201658,
-          "orbitSpeed": 0.016819953657168322,
+          "orbitRadius": 37.5613108977489,
+          "orbitAngle": 1.5544665955992996,
+          "orbitSpeed": -0.054367829095212476,
           "totalSizeKb": 6.55,
           "hasRings": false
         },
@@ -445,8 +445,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 5.6,
-              "orbitRadius": 3.8384866501420074,
-              "orbitAngle": 3.048823254192356,
+              "orbitRadius": 3.930427087320214,
+              "orbitAngle": 3.203127114323958,
               "orbitSpeed": -0.6410256410256411
             },
             {
@@ -456,9 +456,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 3.71,
-              "orbitRadius": 5.168116181178611,
-              "orbitAngle": 4.954545544059448,
-              "orbitSpeed": -0.7293946024799416
+              "orbitRadius": 3.0252260436832876,
+              "orbitAngle": 3.8097953106112548,
+              "orbitSpeed": 0.7293946024799416
             },
             {
               "id": "components/experiments/AudioEngine.ts",
@@ -467,8 +467,8 @@
               "type": "file",
               "extension": ".ts",
               "sizeKb": 4.44,
-              "orbitRadius": 3.5098098260008515,
-              "orbitAngle": 3.316308350170685,
+              "orbitRadius": 5.2616696842765975,
+              "orbitAngle": 5.291551796011293,
               "orbitSpeed": -0.6925207756232686
             },
             {
@@ -478,8 +478,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 10.49,
-              "orbitRadius": 4.171299953752016,
-              "orbitAngle": 0.34846689714394835,
+              "orbitRadius": 5.424076699323284,
+              "orbitAngle": 0.753129545292894,
               "orbitSpeed": -0.48804294777940455
             },
             {
@@ -488,10 +488,10 @@
               "path": "components/experiments/CosmosCanvas.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 3.26,
-              "orbitRadius": 4.781272101424511,
-              "orbitAngle": 1.3315379844303523,
-              "orbitSpeed": 0.7541478129713424
+              "sizeKb": 3.25,
+              "orbitRadius": 3.2319808234142817,
+              "orbitAngle": 3.6506532683626194,
+              "orbitSpeed": 0.7547169811320755
             },
             {
               "id": "components/experiments/CosmosController.tsx",
@@ -500,9 +500,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 3.44,
-              "orbitRadius": 4.520753890461776,
-              "orbitAngle": 3.904769927314548,
-              "orbitSpeed": -0.7440476190476191
+              "orbitRadius": 3.4886200477544502,
+              "orbitAngle": 1.522140043292954,
+              "orbitSpeed": 0.7440476190476191
             },
             {
               "id": "components/experiments/CymaticCanvas.tsx",
@@ -511,9 +511,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 9.83,
-              "orbitRadius": 3.4730793190151923,
-              "orbitAngle": 6.175387914234839,
-              "orbitSpeed": 0.5042864346949067
+              "orbitRadius": 4.039659870578923,
+              "orbitAngle": 0.3437079998115118,
+              "orbitSpeed": -0.5042864346949067
             },
             {
               "id": "components/experiments/FrequencyMapper.ts",
@@ -522,8 +522,8 @@
               "type": "file",
               "extension": ".ts",
               "sizeKb": 6.03,
-              "orbitRadius": 5.279120282846888,
-              "orbitAngle": 0.957183980501087,
+              "orbitRadius": 5.467019439931288,
+              "orbitAngle": 1.499191751868862,
               "orbitSpeed": -0.6238303181534622
             },
             {
@@ -532,10 +532,10 @@
               "path": "components/experiments/GalaxyCanvas.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 6.26,
-              "orbitRadius": 6.460279591400374,
-              "orbitAngle": 2.3202227953670107,
-              "orbitSpeed": 0.6150061500615007
+              "sizeKb": 6.23,
+              "orbitRadius": 5.459612795737073,
+              "orbitAngle": 5.873414263426571,
+              "orbitSpeed": 0.6161429451632778
             },
             {
               "id": "components/experiments/GestureProvider.tsx",
@@ -543,10 +543,10 @@
               "path": "components/experiments/GestureProvider.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 6.63,
-              "orbitRadius": 6.472874409938169,
-              "orbitAngle": 4.181990359018967,
-              "orbitSpeed": -0.6013229104028864
+              "sizeKb": 6.77,
+              "orbitRadius": 6.827157693815911,
+              "orbitAngle": 3.2233097534851214,
+              "orbitSpeed": 0.5963029218843172
             },
             {
               "id": "components/experiments/InstancedStars.tsx",
@@ -554,10 +554,10 @@
               "path": "components/experiments/InstancedStars.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 4.32,
-              "orbitRadius": 6.035521894512933,
-              "orbitAngle": 1.3787376215104072,
-              "orbitSpeed": -0.6983240223463687
+              "sizeKb": 4.29,
+              "orbitRadius": 4.577519628294348,
+              "orbitAngle": 4.225650655228587,
+              "orbitSpeed": 0.6997900629811057
             },
             {
               "id": "components/experiments/KineticText.tsx",
@@ -565,10 +565,10 @@
               "path": "components/experiments/KineticText.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 8.49,
-              "orbitRadius": 7.311304604214457,
-              "orbitAngle": 5.403868524690882,
-              "orbitSpeed": 0.5408328826392644
+              "sizeKb": 8.46,
+              "orbitRadius": 6.231817085960159,
+              "orbitAngle": 2.75942774752214,
+              "orbitSpeed": -0.5417118093174431
             },
             {
               "id": "components/experiments/MagneticGrid.tsx",
@@ -576,10 +576,10 @@
               "path": "components/experiments/MagneticGrid.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 9.98,
-              "orbitRadius": 6.412513813991414,
-              "orbitAngle": 0.7143445978413507,
-              "orbitSpeed": 0.5005005005005005
+              "sizeKb": 10.02,
+              "orbitRadius": 5.289920462176685,
+              "orbitAngle": 5.933829369367203,
+              "orbitSpeed": 0.4995004995004995
             },
             {
               "id": "components/experiments/PipStyleSync.ts",
@@ -588,8 +588,8 @@
               "type": "file",
               "extension": ".ts",
               "sizeKb": 1.67,
-              "orbitRadius": 5.950047750631364,
-              "orbitAngle": 3.9355259581454005,
+              "orbitRadius": 5.574804857504583,
+              "orbitAngle": 2.239167604667641,
               "orbitSpeed": 0.856898029134533
             },
             {
@@ -598,10 +598,10 @@
               "path": "components/experiments/PlanetFolder.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 3.88,
-              "orbitRadius": 5.894755706239678,
-              "orbitAngle": 0.5050489386781376,
-              "orbitSpeed": 0.7204610951008646
+              "sizeKb": 4.36,
+              "orbitRadius": 5.921477907156616,
+              "orbitAngle": 3.0676401461971685,
+              "orbitSpeed": -0.6963788300835655
             },
             {
               "id": "components/experiments/PortalManager.tsx",
@@ -610,8 +610,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 9.6,
-              "orbitRadius": 7.408058176840356,
-              "orbitAngle": 4.3561418275689725,
+              "orbitRadius": 6.754424346334802,
+              "orbitAngle": 4.078602012427138,
               "orbitSpeed": -0.5102040816326531
             },
             {
@@ -620,10 +620,10 @@
               "path": "components/experiments/SatelliteFile.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 2.34,
-              "orbitRadius": 7.222541094164126,
-              "orbitAngle": 4.810372161206616,
-              "orbitSpeed": -0.8103727714748784
+              "sizeKb": 2.38,
+              "orbitRadius": 5.536457104817232,
+              "orbitAngle": 4.238462094916243,
+              "orbitSpeed": -0.8077544426494346
             },
             {
               "id": "components/experiments/SyncEntity.tsx",
@@ -631,10 +631,10 @@
               "path": "components/experiments/SyncEntity.tsx",
               "type": "file",
               "extension": ".tsx",
-              "sizeKb": 10.89,
-              "orbitRadius": 7.726918607499659,
-              "orbitAngle": 3.6178968130109626,
-              "orbitSpeed": -0.4786979415988511
+              "sizeKb": 10.88,
+              "orbitRadius": 7.074383685716331,
+              "orbitAngle": 0.9448895569703976,
+              "orbitSpeed": -0.47892720306513403
             },
             {
               "id": "components/experiments/useHardwareOracle.tsx",
@@ -643,9 +643,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 5.78,
-              "orbitRadius": 6.16535640548053,
-              "orbitAngle": 0.23978342805831115,
-              "orbitSpeed": 0.6337135614702154
+              "orbitRadius": 6.296049295933301,
+              "orbitAngle": 4.727167577245713,
+              "orbitSpeed": -0.6337135614702154
             },
             {
               "id": "components/experiments/useSentient.tsx",
@@ -654,9 +654,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 3.91,
-              "orbitRadius": 8.247016062056023,
-              "orbitAngle": 2.623023828155706,
-              "orbitSpeed": 0.7189072609633357
+              "orbitRadius": 6.906340066814932,
+              "orbitAngle": 3.1621229723404305,
+              "orbitSpeed": -0.7189072609633357
             },
             {
               "id": "components/experiments/VirtualCursor.tsx",
@@ -665,16 +665,16 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 2.97,
-              "orbitRadius": 6.272581225996765,
-              "orbitAngle": 5.814113263028122,
+              "orbitRadius": 8.781267572801951,
+              "orbitAngle": 5.587471951941295,
               "orbitSpeed": 0.7710100231303006
             }
           ],
           "radius": 2.29128784747792,
-          "orbitRadius": 67.75882531249962,
-          "orbitAngle": 5.663117253556699,
-          "orbitSpeed": -0.02958285845991411,
-          "totalSizeKb": 123.52,
+          "orbitRadius": 47.67617272293257,
+          "orbitAngle": 2.0899452638085325,
+          "orbitSpeed": 0.04257653411415309,
+          "totalSizeKb": 124.11,
           "hasRings": true
         },
         {
@@ -691,15 +691,15 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 3.14,
-              "orbitRadius": 4.416997218820513,
-              "orbitAngle": 5.70744177782028,
-              "orbitSpeed": -0.76103500761035
+              "orbitRadius": 3.052537636363179,
+              "orbitAngle": 2.8917002670090595,
+              "orbitSpeed": 0.76103500761035
             }
           ],
           "radius": 1,
-          "orbitRadius": 40.47390979863506,
-          "orbitAngle": 5.202362478207548,
-          "orbitSpeed": -0.01475215696368747,
+          "orbitRadius": 52.879869621644254,
+          "orbitAngle": 6.1779464126384696,
+          "orbitSpeed": 0.05492491907274439,
           "totalSizeKb": 3.14,
           "hasRings": false
         },
@@ -717,9 +717,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 9.54,
-              "orbitRadius": 5.197502886620745,
-              "orbitAngle": 4.3736571811463465,
-              "orbitSpeed": 0.5117707267144319
+              "orbitRadius": 5.168782298160877,
+              "orbitAngle": 5.664512592715723,
+              "orbitSpeed": -0.5117707267144319
             },
             {
               "id": "components/sections/ContactSection.tsx",
@@ -728,8 +728,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 7.66,
-              "orbitRadius": 4.689835003769844,
-              "orbitAngle": 0.440856278164985,
+              "orbitRadius": 5.385145027345477,
+              "orbitAngle": 3.5419069930751723,
               "orbitSpeed": -0.5662514156285391
             },
             {
@@ -739,9 +739,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 10.82,
-              "orbitRadius": 2.6718131703552657,
-              "orbitAngle": 2.016890696718193,
-              "orbitSpeed": 0.4803073967339097
+              "orbitRadius": 4.032003117386793,
+              "orbitAngle": 5.199192446996174,
+              "orbitSpeed": -0.4803073967339097
             },
             {
               "id": "components/sections/HeroSection.tsx",
@@ -750,8 +750,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 7.48,
-              "orbitRadius": 5.6497249325414645,
-              "orbitAngle": 3.633586055019239,
+              "orbitRadius": 5.519166007472537,
+              "orbitAngle": 1.1631707088127037,
               "orbitSpeed": -0.5720823798627002
             },
             {
@@ -761,8 +761,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 8.25,
-              "orbitRadius": 5.905831961970865,
-              "orbitAngle": 3.5915239546507265,
+              "orbitRadius": 5.916029615006989,
+              "orbitAngle": 0.34405279694226215,
               "orbitSpeed": -0.547945205479452
             },
             {
@@ -772,8 +772,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 4.86,
-              "orbitRadius": 5.201235138872258,
-              "orbitAngle": 2.904832248251632,
+              "orbitRadius": 3.684581914296115,
+              "orbitAngle": 4.374676897611587,
               "orbitSpeed": -0.6729475100942127
             },
             {
@@ -783,9 +783,9 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 5.23,
-              "orbitRadius": 5.41619567028302,
-              "orbitAngle": 5.822232456554991,
-              "orbitSpeed": -0.6565988181221274
+              "orbitRadius": 4.437023528927427,
+              "orbitAngle": 5.100013143792362,
+              "orbitSpeed": 0.6565988181221274
             },
             {
               "id": "components/sections/TechStackSection.tsx",
@@ -794,8 +794,8 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 4.45,
-              "orbitRadius": 5.016353613934228,
-              "orbitAngle": 4.38236186845017,
+              "orbitRadius": 5.531962122861179,
+              "orbitAngle": 1.5531138465280567,
               "orbitSpeed": 0.6920415224913495
             },
             {
@@ -805,15 +805,15 @@
               "type": "file",
               "extension": ".tsx",
               "sizeKb": 1.9,
-              "orbitRadius": 6.346444824180181,
-              "orbitAngle": 0.4837758331194681,
-              "orbitSpeed": 0.8403361344537815
+              "orbitRadius": 6.002177823364216,
+              "orbitAngle": 0.8606030156296651,
+              "orbitSpeed": -0.8403361344537815
             }
           ],
           "radius": 1.5,
-          "orbitRadius": 27.91619528821824,
-          "orbitAngle": 1.8400419540307338,
-          "orbitSpeed": -0.02143199412542042,
+          "orbitRadius": 49.94402525614124,
+          "orbitAngle": 5.929058606959088,
+          "orbitSpeed": -0.01857336081454404,
           "totalSizeKb": 60.19,
           "hasRings": true
         }
@@ -825,10 +825,10 @@
           "path": "components/AIHeroGuide.tsx",
           "type": "file",
           "extension": ".tsx",
-          "sizeKb": 12.64,
-          "orbitRadius": 5.168346803641055,
-          "orbitAngle": 2.9076817023835595,
-          "orbitSpeed": -0.4416961130742049
+          "sizeKb": 12.71,
+          "orbitRadius": 5.022293754527435,
+          "orbitAngle": 2.6996964280265874,
+          "orbitSpeed": -0.44033465433729635
         },
         {
           "id": "components/CertificateModal.tsx",
@@ -836,10 +836,10 @@
           "path": "components/CertificateModal.tsx",
           "type": "file",
           "extension": ".tsx",
-          "sizeKb": 20.96,
-          "orbitRadius": 2.5636859157032847,
-          "orbitAngle": 4.100544814451646,
-          "orbitSpeed": 0.32299741602067183
+          "sizeKb": 19.25,
+          "orbitRadius": 2.755511170748211,
+          "orbitAngle": 2.5324789172026527,
+          "orbitSpeed": -0.3418803418803419
         },
         {
           "id": "components/CustomCursor.tsx",
@@ -847,10 +847,10 @@
           "path": "components/CustomCursor.tsx",
           "type": "file",
           "extension": ".tsx",
-          "sizeKb": 4.24,
-          "orbitRadius": 2.912765059978328,
-          "orbitAngle": 6.273412860177784,
-          "orbitSpeed": -0.7022471910112359
+          "sizeKb": 4.15,
+          "orbitRadius": 5.096336831913209,
+          "orbitAngle": 4.29534198938302,
+          "orbitSpeed": -0.7067137809187279
         },
         {
           "id": "components/InfiniteLoopTrigger.tsx",
@@ -859,8 +859,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 0.9,
-          "orbitRadius": 4.422003206861979,
-          "orbitAngle": 0.1494959841252737,
+          "orbitRadius": 4.684271125668089,
+          "orbitAngle": 5.231003892855307,
           "orbitSpeed": -0.9174311926605504
         },
         {
@@ -870,8 +870,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 1.4,
-          "orbitRadius": 3.7206134532323087,
-          "orbitAngle": 0.4527934803611939,
+          "orbitRadius": 4.3212688833698225,
+          "orbitAngle": 6.057149860674517,
           "orbitSpeed": 0.8771929824561403
         },
         {
@@ -881,8 +881,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 7.65,
-          "orbitRadius": 4.537482419296133,
-          "orbitAngle": 4.358471820868648,
+          "orbitRadius": 4.2461095516103216,
+          "orbitAngle": 1.449512683863128,
           "orbitSpeed": 0.56657223796034
         },
         {
@@ -892,9 +892,9 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 1.79,
-          "orbitRadius": 5.8510898201011905,
-          "orbitAngle": 4.540992037390223,
-          "orbitSpeed": 0.8481764206955047
+          "orbitRadius": 5.449438374069833,
+          "orbitAngle": 5.218390588630503,
+          "orbitSpeed": -0.8481764206955047
         },
         {
           "id": "components/Preloader.tsx",
@@ -903,9 +903,9 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 7.25,
-          "orbitRadius": 6.184229529686652,
-          "orbitAngle": 4.060118787439422,
-          "orbitSpeed": 0.5797101449275363
+          "orbitRadius": 5.075985139774199,
+          "orbitAngle": 0.8280240861696359,
+          "orbitSpeed": -0.5797101449275363
         },
         {
           "id": "components/ProjectCard.tsx",
@@ -913,10 +913,10 @@
           "path": "components/ProjectCard.tsx",
           "type": "file",
           "extension": ".tsx",
-          "sizeKb": 7.44,
-          "orbitRadius": 5.033370651001739,
-          "orbitAngle": 1.2623544789592627,
-          "orbitSpeed": -0.573394495412844
+          "sizeKb": 7.39,
+          "orbitRadius": 6.1494769018736335,
+          "orbitAngle": 3.1791064263088207,
+          "orbitSpeed": 0.5750431282346176
         },
         {
           "id": "components/ScrambleText.tsx",
@@ -925,9 +925,9 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 3.09,
-          "orbitRadius": 5.487750378671573,
-          "orbitAngle": 3.760814471172379,
-          "orbitSpeed": -0.7639419404125286
+          "orbitRadius": 4.054174121235083,
+          "orbitAngle": 5.345490485466608,
+          "orbitSpeed": 0.7639419404125286
         },
         {
           "id": "components/ScrollingBanner.tsx",
@@ -935,10 +935,10 @@
           "path": "components/ScrollingBanner.tsx",
           "type": "file",
           "extension": ".tsx",
-          "sizeKb": 1.66,
-          "orbitRadius": 4.340484760518331,
-          "orbitAngle": 5.424137789522566,
-          "orbitSpeed": 0.8576329331046312
+          "sizeKb": 1.62,
+          "orbitRadius": 5.397275307584203,
+          "orbitAngle": 4.319749824726592,
+          "orbitSpeed": 0.8605851979345954
         },
         {
           "id": "components/ServiceCard.tsx",
@@ -947,8 +947,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 1.65,
-          "orbitRadius": 5.339021587419847,
-          "orbitAngle": 3.118168567448835,
+          "orbitRadius": 7.156551822446771,
+          "orbitAngle": 2.066463101260953,
           "orbitSpeed": 0.8583690987124464
         },
         {
@@ -958,8 +958,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 0.45,
-          "orbitRadius": 6.946833163877546,
-          "orbitAngle": 4.15924055720223,
+          "orbitRadius": 7.539032440162638,
+          "orbitAngle": 5.709924321540821,
           "orbitSpeed": 0.9569377990430623
         },
         {
@@ -968,10 +968,10 @@
           "path": "components/TerminalOverlay.tsx",
           "type": "file",
           "extension": ".tsx",
-          "sizeKb": 13.96,
-          "orbitRadius": 6.250608519386132,
-          "orbitAngle": 4.938257941365912,
-          "orbitSpeed": 0.41736227045075125
+          "sizeKb": 13.94,
+          "orbitRadius": 6.695052763367972,
+          "orbitAngle": 0.12713500885126838,
+          "orbitSpeed": -0.41771094402673353
         },
         {
           "id": "components/ThemeToggle.tsx",
@@ -979,10 +979,10 @@
           "path": "components/ThemeToggle.tsx",
           "type": "file",
           "extension": ".tsx",
-          "sizeKb": 5.54,
-          "orbitRadius": 6.862711189779189,
-          "orbitAngle": 5.158932359469872,
-          "orbitSpeed": 0.6435006435006435
+          "sizeKb": 5.43,
+          "orbitRadius": 6.091398406026242,
+          "orbitAngle": 0.7502006634453,
+          "orbitSpeed": 0.6480881399870383
         },
         {
           "id": "components/TopProgressBar.tsx",
@@ -991,8 +991,8 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 0.48,
-          "orbitRadius": 6.882214824858311,
-          "orbitAngle": 4.514346625653765,
+          "orbitRadius": 7.811151303011732,
+          "orbitAngle": 1.0689546898620053,
           "orbitSpeed": 0.9541984732824427
         },
         {
@@ -1002,16 +1002,16 @@
           "type": "file",
           "extension": ".tsx",
           "sizeKb": 4,
-          "orbitRadius": 7.981802421875405,
-          "orbitAngle": 5.526025371145728,
-          "orbitSpeed": 0.7142857142857143
+          "orbitRadius": 7.552125245344705,
+          "orbitAngle": 5.563154773027026,
+          "orbitSpeed": -0.7142857142857143
         }
       ],
       "radius": 2.29128784747792,
-      "orbitRadius": 33.85149719357673,
-      "orbitAngle": 3.5768005453136844,
-      "orbitSpeed": 0.03404035730926776,
-      "totalSizeKb": 288.5,
+      "orbitRadius": 49.0794561478064,
+      "orbitAngle": 1.963857605127057,
+      "orbitSpeed": 0.02426575514295011,
+      "totalSizeKb": 287.14,
       "hasRings": true
     },
     {
@@ -1028,9 +1028,9 @@
           "type": "file",
           "extension": ".ts",
           "sizeKb": 3.64,
-          "orbitRadius": 3.020604508617774,
-          "orbitAngle": 5.032684697542954,
-          "orbitSpeed": -0.7331378299120235
+          "orbitRadius": 4.824109400544736,
+          "orbitAngle": 5.463058642381701,
+          "orbitSpeed": 0.7331378299120235
         },
         {
           "id": "data/cosmosTree.json",
@@ -1038,10 +1038,10 @@
           "path": "data/cosmosTree.json",
           "type": "file",
           "extension": ".json",
-          "sizeKb": 42.27,
-          "orbitRadius": 4.329499986980558,
-          "orbitAngle": 6.008290581481048,
-          "orbitSpeed": 0.19131432944327528
+          "sizeKb": 42.26,
+          "orbitRadius": 5.043709871812611,
+          "orbitAngle": 1.92833746082545,
+          "orbitSpeed": -0.19135093761959435
         },
         {
           "id": "data/experience.ts",
@@ -1050,8 +1050,8 @@
           "type": "file",
           "extension": ".ts",
           "sizeKb": 5.16,
-          "orbitRadius": 3.607075806482298,
-          "orbitAngle": 1.3104501342810206,
+          "orbitRadius": 4.691527195591689,
+          "orbitAngle": 6.058521781960045,
           "orbitSpeed": 0.6596306068601583
         },
         {
@@ -1060,10 +1060,10 @@
           "path": "data/fileTree.json",
           "type": "file",
           "extension": ".json",
-          "sizeKb": 24.19,
-          "orbitRadius": 4.40936125063918,
-          "orbitAngle": 4.4450124729619125,
-          "orbitSpeed": -0.2924831822170225
+          "sizeKb": 23.55,
+          "orbitRadius": 2.946222252640877,
+          "orbitAngle": 1.3419604018573865,
+          "orbitSpeed": 0.2980625931445604
         },
         {
           "id": "data/lab.ts",
@@ -1072,8 +1072,8 @@
           "type": "file",
           "extension": ".ts",
           "sizeKb": 5.51,
-          "orbitRadius": 5.989682182511743,
-          "orbitAngle": 4.926374967511555,
+          "orbitRadius": 4.879164689321609,
+          "orbitAngle": 1.1827496233989392,
           "orbitSpeed": -0.6447453255963894
         },
         {
@@ -1083,16 +1083,16 @@
           "type": "file",
           "extension": ".ts",
           "sizeKb": 4.21,
-          "orbitRadius": 6.17703506255011,
-          "orbitAngle": 0.6937980203910359,
-          "orbitSpeed": 0.7037297677691766
+          "orbitRadius": 5.841590578493432,
+          "orbitAngle": 1.0159660602394442,
+          "orbitSpeed": -0.7037297677691766
         }
       ],
       "radius": 1.224744871391589,
-      "orbitRadius": 46.70293789116353,
-      "orbitAngle": 3.7451571007002125,
-      "orbitSpeed": 0.02678541465367057,
-      "totalSizeKb": 84.98,
+      "orbitRadius": 59.999283062941025,
+      "orbitAngle": 6.153339244448567,
+      "orbitSpeed": -0.012277488956250296,
+      "totalSizeKb": 84.33,
       "hasRings": true
     },
     {
@@ -1106,67 +1106,7 @@
           "name": "ai",
           "type": "folder",
           "path": "lib/ai",
-          "children": [
-            {
-              "id": "lib/ai/prompts",
-              "name": "prompts",
-              "type": "folder",
-              "path": "lib/ai/prompts",
-              "children": [],
-              "satelliteFiles": [
-                {
-                  "id": "lib/ai/prompts/guide.prompt.ts",
-                  "name": "guide.prompt.ts",
-                  "path": "lib/ai/prompts/guide.prompt.ts",
-                  "type": "file",
-                  "extension": ".ts",
-                  "sizeKb": 2.53,
-                  "orbitRadius": 3.447344711513491,
-                  "orbitAngle": 1.1656493148620994,
-                  "orbitSpeed": 0.7980845969672786
-                },
-                {
-                  "id": "lib/ai/prompts/lab.prompt.ts",
-                  "name": "lab.prompt.ts",
-                  "path": "lib/ai/prompts/lab.prompt.ts",
-                  "type": "file",
-                  "extension": ".ts",
-                  "sizeKb": 0.9,
-                  "orbitRadius": 4.64234795717911,
-                  "orbitAngle": 0.9421648378037593,
-                  "orbitSpeed": 0.9174311926605504
-                },
-                {
-                  "id": "lib/ai/prompts/system.prompt.ts",
-                  "name": "system.prompt.ts",
-                  "path": "lib/ai/prompts/system.prompt.ts",
-                  "type": "file",
-                  "extension": ".ts",
-                  "sizeKb": 1.62,
-                  "orbitRadius": 5.578786330605766,
-                  "orbitAngle": 0.40634551894603455,
-                  "orbitSpeed": 0.8605851979345954
-                },
-                {
-                  "id": "lib/ai/prompts/terminal.prompt.ts",
-                  "name": "terminal.prompt.ts",
-                  "path": "lib/ai/prompts/terminal.prompt.ts",
-                  "type": "file",
-                  "extension": ".ts",
-                  "sizeKb": 0.55,
-                  "orbitRadius": 3.3959202839103844,
-                  "orbitAngle": 5.21204588768385,
-                  "orbitSpeed": -0.947867298578199
-                }
-              ],
-              "radius": 1,
-              "orbitRadius": 25.91317474995632,
-              "orbitAngle": 1.822137350668717,
-              "orbitSpeed": 0.028191308000728034,
-              "totalSizeKb": 5.6,
-              "hasRings": false
-            }
-          ],
+          "children": [],
           "satelliteFiles": [
             {
               "id": "lib/ai/ai.ts",
@@ -1174,26 +1114,49 @@
               "path": "lib/ai/ai.ts",
               "type": "file",
               "extension": ".ts",
-              "sizeKb": 3.57,
-              "orbitRadius": 4.191922588095588,
-              "orbitAngle": 1.1175332404289302,
-              "orbitSpeed": -0.7369196757553427
+              "sizeKb": 3.58,
+              "orbitRadius": 4.794195734894108,
+              "orbitAngle": 6.1129889157419255,
+              "orbitSpeed": -0.7363770250368189
             }
           ],
           "radius": 1,
-          "orbitRadius": 38.76528241006707,
-          "orbitAngle": 4.6786203466421075,
-          "orbitSpeed": -0.05367562534945764,
-          "totalSizeKb": 9.17,
+          "orbitRadius": 50.26092143330376,
+          "orbitAngle": 2.6933324509572296,
+          "orbitSpeed": 0.020416500317526634,
+          "totalSizeKb": 3.58,
           "hasRings": false
         }
       ],
-      "satelliteFiles": [],
+      "satelliteFiles": [
+        {
+          "id": "lib/useMediaQuery.ts",
+          "name": "useMediaQuery.ts",
+          "path": "lib/useMediaQuery.ts",
+          "type": "file",
+          "extension": ".ts",
+          "sizeKb": 0.86,
+          "orbitRadius": 2.584503429304427,
+          "orbitAngle": 2.8893382455305776,
+          "orbitSpeed": 0.9208103130755065
+        },
+        {
+          "id": "lib/useMounted.ts",
+          "name": "useMounted.ts",
+          "path": "lib/useMounted.ts",
+          "type": "file",
+          "extension": ".ts",
+          "sizeKb": 0.8,
+          "orbitRadius": 4.5116771562535956,
+          "orbitAngle": 4.819527185281679,
+          "orbitSpeed": -0.9259259259259258
+        }
+      ],
       "radius": 1,
-      "orbitRadius": 69.03112934866695,
-      "orbitAngle": 3.383353371839692,
-      "orbitSpeed": -0.043463197050825436,
-      "totalSizeKb": 9.17,
+      "orbitRadius": 45.18185703572998,
+      "orbitAngle": 0.16096659628247523,
+      "orbitSpeed": -0.045788269000162043,
+      "totalSizeKb": 5.24,
       "hasRings": false
     },
     {
@@ -1210,24 +1173,24 @@
           "type": "file",
           "extension": ".ts",
           "sizeKb": 2.82,
-          "orbitRadius": 3.787281891597903,
-          "orbitAngle": 0.4677039485772968,
-          "orbitSpeed": -0.7800312012480499
+          "orbitRadius": 4.815931769035589,
+          "orbitAngle": 4.008947703888342,
+          "orbitSpeed": 0.7800312012480499
         }
       ],
       "radius": 1,
-      "orbitRadius": 29.819499725121815,
-      "orbitAngle": 5.724993491325101,
-      "orbitSpeed": 0.05562498448929007,
+      "orbitRadius": 49.21858111214311,
+      "orbitAngle": 0.9102045684822753,
+      "orbitSpeed": 0.046441201206688446,
       "totalSizeKb": 2.82,
       "hasRings": false
     }
   ],
   "satelliteFiles": [],
   "radius": 1.118033988749895,
-  "orbitRadius": 44.50526144365516,
-  "orbitAngle": 5.527556353267028,
-  "orbitSpeed": 0.024966713284996292,
-  "totalSizeKb": 509.44,
+  "orbitRadius": 56.12537037329151,
+  "orbitAngle": 3.3012029948417347,
+  "orbitSpeed": -0.05069597083543491,
+  "totalSizeKb": 503.4,
   "hasRings": false
 }

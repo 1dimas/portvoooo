@@ -80,7 +80,7 @@ export default function SyncEntity() {
 
         const friction = 0.98;
 
-        const physicsLoop = (time: number) => {
+        const physicsLoop = () => {
 
             // We only need ONE window to calculate physics to avoid race conditions.
             // Let's make the window that is currently "observing" it the calculator?

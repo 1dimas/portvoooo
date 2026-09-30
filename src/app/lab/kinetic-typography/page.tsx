@@ -1,26 +1,26 @@
 "use client";
 
+type FontWeight = 100 | 300 | 400 | 600 | 800 | 900;
+
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MagneticButton from "@/components/MagneticButton";
 import KineticText from "@/components/experiments/KineticText";
+import { useMounted } from "@/lib/useMounted";
 
 export default function KineticTypographyPage() {
-    const [isMounted, setIsMounted] = useState(false);
+    const isMounted = useMounted();
 
     // Controls State
     const [maskSize, setMaskSize] = useState(250);
-    const [stiffness, setStiffness] = useState(150);
+    const [stiffness] = useState(150);
     const [damping, setDamping] = useState(15);
     const [blendMode, setBlendMode] = useState<"normal" | "difference" | "overlay" | "screen" | "exclusion">("exclusion");
-    const [fontWeight, setFontWeight] = useState<100 | 300 | 400 | 600 | 800 | 900>(900);
+    const [fontWeight, setFontWeight] = useState<FontWeight>(900);
     const [invert, setInvert] = useState(false);
     const [chromaticAberration, setChromaticAberration] = useState(true);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     if (!isMounted) return null;
 
@@ -47,7 +47,7 @@ export default function KineticTypographyPage() {
                         </div>
                         <h1 className="text-3xl font-heading uppercase text-accent mb-2">Kinetic Typo</h1>
                         <p className="text-xs text-text-secondary leading-relaxed">
-                            Optical illusion and "Semantic Shift" using SVG Masks & <code>clip-path</code> physics.
+                            Optical illusion and &ldquo;Semantic Shift&rdquo; using SVG Masks & <code>clip-path</code> physics.
                         </p>
                     </div>
 
@@ -114,7 +114,7 @@ export default function KineticTypographyPage() {
                                 </div>
                                 <input
                                     type="range" min="100" max="900" step="100"
-                                    value={fontWeight} onChange={e => setFontWeight(Number(e.target.value) as any)}
+                                    value={fontWeight} onChange={e => setFontWeight(Number(e.target.value) as FontWeight)}
                                     className="w-full h-1 bg-border rounded-lg appearance-none cursor-ew-resize accent-accent"
                                 />
                             </div>
@@ -135,7 +135,7 @@ export default function KineticTypographyPage() {
 
                     <div className="mt-auto pt-8">
                         <div className="p-4 border border-border bg-bg-primary text-[10px] text-text-muted font-mono leading-relaxed">
-                            <span className="text-accent">{'//'} Semantic Shift:</span> Hover over "STUDENT" to reveal "DEVELOPER". Move mouse fast to trigger Chromatic Aberration and Lens stretch.
+                            <span className="text-accent">{'//'} Semantic Shift:</span> Hover over &ldquo;STUDENT&rdquo; to reveal &ldquo;DEVELOPER&rdquo;. Move mouse fast to trigger Chromatic Aberration and Lens stretch.
                         </div>
                     </div>
                 </div>

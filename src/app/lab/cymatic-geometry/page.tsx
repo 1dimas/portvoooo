@@ -24,7 +24,7 @@ export default function CymaticGeometryPage() {
     const [pattern, setPattern] = useState<PatternType>("chladni");
     const [sensitivity, setSensitivity] = useState(1.5);
     const [theme, setTheme] = useState<'core' | 'fire' | 'neon'>("core");
-    const [particles, setParticles] = useState(10000);
+    const [particles] = useState(10000);
 
     const toggleAudio = async () => {
         if (isListening && audioEngine) {
@@ -39,8 +39,8 @@ export default function CymaticGeometryPage() {
             setAudioEngine(engine);
             setIsListening(true);
             setError(null);
-        } catch (err: any) {
-            setError(err.message || "Failed to access microphone.");
+        } catch (err) {
+            setError(err instanceof Error ? err.message : "Failed to access microphone.");
             setIsListening(false);
         }
     };

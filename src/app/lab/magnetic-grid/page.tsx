@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MagneticGrid, { VisualMode } from "@/components/experiments/MagneticGrid";
 import MagneticButton from "@/components/MagneticButton";
+import { useMounted } from "@/lib/useMounted";
 
 export default function MagneticGridPage() {
-    const [isMounted, setIsMounted] = useState(false);
+    const isMounted = useMounted();
 
     // Grid Controls State
     const [density, setDensity] = useState(15);
@@ -16,9 +17,6 @@ export default function MagneticGridPage() {
     const [mode, setMode] = useState<"repel" | "attract">("repel");
     const [visualMode, setVisualMode] = useState<VisualMode>("dots");
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     if (!isMounted) return null; // Prevent hydration mismatch
 
@@ -137,7 +135,7 @@ export default function MagneticGridPage() {
 
                     <div className="mt-auto pt-8">
                         <div className="p-4 border border-border bg-bg-primary text-[10px] text-text-muted font-mono leading-relaxed">
-                            <span className="text-accent">{'//'} Pro Tip:</span> Try 'Attract' mode with the 'Compass' flavor for a mesmerizing follow-effect.
+                            <span className="text-accent">{'//'} Pro Tip:</span> Try &lsquo;Attract&rsquo; mode with the &lsquo;Compass&rsquo; flavor for a mesmerizing follow-effect.
                         </div>
                     </div>
                 </div>

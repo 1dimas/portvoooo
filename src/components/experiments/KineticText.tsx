@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform, useVelocity, useAnimationFrame } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, useMotionValue, useSpring, useTransform, useVelocity } from "framer-motion";
+import { useRef, useState } from "react";
 
 interface KineticTextProps {
     baseText: string;

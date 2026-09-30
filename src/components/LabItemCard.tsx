@@ -42,7 +42,7 @@ export default function LabItemCard({ title, description, tech, link, status, de
                 {/* Status Badge */}
                 <div className="flex items-center justify-between mb-6">
                     <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-text-muted">
-                        // EXP_{String(title).substring(0, 3).toUpperCase()}_{String(title).length.toString().padStart(2, '0')}
+                        {"// "}EXP_{String(title).substring(0, 3).toUpperCase()}_{String(title).length.toString().padStart(2, '0')}
                     </span>
                     <span className={`text-[10px] font-bold px-2 py-1 uppercase tracking-widest border ${status === 'Done' ? 'border-green-500/50 text-green-400' :
                         status === 'WIP' ? 'border-yellow-500/50 text-yellow-400' :

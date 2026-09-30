@@ -1,4 +1,4 @@
-import React, { useRef, useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
@@ -80,7 +80,7 @@ function InformationHUD({ star, onClose }: { star: FileNode3D; onClose: () => vo
 
 export function GalaxyCanvas({ data, enableBloom = true }: GalaxyCanvasProps) {
     const [selectedStar, setSelectedStar] = useState<FileNode3D | null>(null);
-    const [hoveredStarId, setHoveredStarId] = useState<string | null>(null);
+    const [hoveredStarId] = useState<string | null>(null);
 
     // Filter out huge lists for safety if data somehow breaks
     const safeData = useMemo(() => {

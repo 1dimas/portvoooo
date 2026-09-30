@@ -34,7 +34,6 @@ export function GestureProvider({ children }: { children: ReactNode }) {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const handLandmarkerRef = useRef<HandLandmarker | null>(null);
     const requestRef = useRef<number>(-1);
-    const canvasRef = useRef<HTMLCanvasElement | null>(null); // Offscreen canvas for optional image processing if needed
     const lastVideoTimeRef = useRef(-1);
 
     const initializeMediaPipe = async () => {
@@ -83,13 +82,18 @@ export function GestureProvider({ children }: { children: ReactNode }) {
 
             // Start detection loop
             detectLoop();
-        } catch (err: any) {
+        } catch (err) {
             console.error("Failed to initialize MediaPipe", err);
-            setError(err.message || "Failed to initialize webcam or AI model");
+            setError(
+                err instanceof Error ? err.message : "Failed to initialize webcam or AI model"
+            );
             setIsInitializing(false);
         }
     };
 
+    // Dijalankan dari requestAnimationFrame, bukan saat render — performance.now() dan
+    // detectForVideo() di dalamnya aman. Linter tidak bisa membedakan keduanya.
+    /* eslint-disable react-hooks/purity */
     const detectLoop = () => {
         const video = videoRef.current;
         const landmarker = handLandmarkerRef.current;

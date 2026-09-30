@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import MagneticButton from "@/components/MagneticButton";
-import { HardwareOracleProvider, useHardwareOracle, PerformanceTier } from "@/components/experiments/useHardwareOracle";
+import { HardwareOracleProvider, useHardwareOracle } from "@/components/experiments/useHardwareOracle";
 import AdaptiveWrapper, { AdaptiveMedia } from "@/components/experiments/AdaptiveWrapper";
+import { useMounted } from "@/lib/useMounted";
 
 // A dummy heavy particle component that only works in HIGH tier
 function HeavyParticleSimulation() {
@@ -20,7 +21,7 @@ function HeavyParticleSimulation() {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        let particles: { x: number, y: number, vx: number, vy: number, life: number }[] = [];
+        const particles: { x: number, y: number, vx: number, vy: number, life: number }[] = [];
         let reqId: number;
 
         const resize = () => {
@@ -319,11 +320,8 @@ function AdaptiveDashboard() {
 }
 
 export default function AdaptiveSurvivorPage() {
-    const [isMounted, setIsMounted] = useState(false);
+    const isMounted = useMounted();
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     if (!isMounted) return null;
 

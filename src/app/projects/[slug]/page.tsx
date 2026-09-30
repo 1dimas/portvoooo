@@ -124,7 +124,7 @@ export default async function ProjectPage({
                         </div>
                         <div className="bg-bg-card border-l-4 border-accent p-8">
                             <p className="text-xl leading-relaxed text-text-primary font-medium">
-                                "{project.impact}"
+                                &ldquo;{project.impact}&rdquo;
                             </p>
                         </div>
                     </div>

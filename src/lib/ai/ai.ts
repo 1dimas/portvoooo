@@ -38,7 +38,7 @@ const COOLDOWN_MS = 2000; // 2 sec minimum between reqs
 export async function sendAIMessage(
   message: string,
   feature: 'hero' | 'lab' | 'terminal',
-  context?: any,
+  context?: Record<string, unknown>,
   previousMessages?: { role: string; text: string }[]
 ): Promise<AIResponse> {
   const normalizedMsg = message.trim().toLowerCase();

@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MagneticButton from "@/components/MagneticButton";
 import ChaosEngine from "@/components/experiments/ChaosEngine";
+import { useMounted } from "@/lib/useMounted";
 
 export default function ChaosDesktopPage() {
-    const [isMounted, setIsMounted] = useState(false);
+    const isMounted = useMounted();
 
     // Controls State
     const [gravity, setGravity] = useState(1);
@@ -15,9 +16,6 @@ export default function ChaosDesktopPage() {
     const [frictionAir, setFrictionAir] = useState(0.02);
     const [triggerBang, setTriggerBang] = useState(0);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     if (!isMounted) return null;
 
