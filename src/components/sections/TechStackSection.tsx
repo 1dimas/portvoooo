@@ -65,7 +65,7 @@ function TechIcon({ item }: { item: TechItem }) {
 
 export default function TechStackSection() {
     return (
-        <section className="relative py-32 overflow-hidden bg-bg-primary">
+        <section id="tech" className="relative py-32 overflow-hidden bg-bg-primary">
             <div className="relative z-10">
                 {/* Section Header */}
                 <motion.div
