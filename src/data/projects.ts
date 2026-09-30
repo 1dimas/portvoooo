@@ -34,7 +34,7 @@ export const projects: Project[] = [
         gradient: "bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700",
         liveUrl: "#",
         githubUrl: "#",
-        image: "/image/profile_company_v3.png",
+        image: "/image/profile_company_v3.webp",
     },
     {
         slug: "sportzone",
@@ -54,27 +54,27 @@ export const projects: Project[] = [
         gradient: "bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700",
         liveUrl: "#",
         githubUrl: "#",
-        image: "/image/Sportzone_v3.png",
+        image: "/image/Sportzone_v3.webp",
     },
     {
-        slug: "company-profile",
+        slug: "solit03",
         title: "Solit03",
-        category: "Profile Perusahaan",
-        role: "Frontend",
+        category: "Profil Perusahaan",
+        role: "Frontend Developer",
         timeline: "2026",
         description:
-            "Website profile perusahaan yang modern dan responsif.",
+            "Website profil perusahaan untuk Solit03 — bisnis jual beli laptop second dan jasa servis. Menyatukan layanan, katalog, dan jalur kontak dalam satu halaman yang ringan dan rapi di semua ukuran layar.",
         problem:
-            "User membutuhkan website profile perusahaan yang modern dan responsif sesuai dengan permintaan User.",
+            "Calon pembeli laptop second menilai kredibilitas penjual sebelum datang atau menghubungi. Tanpa kehadiran online resmi, toko hanya bisa bersaing lewat marketplace — tempat harga jadi satu-satunya pembeda.",
         solution:
-            "Membangun arsitektur dengan Next.js agar website profile perusahaan modern dan responsif.",
+            "Membangun situs profil perusahaan dengan Next.js. Struktur kontennya difokuskan pada layanan dan bukti kredibilitas, dengan waktu muat cepat serta tampilan konsisten dari mobile sampai desktop.",
         impact:
-            "costomer bisa melihat profil perusahaan secara online dengan antarmuka yang modern dan responsif.",
-        tech: ["React", "NestJS", "WebSocket"],
+            "Perusahaan punya kanal resmi yang bisa dirujuk langsung ke calon pelanggan, lepas dari ketergantungan pada marketplace pihak ketiga.",
+        tech: ["Next.js", "React", "Tailwind CSS"],
         gradient: "bg-gradient-to-br from-orange-600 via-rose-600 to-pink-700",
         liveUrl: "https://solit03.com",
         githubUrl: "#",
-        image: "/image/Solit03.png",
+        image: "/image/Solit03.webp",
     },
 ];
 

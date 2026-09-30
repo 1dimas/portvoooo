@@ -37,7 +37,7 @@ function CertificateImage({ src, alt }: { src: string; alt: string }) {
                     </div>
                 </div>
             )}
-            {/* Standard img tag bypasses Next.js image cache to ensure updated disk files render immediately */}
+            {/* <img> biasa: modal ini punya rotasi + zoom sendiri, dan asetnya sudah WebP kecil */}
             <img
                 src={src}
                 alt={alt}
@@ -79,14 +79,11 @@ export default function CertificateModal({
 }: CertificateModalProps) {
     const phase = useDecryptAnimation(isOpen);
     const [showBack, setShowBack] = useState(false);
-    const [cacheBuster, setCacheBuster] = useState("");
 
     // Reset back side view and set cache buster when opening modal
     useEffect(() => {
         if (!isOpen) {
             setShowBack(false);
-        } else {
-            setCacheBuster(Date.now().toString());
         }
     }, [isOpen]);
 
@@ -208,9 +205,10 @@ export default function CertificateModal({
                                         {/* Left Side: Certificate Image Container */}
                                         <div className="flex flex-col gap-3">
                                             <CertificateImage
-                                                src={showBack && certificate.backImage 
-                                                    ? `${certificate.backImage}?t=${cacheBuster}` 
-                                                    : `${certificate.image}?t=${cacheBuster}`
+                                                src={
+                                                    showBack && certificate.backImage
+                                                        ? certificate.backImage
+                                                        : certificate.image
                                                 }
                                                 alt={`${certificate.title} ${showBack ? "(Back)" : "(Front)"}`}
                                             />
@@ -249,8 +247,8 @@ export default function CertificateModal({
                                                 {/* View High-Res Link */}
                                                 <a
                                                     href={showBack && certificate.backImage 
-                                                        ? `${certificate.backImage}?t=${cacheBuster}` 
-                                                        : `${certificate.image}?t=${cacheBuster}`
+                                                        ? certificate.backImage
+                                                        : certificate.image
                                                     }
                                                     target="_blank"
                                                     rel="noopener noreferrer"

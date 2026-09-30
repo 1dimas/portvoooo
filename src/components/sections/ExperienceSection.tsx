@@ -151,8 +151,8 @@ function ExperienceItem({ exp, index }: { exp: Experience; index: number }) {
 
                 {exp.confidential && (
                     <p className="text-xs font-mono text-text-muted/80 leading-relaxed mt-4 border-l-2 border-text-muted/30 pl-3">
-                        Sistem bersifat internal perusahaan — tidak tersedia demo publik maupun
-                        repositori terbuka. Detail arsitektur dapat didiskusikan saat wawancara.
+                        ERP internal perusahaan tidak memiliki demo publik maupun repositori
+                        terbuka. Detail arsitekturnya dapat didiskusikan saat wawancara.
                     </p>
                 )}
 

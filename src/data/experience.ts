@@ -83,6 +83,7 @@ export const experiences: Experience[] = [
             "Mengintegrasikan asisten AI DeepSeek yang terhubung ke data operasional: menjawab pertanyaan lintas modul, menyusun laporan, dan memberi rekomendasi",
             "Memimpin migrasi database dari Supabase ke PostgreSQL self-hosted",
             "Menyiapkan dan mengelola mini server Linux sebagai host sistem — menangani deployment serta optimasi query di produksi",
+            "Membangun website profil perusahaan (solit03.com) sebagai kanal resmi publik",
         ],
         modules: [
             "Akuntansi & Cashflow",

@@ -24,6 +24,7 @@ const anton = Anton({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portvoooo.vercel.app"),
   title: "Dimas — Full Stack Developer & Mitra Digital Bisnis",
   description:
     "Portfolio seorang Full Stack Developer yang siap membantu mewujudkan ide bisnis Anda menjadi produk digital yang fungsional, estetik, dan scalable.",
