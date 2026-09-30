@@ -1,5 +1,5 @@
 {
-    "Services": {
+    "services": {
         "frontend": {
             "routePrefix": "/",
             "framework": "nextjs"
