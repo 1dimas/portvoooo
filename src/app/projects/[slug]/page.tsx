@@ -41,7 +41,7 @@ export default async function ProjectPage({
                     <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase bg-accent/10 px-4 py-2 border border-accent/30 inline-block mb-6">
                         {project.category}
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-black font-heading text-text-primary uppercase tracking-tighter mb-8 leading-none">
+                    <h1 className="text-5xl md:text-7xl font-heading text-text-primary uppercase mb-8 leading-none">
                         {project.title}
                     </h1>
 
@@ -95,7 +95,7 @@ export default async function ProjectPage({
                     <div>
                         <div className="flex items-center gap-4 mb-8">
                             <span className="text-4xl font-heading text-text-muted/30">01</span>
-                            <h2 className="text-3xl font-black font-heading uppercase text-text-primary tracking-wide">The Challenge</h2>
+                            <h2 className="text-3xl font-heading uppercase text-text-primary">The Challenge</h2>
                             <div className="flex-1 h-px bg-border"></div>
                         </div>
                         <p className="text-xl leading-relaxed text-text-secondary">
@@ -107,7 +107,7 @@ export default async function ProjectPage({
                     <div>
                         <div className="flex items-center gap-4 mb-8">
                             <span className="text-4xl font-heading text-text-muted/30">02</span>
-                            <h2 className="text-3xl font-black font-heading uppercase text-text-primary tracking-wide">The Solution</h2>
+                            <h2 className="text-3xl font-heading uppercase text-text-primary">The Solution</h2>
                             <div className="flex-1 h-px bg-border"></div>
                         </div>
                         <p className="text-xl leading-relaxed text-text-secondary">
@@ -119,7 +119,7 @@ export default async function ProjectPage({
                     <div>
                         <div className="flex items-center gap-4 mb-8">
                             <span className="text-4xl font-heading text-text-muted/30">03</span>
-                            <h2 className="text-3xl font-black font-heading uppercase text-text-primary tracking-wide">The Impact</h2>
+                            <h2 className="text-3xl font-heading uppercase text-text-primary">The Impact</h2>
                             <div className="flex-1 h-px bg-border"></div>
                         </div>
                         <div className="bg-bg-card border-l-4 border-accent p-8">
@@ -134,7 +134,7 @@ export default async function ProjectPage({
 
             {/* Next Project CTA could go here */}
             <div className="container mx-auto px-6 mt-32 text-center">
-                <Link href="/#projects" className="inline-block py-6 px-12 border-2 border-text-primary text-text-primary uppercase tracking-widest font-black font-heading text-2xl hover:bg-text-primary hover:text-bg-primary transition-colors duration-500">
+                <Link href="/#projects" className="inline-block py-6 px-12 border-2 border-text-primary text-text-primary uppercase tracking-widest font-heading text-2xl hover:bg-text-primary hover:text-bg-primary transition-colors duration-500">
                     Explore More Projects
                 </Link>
             </div>

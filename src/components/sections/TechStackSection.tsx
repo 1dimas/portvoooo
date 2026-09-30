@@ -77,7 +77,7 @@ export default function TechStackSection() {
                     <span className="text-accent text-sm font-bold uppercase tracking-widest border-2 border-accent px-4 py-1.5 rounded-none cursor-default" lang="en">
                         <ScrambleText text="Tech Stack" />
                     </span>
-                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-black mt-8 mb-4 tracking-tighter uppercase font-heading cursor-default">
+                    <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-8 mb-4 cursor-default">
                         <span className="text-text-primary">
                             <ScrambleText text="Tech" />
                         </span>{" "}
@@ -85,7 +85,7 @@ export default function TechStackSection() {
                             <ScrambleText text="Stack" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed" lang="en">
+                    <p className="text-text-secondary text-lead max-w-2xl mx-auto" lang="en">
                         Tools and frameworks I use daily to ship quality products.
                     </p>
                 </motion.div>

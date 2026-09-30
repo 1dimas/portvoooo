@@ -255,7 +255,7 @@ function ModalContent({
                                         </span>
 
                                         {/* Title */}
-                                        <h3 className="text-2xl md:text-3xl font-black font-heading uppercase tracking-wider text-text-primary leading-tight">
+                                        <h3 className="text-2xl md:text-3xl font-heading uppercase text-text-primary leading-tight">
                                             {certificate.title}
                                         </h3>
 

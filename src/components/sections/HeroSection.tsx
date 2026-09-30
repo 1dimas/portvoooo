@@ -47,7 +47,7 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 100 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, ease: [0.19, 1, 0.22, 1] }}
-                            className="text-[clamp(2.5rem,8vw,8rem)] font-heading leading-[0.9] tracking-wide uppercase text-text-primary text-center m-0 p-0"
+                            className="text-[clamp(2.5rem,8vw,8rem)] font-heading leading-[0.9] uppercase text-text-primary text-center m-0 p-0"
                         >
                             DIMAS Dwi A.P
                         </motion.h1>

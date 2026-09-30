@@ -59,7 +59,7 @@ export default function ContactSection() {
                     <span className="text-accent text-sm font-semibold uppercase tracking-widest">
                         Contact
                     </span>
-                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6 uppercase tracking-wider">
+                    <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-4 mb-6">
                         Let&apos;s <span className="text-accent">Collaborate</span>
                     </h2>
                     <p className="text-text-secondary text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed">
@@ -89,7 +89,7 @@ export default function ContactSection() {
                             className="flex flex-col items-center justify-center gap-4 py-8 px-6 bg-bg-primary text-text-primary border-4 border-text-primary hover:bg-text-primary hover:text-bg-primary transition-colors duration-300 relative group overflow-hidden"
                         >
                             <div className="z-10">{link.icon}</div>
-                            <span className="font-heading font-black text-xl uppercase tracking-widest z-10">{link.name}</span>
+                            <span className="font-heading text-xl uppercase tracking-widest z-10">{link.name}</span>
                             <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-0"></div>
                         </motion.a>
                     ))}

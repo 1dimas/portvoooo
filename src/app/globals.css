@@ -35,6 +35,34 @@
   --font-heading: var(--font-anton), sans-serif;
   --font-body: var(--font-inter), sans-serif;
 
+  /* ---- Skala Tipografi ----
+     Rasio 1.25, fluid lewat clamp(). Tracking berbanding terbalik dengan ukuran:
+     makin besar teks makin rapat. Kapital kecil justru direnggangkan. */
+  --text-display: clamp(3rem, 9vw, 7rem);
+  --text-display--line-height: 0.85;
+  --text-display--letter-spacing: -0.045em;
+
+  --text-h1: clamp(2.75rem, 7vw, 5rem);
+  --text-h1--line-height: 0.92;
+  --text-h1--letter-spacing: -0.035em;
+
+  --text-h2: clamp(2.25rem, 5vw, 3.75rem);
+  --text-h2--line-height: 0.98;
+  --text-h2--letter-spacing: -0.025em;
+
+  --text-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --text-h3--line-height: 1.1;
+  --text-h3--letter-spacing: -0.015em;
+
+  --text-lead: clamp(1rem, 1.2vw, 1.125rem);
+  --text-lead--line-height: 1.65;
+  --text-lead--letter-spacing: 0em;
+
+  /* Kapital berukuran kecil butuh lebih renggang, bukan lebih rapat. */
+  --text-label: 0.625rem;
+  --text-label--line-height: 1.4;
+  --text-label--letter-spacing: 0.18em;
+
   /* ---- Animation Durations ---- */
   --duration-fast: 150ms;
   --duration-normal: 300ms;
@@ -196,6 +224,9 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Anton hanya memuat berat 400 — tanpa ini browser akan memalsukan bold
+     dan melebarkan stroke secara artifisial di setiap judul. */
+  font-synthesis: none;
   overflow-x: hidden;
 }
 
@@ -227,9 +258,16 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  /* Anton sudah berat dari desainnya; menaikkan angka ini hanya memicu fake bold. */
+  font-weight: 400;
   line-height: 1.1;
+  letter-spacing: -0.03em;
+  /* Cegah kata tunggal terdampar di baris terakhir judul. */
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 /* ---- Links ---- */

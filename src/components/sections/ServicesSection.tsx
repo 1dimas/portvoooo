@@ -91,12 +91,12 @@ export default function ServicesSection() {
                     <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
                         <ScrambleText text="What I Build" />
                     </span>
-                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-6 tracking-wider uppercase text-text-primary cursor-default">
+                    <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-6 cursor-default">
                         <ScrambleText text="Digital" /> <span className="text-accent underline decoration-4 underline-offset-8">
                             <ScrambleText text="Services" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed" lang="en">
+                    <p className="text-text-secondary text-lead max-w-2xl mx-auto" lang="en">
                         End-to-end solutions from design to deployment. Performance-focused web applications built for real business impact.
                     </p>
                 </motion.div>

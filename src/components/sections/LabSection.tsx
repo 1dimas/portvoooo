@@ -57,7 +57,7 @@ function PreviewPanel() {
             {/* Kaki panel */}
             <div className="relative z-20 flex items-center justify-between gap-4 px-4 py-3 border-t-2 border-border bg-bg-primary">
                 <div className="min-w-0">
-                    <p className="font-heading font-black uppercase tracking-wider text-sm md:text-base text-text-primary truncate">
+                    <p className="font-heading uppercase tracking-wider text-sm md:text-base text-text-primary truncate">
                         Magnetic Grid
                     </p>
                     <p className="text-[10px] font-mono uppercase tracking-widest text-text-muted truncate">
@@ -92,13 +92,13 @@ export default function LabSection() {
                     <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
                         <ScrambleText text="Laboratory" />
                     </span>
-                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-4 tracking-wider uppercase text-text-primary cursor-default">
+                    <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-4 cursor-default">
                         <ScrambleText text="The " />
                         <span className="text-accent underline decoration-4 underline-offset-8">
                             <ScrambleText text="Lab" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-text-secondary text-lead max-w-2xl mx-auto">
                         {playable.length} eksperimen antarmuka yang bisa langsung dicoba — hand
                         tracking, sinkronisasi antar-jendela, visualizer audio, sampai codebase 3D.
                     </p>
@@ -130,7 +130,7 @@ export default function LabSection() {
                                     href={item.link!}
                                     className="group flex flex-col justify-between h-full border-2 border-border bg-bg-card p-4 hover:border-accent hover:shadow-[-4px_4px_0px_0px_var(--color-accent)] transition-all duration-300"
                                 >
-                                    <p className="font-heading font-black uppercase tracking-wider text-sm text-text-primary group-hover:text-accent transition-colors duration-300 leading-tight">
+                                    <p className="font-heading uppercase tracking-wider text-sm text-text-primary group-hover:text-accent transition-colors duration-300 leading-tight">
                                         {item.title}
                                     </p>
                                     <div className="flex flex-wrap gap-1.5 mt-3">
@@ -158,7 +158,7 @@ export default function LabSection() {
                 >
                     <Link
                         href="/lab"
-                        className="font-heading font-black uppercase tracking-widest text-sm md:text-base border-2 border-text-primary text-text-primary px-8 py-4 hover:bg-accent hover:border-accent hover:text-bg-primary transition-colors duration-200"
+                        className="font-heading uppercase tracking-widest text-sm md:text-base border-2 border-text-primary text-text-primary px-8 py-4 hover:bg-accent hover:border-accent hover:text-bg-primary transition-colors duration-200"
                     >
                         Masuk ke Lab →
                     </Link>

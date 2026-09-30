@@ -152,7 +152,7 @@ export default function Preloader() {
                                 <span className="text-text-secondary uppercase tracking-[0.3em] font-bold text-sm md:text-base max-w-[200px]">
                                     Sedang Memuat Pengalaman Digital
                                 </span>
-                                <h1 className="text-[15vw] leading-none font-black font-heading text-accent tracking-tighter m-0 p-0 mix-blend-difference tabular-nums">
+                                <h1 className="text-[15vw] leading-none font-heading text-accent m-0 p-0 mix-blend-difference tabular-nums">
                                     {shown}
                                     <span className="text-[10vw]">%</span>
                                 </h1>

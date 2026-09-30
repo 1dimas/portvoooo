@@ -30,7 +30,7 @@ export default function ServiceCard({
                         {icon}
                     </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 font-heading uppercase tracking-wider text-text-primary group-hover:text-accent transition-colors duration-300">
+                <h3 className="text-2xl mb-4 font-heading uppercase text-text-primary group-hover:text-accent transition-colors duration-300">
                     {title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed text-base">

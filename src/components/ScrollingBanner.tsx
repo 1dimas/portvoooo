@@ -22,7 +22,7 @@ export default function ScrollingBanner({
                 <div className="flex whitespace-nowrap items-center">
                     {repeatedText.map((item, i) => (
                         <div key={i} className="flex items-center">
-                            <span className="text-3xl md:text-5xl font-black font-heading uppercase text-bg-primary px-4 md:px-8 tracking-wider">
+                            <span className="text-3xl md:text-5xl font-heading uppercase text-bg-primary px-4 md:px-8">
                                 {item}
                             </span>
                             {/* The bullet separator */}

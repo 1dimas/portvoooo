@@ -37,7 +37,7 @@ function StatRow({ stats }: { stats: NonNullable<Experience["stats"]> }) {
                     </span>
                     <span
                         aria-hidden
-                        className="block font-heading font-black text-3xl md:text-5xl text-accent leading-none tabular-nums"
+                        className="block font-heading text-3xl md:text-5xl text-accent leading-none tabular-nums"
                     >
                         <CountUp to={stat.value} duration={1.6} />
                         {stat.suffix}
@@ -85,12 +85,12 @@ function ExperienceItem({ exp, index }: { exp: Experience; index: number }) {
                     >
                         {exp.type}
                     </span>
-                    <span className="text-xs font-mono text-text-muted tracking-wider">
+                    <span className="text-xs font-mono text-text-muted">
                         {exp.period}
                     </span>
                     {exp.confidential && (
                         <span
-                            className="text-[10px] font-mono font-bold uppercase tracking-widest border border-text-muted/50 text-text-muted px-2 py-0.5"
+                            className="text-[10px] font-mono uppercase tracking-widest border border-text-muted/50 text-text-muted px-2 py-0.5"
                             title="Sistem internal perusahaan — tidak ada demo publik atau repositori terbuka"
                         >
                             🔒 Internal
@@ -98,7 +98,7 @@ function ExperienceItem({ exp, index }: { exp: Experience; index: number }) {
                     )}
                 </div>
 
-                <h3 className="font-black font-heading uppercase tracking-wider text-lg md:text-2xl text-text-primary group-hover:text-accent transition-colors duration-300 leading-tight">
+                <h3 className="font-heading uppercase text-lg md:text-2xl text-text-primary group-hover:text-accent transition-colors duration-300 leading-tight">
                     {exp.role}
                 </h3>
                 <p className="text-sm md:text-base text-text-secondary font-mono mt-1">
@@ -203,13 +203,13 @@ export default function ExperienceSection() {
                     <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
                         <ScrambleText text="Journey" />
                     </span>
-                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-4 tracking-wider uppercase text-text-primary cursor-default">
+                    <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-4 cursor-default">
                         <ScrambleText text="Experi" />
                         <span className="text-accent underline decoration-4 underline-offset-8">
                             <ScrambleText text="ence" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-text-secondary text-lead max-w-2xl mx-auto">
                         Rekam jejak profesional — dari proyek freelance, magang industri, sampai
                         kontribusi organisasi.
                     </p>

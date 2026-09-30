@@ -50,7 +50,7 @@ export default function ProjectCard({
                                 {/* Inner mechanical frame */}
                                 <div className="absolute w-[80%] h-[80%] border border-black/20 flex flex-col items-center justify-center gap-4 bg-bg-card shadow-[-8px_8px_0px_0px_var(--color-primary)]">
                                     <ImageIcon className="w-12 h-12 text-text-muted group-hover:text-text-primary transition-colors duration-300" />
-                                    <span className="text-xs font-bold uppercase tracking-widest text-text-muted px-4 py-1 border border-border">
+                                    <span className="text-xs uppercase tracking-widest text-text-muted px-4 py-1 border border-border">
                                         {project.title}
                                     </span>
                                 </div>
@@ -64,11 +64,11 @@ export default function ProjectCard({
 
                     <div>
                         <div className="flex items-center gap-4 mb-4">
-                            <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase bg-accent/10 px-3 py-1 border border-accent/30">
+                            <span className="text-accent text-xs tracking-[0.2em] uppercase bg-accent/10 px-3 py-1 border border-accent/30">
                                 {project.category}
                             </span>
                         </div>
-                        <h3 className="text-3xl md:text-5xl font-black font-heading mb-4 text-text-primary uppercase tracking-tighter">
+                        <h3 className="text-3xl md:text-5xl font-heading mb-4 text-text-primary uppercase">
                             {project.title}
                         </h3>
                         <p className="text-text-secondary text-base md:text-lg leading-relaxed line-clamp-2 md:line-clamp-3">
@@ -82,7 +82,7 @@ export default function ProjectCard({
                             {project.tech.map((tech) => (
                                 <span
                                     key={tech}
-                                    className="px-3 py-1 text-xs font-bold uppercase tracking-widest bg-bg-tertiary text-text-primary border border-border"
+                                    className="px-3 py-1 text-xs uppercase tracking-widest bg-bg-tertiary text-text-primary border border-border"
                                 >
                                     {tech}
                                 </span>
@@ -96,7 +96,7 @@ export default function ProjectCard({
                                     href={project.liveUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 px-6 py-3 bg-text-primary text-bg-primary text-sm font-bold uppercase tracking-widest border-2 border-text-primary hover:bg-accent hover:border-accent hover:text-black transition-colors duration-300"
+                                    className="flex items-center gap-2 px-6 py-3 bg-text-primary text-bg-primary text-sm uppercase tracking-widest border-2 border-text-primary hover:bg-accent hover:border-accent hover:text-black transition-colors duration-300"
                                 >
                                     <ExternalLink className="w-4 h-4" />
                                     Live Demo
@@ -107,7 +107,7 @@ export default function ProjectCard({
                                     href={project.githubUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 px-6 py-3 bg-transparent text-text-primary text-sm font-bold uppercase tracking-widest border-2 border-border hover:border-text-primary transition-colors duration-300"
+                                    className="flex items-center gap-2 px-6 py-3 bg-transparent text-text-primary text-sm uppercase tracking-widest border-2 border-border hover:border-text-primary transition-colors duration-300"
                                 >
                                     <Github className="w-4 h-4" />
                                     GitHub

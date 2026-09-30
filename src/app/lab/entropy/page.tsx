@@ -86,7 +86,7 @@ export default function EntropyPage() {
                             </Link>
                         </MagneticButton>
 
-                        <h1 className="font-heading font-black uppercase tracking-wider text-3xl md:text-4xl leading-none">
+                        <h1 className="font-heading uppercase text-3xl md:text-4xl leading-none">
                             Entropy
                         </h1>
                         <p className="text-text-secondary text-sm leading-relaxed mt-4">
