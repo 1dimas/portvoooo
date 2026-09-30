@@ -57,24 +57,24 @@ export const projects: Project[] = [
         image: "/image/Sportzone_v3.png",
     },
     {
-        slug: "yomu",
-        title: "YOMU",
-        category: "Sistem Manajemen Data Kompleks",
-        role: "Lead Backend & Frontend",
-        timeline: "2024",
+        slug: "company-profile",
+        title: "Solit03",
+        category: "Profile Perusahaan",
+        role: "Frontend",
+        timeline: "2026",
         description:
-            "Aplikasi manajemen perpustakaan digital dengan fitur peminjaman buku, notifikasi real-time, chat system, dan dashboard admin. Bukti kemampuan teknikal dan pengelolaan data kompleks.",
+            "Website profile perusahaan yang modern dan responsif.",
         problem:
-            "Proses manajemen perpustakaan tradisional lambat dan tidak efisien. Sistem pelacakan buku sering tidak akurat dan komunikasi antara admin dan peminjam terhambat.",
+            "User membutuhkan website profile perusahaan yang modern dan responsif sesuai dengan permintaan User.",
         solution:
-            "Membangun arsitektur terpisah (Frontend React & Backend NestJS) untuk skalabilitas tinggi. Mengintegrasikan teknologi WebSocket untuk mengaktifkan notifikasi peminjaman real-time dan fitur live chat admin-siswa.",
+            "Membangun arsitektur dengan Next.js agar website profile perusahaan modern dan responsif.",
         impact:
-            "Mendemonstrasikan pemahaman mendalam tentang arsitektur microservices-lite, penggunaan cron jobs untuk denda otomatis, dan optimalisasi query database N+1 yang kompleks menggunakan Prisma.",
-        tech: ["React", "NestJS", "PostgreSQL", "Prisma", "WebSocket"],
+            "costomer bisa melihat profil perusahaan secara online dengan antarmuka yang modern dan responsif.",
+        tech: ["React", "NestJS", "WebSocket"],
         gradient: "bg-gradient-to-br from-orange-600 via-rose-600 to-pink-700",
-        liveUrl: "#",
+        liveUrl: "https://solit03.com",
         githubUrl: "#",
-        image: "/image/YOMU.png",
+        image: "/image/Solit03.png",
     },
 ];
 
