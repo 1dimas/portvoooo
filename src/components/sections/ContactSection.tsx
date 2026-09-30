@@ -57,7 +57,7 @@ export default function ContactSection() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
                 >
-                    <SectionCommand command="ssh dimas@solit03" label="Kontak" />
+                    <SectionCommand command="ssh dimas@xxx.xxx.xx" label="Kontak" />
                     <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-4 mb-6">
                         Let&apos;s <span className="text-accent">Collaborate</span>
                     </h2>
