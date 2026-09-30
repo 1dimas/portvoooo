@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Certificate } from "@/data/certificates";
 
@@ -12,11 +13,9 @@ interface CertificateModalProps {
 
 /** Retro/Cyberpunk image component with skeleton loader and hover zoom */
 function CertificateImage({ src, alt }: { src: string; alt: string }) {
+    // Dipanggil dengan key={src}: ganti gambar = remount, jadi status ikut reset
+    // tanpa perlu setState di dalam effect.
     const [status, setStatus] = useState<"loading" | "loaded" | "error">("loading");
-
-    useEffect(() => {
-        setStatus("loading");
-    }, [src]);
 
     return (
         <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[360px] bg-black/40 overflow-hidden flex items-center justify-center border border-border/30 rounded-sm">
@@ -33,15 +32,16 @@ function CertificateImage({ src, alt }: { src: string; alt: string }) {
                     <div className="flex flex-col items-center gap-2 text-center">
                         <span className="text-2xl text-accent">⚠</span>
                         <span className="text-[10px] font-mono text-accent tracking-widest uppercase">DECRYPTION FAILED</span>
-                        <span className="text-[10px] font-mono text-text-muted break-all">{src.split("?")[0]}</span>
+                        <span className="text-[10px] font-mono text-text-muted break-all">{src}</span>
                     </div>
                 </div>
             )}
-            {/* <img> biasa: modal ini punya rotasi + zoom sendiri, dan asetnya sudah WebP kecil */}
-            <img
+            <Image
                 src={src}
                 alt={alt}
-                className="w-full h-full object-contain transition-transform duration-500 hover:scale-102"
+                fill
+                sizes="(max-width: 768px) 100vw, 720px"
+                className="object-contain transition-transform duration-500 hover:scale-102"
                 onLoad={() => setStatus("loaded")}
                 onError={() => setStatus("error")}
             />
@@ -205,6 +205,11 @@ export default function CertificateModal({
                                         {/* Left Side: Certificate Image Container */}
                                         <div className="flex flex-col gap-3">
                                             <CertificateImage
+                                                key={
+                                                    showBack && certificate.backImage
+                                                        ? certificate.backImage
+                                                        : certificate.image
+                                                }
                                                 src={
                                                     showBack && certificate.backImage
                                                         ? certificate.backImage

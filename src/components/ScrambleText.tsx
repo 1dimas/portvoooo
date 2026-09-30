@@ -12,12 +12,15 @@ interface ScrambleTextProps {
 }
 
 export default function ScrambleText({ text, className = "", duration = 50, delay = 0 }: ScrambleTextProps) {
-    const [displayText, setDisplayText] = useState("");
+    const [displayText, setDisplayText] = useState(text);
     const [isScrambling, setIsScrambling] = useState(false);
 
     useEffect(() => {
+        // Hormati preferensi sistem: lewati animasi, biarkan teks apa adanya.
+        // displayText sudah diinisialisasi dengan `text`, jadi cukup tidak mengacak.
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
         let frame = 0;
-        let timeout: NodeJS.Timeout;
         let frameId: number;
 
         const maxFrames = duration;
@@ -51,7 +54,7 @@ export default function ScrambleText({ text, className = "", duration = 50, dela
         };
 
         // Initial delay
-        timeout = setTimeout(startScramble, delay * 1000);
+        const timeout = setTimeout(startScramble, delay * 1000);
 
         return () => {
             clearTimeout(timeout);
@@ -61,6 +64,7 @@ export default function ScrambleText({ text, className = "", duration = 50, dela
 
     const handleHover = () => {
         if (isScrambling) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         setIsScrambling(true);
         let hoverFrame = 0;
         const totalHoverFrames = 20;

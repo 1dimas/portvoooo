@@ -36,7 +36,7 @@ export default function ZoomTransitionSection() {
                     style={{ scale, opacity }}
                     className="relative z-10 origin-center flex items-center justify-center px-4"
                 >
-                    <h2 className="text-[clamp(3rem,8vw,10rem)] font-heading uppercase text-text-primary text-center leading-[0.8] tracking-tighter m-0 p-0">
+                    <h2 lang="en" className="text-[clamp(3rem,8vw,10rem)] font-heading uppercase text-text-primary text-center leading-[0.8] tracking-tighter m-0 p-0">
                         UNDER<br />THE HOOD
                     </h2>
                 </motion.div>

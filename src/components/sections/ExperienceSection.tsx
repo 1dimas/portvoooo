@@ -200,10 +200,10 @@ export default function ExperienceSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default">
+                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
                         <ScrambleText text="Journey" />
                     </span>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-4 tracking-wider uppercase text-text-primary cursor-default">
+                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-4 tracking-wider uppercase text-text-primary cursor-default">
                         <ScrambleText text="Experi" />
                         <span className="text-accent underline decoration-4 underline-offset-8">
                             <ScrambleText text="ence" />

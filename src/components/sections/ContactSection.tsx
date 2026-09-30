@@ -59,7 +59,7 @@ export default function ContactSection() {
                     <span className="text-accent text-sm font-semibold uppercase tracking-widest">
                         Contact
                     </span>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6 uppercase tracking-wider">
+                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6 uppercase tracking-wider">
                         Let&apos;s <span className="text-accent">Collaborate</span>
                     </h2>
                     <p className="text-text-secondary text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed">

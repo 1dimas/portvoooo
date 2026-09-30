@@ -71,7 +71,7 @@ export default function ProjectsSection() {
                         <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary">
                             Portfolio
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading mt-6 mb-3 uppercase tracking-wider text-text-primary">
+                        <h2 lang="en" className="text-3xl sm:text-4xl md:text-5xl font-black font-heading mt-6 mb-3 uppercase tracking-wider text-text-primary">
                             Featured <span className="text-accent underline decoration-4 underline-offset-8">Projects</span>
                         </h2>
                         <p className="text-text-secondary text-sm md:text-base mt-2">

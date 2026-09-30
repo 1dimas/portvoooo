@@ -75,6 +75,7 @@ export function AdaptiveMedia({
             return (
                 <div className={`relative flex items-center justify-center bg-gray-900 overflow-hidden ${className}`}>
                     {/* Fallback image instead of video */}
+                    {/* eslint-disable-next-line @next/next/no-img-element -- eksperimen ini sengaja memilih resolusi sendiri berdasarkan baterai/jaringan; next/image akan menimpa logika itu */}
                     <img src={src} alt={alt} className="w-full h-full object-cover opacity-50 grayscale" />
                     <div className="absolute inset-0 flex items-center justify-center">
                         <span className="text-[10px] font-mono text-white/70 bg-black/50 px-2 py-1 rounded">
@@ -86,6 +87,7 @@ export function AdaptiveMedia({
         }
 
         // Standard image, perhaps heavily compressed or blurhashed
+        // eslint-disable-next-line @next/next/no-img-element -- resolusi dipilih manual oleh hardware oracle
         return <img src={src} alt={alt} className={className} loading="lazy" width="100%" height="100%" />;
     }
 
@@ -102,5 +104,6 @@ export function AdaptiveMedia({
         );
     }
 
+    // eslint-disable-next-line @next/next/no-img-element -- varian resolusi tinggi dipilih manual
     return <img src={highResSrc} alt={alt} className={className} />;
 }

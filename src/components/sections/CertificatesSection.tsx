@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import ScrambleText from "@/components/ScrambleText";
 import CertificateModal from "@/components/CertificateModal";
 import { certificates, type Certificate } from "@/data/certificates";
@@ -19,11 +19,26 @@ function getSpanClasses(span: Certificate["span"]) {
     }
 }
 
-/** Generates a pseudo-encrypted hex string for the "locked" look */
-function useEncryptedText(length: number) {
-    const [text, setText] = useState("");
+/** Placeholder deterministik: aman untuk SSR dan menjaga lebar agar tidak ada CLS. */
+function hexPlaceholder(length: number) {
+    let result = "";
+    for (let i = 0; i < length; i++) {
+        if (i > 0 && i % 4 === 0) result += " ";
+        result += "0";
+    }
+    return result;
+}
+
+/**
+ * Hex acak untuk kesan "terkunci". Hanya berjalan saat kartunya terlihat —
+ * tanpa gerbang ini, tiap kartu menyalakan interval 150ms selamanya.
+ */
+function useEncryptedText(length: number, active: boolean) {
+    const [text, setText] = useState(() => hexPlaceholder(length));
 
     useEffect(() => {
+        if (!active) return;
+
         const chars = "0123456789ABCDEF";
         const generate = () => {
             let result = "";
@@ -33,10 +48,10 @@ function useEncryptedText(length: number) {
             }
             return result;
         };
-        setText(generate());
+
         const interval = setInterval(() => setText(generate()), 150);
         return () => clearInterval(interval);
-    }, [length]);
+    }, [length, active]);
 
     return text;
 }
@@ -50,11 +65,15 @@ function CertificateCard({
     index: number;
     onClick: () => void;
 }) {
-    const encryptedText = useEncryptedText(16);
+    const cardRef = useRef<HTMLDivElement>(null);
+    const isVisible = useInView(cardRef);
+    const prefersReducedMotion = useReducedMotion();
+    const encryptedText = useEncryptedText(16, isVisible && !prefersReducedMotion);
     const isLarge = cert.span === "large";
 
     return (
         <motion.div
+            ref={cardRef}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -162,16 +181,16 @@ export default function CertificatesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default">
+                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
                         <ScrambleText text="Credentials" />
                     </span>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-4 tracking-wider uppercase text-text-primary cursor-default">
+                    <h2 lang="en" className="text-4xl sm:text-5xl md:text-6xl font-black font-heading mt-6 mb-4 tracking-wider uppercase text-text-primary cursor-default">
                         <ScrambleText text="Certi" />
                         <span className="text-accent underline decoration-4 underline-offset-8">
                             <ScrambleText text="ficates" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-text-secondary font-medium text-base md:text-lg max-w-2xl mx-auto leading-relaxed" lang="en">
                         Verified credentials and certifications — click to decrypt and reveal details.
                     </p>
                 </motion.div>

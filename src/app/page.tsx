@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/HeroSection";
+import LabSection from "@/components/sections/LabSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
@@ -14,6 +15,8 @@ export default function Home() {
     <main className="relative bg-bg-primary overflow-clip">
       <Preloader />
       <HeroSection />
+      <div className="h-16 md:h-48" />
+      <LabSection />
       <div className="h-16 md:h-48" />
       <ServicesSection />
       <div className="h-16 md:h-48" />
