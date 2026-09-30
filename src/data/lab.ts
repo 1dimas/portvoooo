@@ -91,6 +91,24 @@ export const labItems: LabItem[] = [
         useCase: ["Codebase visualization", "3D file system explorer"],
         impact: ["Intuitive repo structure overview"]
     },
+    {
+        title: "Entropy",
+        description: "Halaman yang membusuk saat diabaikan. Karakter terkorupsi, tata letak bergeser, kanal warna terpisah — lalu pulih begitu kursor bergerak lagi. Perhatian melawan entropi.",
+        tech: ["MutationObserver-free decay", "Seeded PRNG", "CSS Filters"],
+        status: "Done",
+        link: "/lab/entropy",
+        useCase: ["Narrative-driven interfaces", "Idle-state storytelling"],
+        impact: ["Zero dependency, zero server", "Memorable on-brand interaction"]
+    },
+    {
+        title: "DOM X-Ray",
+        description: "Membedah pohon DOM yang sebenarnya menjadi lapisan 3D yang bisa diputar. Bukan rekonstruksi WebGL — elemennya tetap hidup, masih bisa di-hover dan dibaca tag, kelas, serta ukurannya.",
+        tech: ["CSS 3D Transforms", "DOM Traversal", "Pointer Events"],
+        status: "Done",
+        link: "/lab/dom-xray",
+        useCase: ["Developer tooling", "Teaching layout & stacking"],
+        impact: ["Zero dependency, zero WebGL", "Elemen tetap interaktif saat dibedah"]
+    },
     // Coming Soon / WIP Items
     {
         title: "Biometric Pulse Sync",
