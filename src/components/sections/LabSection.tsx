@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import ScrambleText from "@/components/ScrambleText";
+import SectionCommand from "@/components/SectionCommand";
 import { labItems } from "@/data/lab";
 
 /**
@@ -30,7 +31,7 @@ function PreviewPanel() {
             {/* Label status */}
             <div className="absolute top-0 left-0 z-20 flex items-center gap-2 px-3 py-2 border-r-2 border-b-2 border-border bg-bg-primary">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-text-muted">
+                <span className="text-label font-mono font-bold uppercase text-text-muted">
                     Live — gerakkan kursor di sini
                 </span>
             </div>
@@ -47,7 +48,7 @@ function PreviewPanel() {
                     />
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-text-muted/50">
+                        <span className="text-label font-mono uppercase text-text-muted/50">
                             Memuat eksperimen…
                         </span>
                     </div>
@@ -60,13 +61,13 @@ function PreviewPanel() {
                     <p className="font-heading uppercase tracking-wider text-sm md:text-base text-text-primary truncate">
                         Magnetic Grid
                     </p>
-                    <p className="text-[10px] font-mono uppercase tracking-widest text-text-muted truncate">
+                    <p className="text-label font-mono uppercase text-text-muted truncate">
                         1 dari {playable.length} eksperimen
                     </p>
                 </div>
                 <Link
                     href="/lab/magnetic-grid"
-                    className="shrink-0 text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest border-2 border-text-primary text-text-primary px-3 py-2 hover:bg-accent hover:border-accent hover:text-bg-primary transition-colors duration-200"
+                    className="text-label shrink-0 md:text-xs font-mono font-bold uppercase border-2 border-text-primary text-text-primary px-3 py-2 hover:bg-accent hover:border-accent hover:text-bg-primary transition-colors duration-200"
                 >
                     Buka penuh →
                 </Link>
@@ -89,9 +90,7 @@ export default function LabSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-12"
                 >
-                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
-                        <ScrambleText text="Laboratory" />
-                    </span>
+                    <SectionCommand command="ls /lab" label="Laboratorium" />
                     <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-4 cursor-default">
                         <ScrambleText text="The " />
                         <span className="text-accent underline decoration-4 underline-offset-8">

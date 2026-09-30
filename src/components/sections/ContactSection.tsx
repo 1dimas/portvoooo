@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import InfiniteLoopTrigger from "@/components/InfiniteLoopTrigger";
+import SectionCommand from "@/components/SectionCommand";
 
 const socialLinks = [
     {
@@ -56,9 +57,7 @@ export default function ContactSection() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="text-accent text-sm font-semibold uppercase tracking-widest">
-                        Contact
-                    </span>
+                    <SectionCommand command="ssh dimas@solit03" label="Kontak" />
                     <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-4 mb-6">
                         Let&apos;s <span className="text-accent">Collaborate</span>
                     </h2>

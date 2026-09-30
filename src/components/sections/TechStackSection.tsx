@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import InfiniteMarquee from "@/components/InfiniteMarquee";
 import ScrambleText from "@/components/ScrambleText";
+import SectionCommand from "@/components/SectionCommand";
 
 import {
     siNextdotjs,
@@ -74,9 +75,7 @@ export default function TechStackSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16 px-6"
                 >
-                    <span className="text-accent text-sm font-bold uppercase tracking-widest border-2 border-accent px-4 py-1.5 rounded-none cursor-default" lang="en">
-                        <ScrambleText text="Tech Stack" />
-                    </span>
+                    <SectionCommand command="npm list --depth=0" label="Tech stack" />
                     <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-8 mb-4 cursor-default">
                         <span className="text-text-primary">
                             <ScrambleText text="Tech" />
@@ -85,8 +84,8 @@ export default function TechStackSection() {
                             <ScrambleText text="Stack" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary text-lead max-w-2xl mx-auto" lang="en">
-                        Tools and frameworks I use daily to ship quality products.
+                    <p className="text-text-secondary text-lead max-w-2xl mx-auto">
+                        Perkakas dan framework yang saya pakai sehari-hari untuk merilis produk yang layak dipakai.
                     </p>
                 </motion.div>
 

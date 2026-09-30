@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView, useScroll, useSpring } from "framer-motion";
 import ScrambleText from "@/components/ScrambleText";
+import SectionCommand from "@/components/SectionCommand";
 import CountUp from "@/components/reactbits/CountUp";
 import { experiences, type Experience } from "@/data/experience";
 
@@ -44,7 +45,7 @@ function StatRow({ stats }: { stats: NonNullable<Experience["stats"]> }) {
                     </span>
                     <span
                         aria-hidden
-                        className="block text-[10px] font-mono uppercase tracking-widest text-text-muted mt-2"
+                        className="text-label block font-mono uppercase text-text-muted mt-2"
                     >
                         {stat.label}
                     </span>
@@ -79,7 +80,7 @@ function ExperienceItem({ exp, index }: { exp: Experience; index: number }) {
             <article className="group bg-bg-card border-2 border-border p-5 md:p-6 transition-all duration-300 hover:border-accent hover:shadow-[-4px_4px_0px_0px_var(--color-accent)]">
                 <div className="flex flex-wrap items-center gap-3 mb-3">
                     <span
-                        className={`text-[10px] font-mono font-bold uppercase tracking-widest border px-2 py-0.5 ${getTypeClasses(
+                        className={`text-label font-mono font-bold uppercase border px-2 py-0.5 ${getTypeClasses(
                             exp.type
                         )}`}
                     >
@@ -90,7 +91,7 @@ function ExperienceItem({ exp, index }: { exp: Experience; index: number }) {
                     </span>
                     {exp.confidential && (
                         <span
-                            className="text-[10px] font-mono uppercase tracking-widest border border-text-muted/50 text-text-muted px-2 py-0.5"
+                            className="text-label font-mono uppercase border border-text-muted/50 text-text-muted px-2 py-0.5"
                             title="Sistem internal perusahaan — tidak ada demo publik atau repositori terbuka"
                         >
                             🔒 Internal
@@ -130,7 +131,7 @@ function ExperienceItem({ exp, index }: { exp: Experience; index: number }) {
 
                 {exp.modules && exp.modules.length > 0 && (
                     <div className="mt-5 pt-4 border-t border-border">
-                        <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-text-muted mb-3">
+                        <p className="text-label font-mono font-bold uppercase text-text-muted mb-3">
                             Cakupan sistem — {exp.modules.length} modul
                         </p>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -200,9 +201,7 @@ export default function ExperienceSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
-                        <ScrambleText text="Journey" />
-                    </span>
+                    <SectionCommand command="git log --author=dimas" label="Perjalanan karier" />
                     <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-4 cursor-default">
                         <ScrambleText text="Experi" />
                         <span className="text-accent underline decoration-4 underline-offset-8">

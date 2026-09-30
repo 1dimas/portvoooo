@@ -98,7 +98,7 @@ export default function EntropyPage() {
                     {/* Pembacaan integritas */}
                     <div className="border-2 border-border bg-bg-primary p-4">
                         <div className="flex justify-between items-baseline font-mono">
-                            <span className="text-[10px] uppercase tracking-widest text-text-muted">
+                            <span className="text-label uppercase text-text-muted">
                                 System Integrity
                             </span>
                             <span className="text-accent font-black text-2xl tabular-nums">
@@ -111,7 +111,7 @@ export default function EntropyPage() {
                                 style={{ width: `${integrity}%` }}
                             />
                         </div>
-                        <p className="text-[10px] font-mono uppercase tracking-widest text-text-muted mt-3">
+                        <p className="text-label font-mono uppercase text-text-muted mt-3">
                             status: <span className="text-accent">{stage}</span>
                         </p>
                     </div>
@@ -147,13 +147,13 @@ export default function EntropyPage() {
                         <div className="grid grid-cols-2 gap-2">
                             <button
                                 onClick={() => setPaused((p) => !p)}
-                                className="font-mono text-[10px] font-bold uppercase tracking-widest border-2 border-border text-text-secondary px-3 py-3 hover:border-accent hover:text-accent transition-colors"
+                                className="text-label font-mono font-bold uppercase border-2 border-border text-text-secondary px-3 py-3 hover:border-accent hover:text-accent transition-colors"
                             >
                                 {paused ? "Lanjutkan" : "Bekukan"}
                             </button>
                             <button
                                 onClick={() => setIntegrity(100)}
-                                className="font-mono text-[10px] font-bold uppercase tracking-widest border-2 border-text-primary bg-text-primary text-bg-primary px-3 py-3 hover:bg-accent hover:border-accent transition-colors"
+                                className="text-label font-mono font-bold uppercase border-2 border-text-primary bg-text-primary text-bg-primary px-3 py-3 hover:bg-accent hover:border-accent transition-colors"
                             >
                                 $ repair
                             </button>

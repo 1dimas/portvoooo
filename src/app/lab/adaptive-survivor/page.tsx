@@ -129,7 +129,7 @@ function AdaptiveDashboard() {
                 >
                     <span className="text-xl">{tierConfig.icon}</span>
                     <div className="flex flex-col">
-                        <span className={`text-[10px] uppercase font-bold tracking-widest ${tierConfig.color}`}>
+                        <span className={`text-label uppercase font-bold ${tierConfig.color}`}>
                             {tier} PERFORMANCE
                         </span>
                         <span className="text-[9px] uppercase font-mono opacity-70">
@@ -152,7 +152,7 @@ function AdaptiveDashboard() {
                                         ←
                                     </Link>
                                 </MagneticButton>
-                                <span className="text-[10px] uppercase font-mono tracking-widest text-text-muted">EXP_008</span>
+                                <span className="text-label uppercase font-mono text-text-muted">EXP_008</span>
                             </div>
                             <h1 className={`text-3xl font-heading uppercase tracking-tighter mb-2 leading-tight transition-colors ${tier === 'ECO' ? 'text-gray-300' : 'text-accent'}`}>Adaptive<br />Survivor</h1>
                             <p className="text-xs text-text-secondary leading-relaxed">
@@ -204,7 +204,7 @@ function AdaptiveDashboard() {
                             <div className="flex flex-col gap-3">
                                 <button
                                     onClick={() => simulateTier('ECO')}
-                                    className={`py-3 px-4 border rounded text-[10px] font-mono uppercase tracking-widest transition-all text-left flex justify-between ${isSimulating && tier === 'ECO'
+                                    className={`text-label py-3 px-4 border rounded font-mono uppercase transition-all text-left flex justify-between ${isSimulating && tier === 'ECO'
                                             ? 'border-red-500/50 bg-red-500/10 text-red-500'
                                             : 'border-border text-text-muted hover:border-text-secondary'
                                         }`}
@@ -214,7 +214,7 @@ function AdaptiveDashboard() {
                                 </button>
                                 <button
                                     onClick={() => simulateTier('MEDIUM')}
-                                    className={`py-3 px-4 border rounded text-[10px] font-mono uppercase tracking-widest transition-all text-left flex justify-between ${isSimulating && tier === 'MEDIUM'
+                                    className={`text-label py-3 px-4 border rounded font-mono uppercase transition-all text-left flex justify-between ${isSimulating && tier === 'MEDIUM'
                                             ? 'border-yellow-500/50 bg-yellow-500/10 text-yellow-500'
                                             : 'border-border text-text-muted hover:border-text-secondary'
                                         }`}
@@ -224,7 +224,7 @@ function AdaptiveDashboard() {
                                 </button>
                                 <button
                                     onClick={() => simulateTier('HIGH')}
-                                    className={`py-3 px-4 border rounded text-[10px] font-mono uppercase tracking-widest transition-all text-left flex justify-between ${isSimulating && tier === 'HIGH'
+                                    className={`text-label py-3 px-4 border rounded font-mono uppercase transition-all text-left flex justify-between ${isSimulating && tier === 'HIGH'
                                             ? 'border-green-500/50 bg-green-500/10 text-green-500'
                                             : 'border-border text-text-muted hover:border-text-secondary'
                                         }`}

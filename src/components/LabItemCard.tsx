@@ -41,10 +41,10 @@ export default function LabItemCard({ title, description, tech, link, status, de
 
                 {/* Status Badge */}
                 <div className="flex items-center justify-between mb-6">
-                    <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-text-muted">
+                    <span className="text-label sm:text-xs font-mono uppercase text-text-muted">
                         {"// "}EXP_{String(title).substring(0, 3).toUpperCase()}_{String(title).length.toString().padStart(2, '0')}
                     </span>
-                    <span className={`text-[10px] font-bold px-2 py-1 uppercase tracking-widest border ${status === 'Done' ? 'border-green-500/50 text-green-400' :
+                    <span className={`text-label font-bold px-2 py-1 uppercase border ${status === 'Done' ? 'border-green-500/50 text-green-400' :
                         status === 'WIP' ? 'border-yellow-500/50 text-yellow-400' :
                             'border-blue-500/50 text-blue-400'
                         }`}>
@@ -113,7 +113,7 @@ export default function LabItemCard({ title, description, tech, link, status, de
                                             }
                                         }));
                                     }}
-                                    className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-accent/60 hover:text-accent transition-colors border border-accent/20 hover:border-accent/50 px-2 py-1"
+                                    className="text-label inline-flex items-center gap-1.5 font-bold uppercase text-accent/60 hover:text-accent transition-colors border border-accent/20 hover:border-accent/50 px-2 py-1"
                                 >
                                     <span>✦</span>
                                     <span>Ask AI</span>

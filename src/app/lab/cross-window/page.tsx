@@ -37,7 +37,7 @@ function PortalDashboard() {
                                     ←
                                 </Link>
                             </MagneticButton>
-                            <span className="text-[10px] uppercase font-mono tracking-widest text-text-muted">EXP_005</span>
+                            <span className="text-label uppercase font-mono text-text-muted">EXP_005</span>
                         </div>
                         <h1 className="text-3xl font-heading uppercase tracking-tighter text-accent mb-2">Cross-Window Portal</h1>
                         <p className="text-xs text-text-secondary leading-relaxed">
@@ -53,7 +53,7 @@ function PortalDashboard() {
                             <span className="text-xs font-mono uppercase tracking-wider text-text-muted">Network Status</span>
                             <div className="flex items-center gap-2">
                                 <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`} />
-                                <span className={`text-[10px] uppercase font-bold tracking-widest ${isConnected ? 'text-green-500' : 'text-red-500'}`}>
+                                <span className={`text-label uppercase font-bold ${isConnected ? 'text-green-500' : 'text-red-500'}`}>
                                     {isConnected ? 'ONLINE' : 'OFFLINE'}
                                 </span>
                             </div>
@@ -66,7 +66,7 @@ function PortalDashboard() {
 
                         <button
                             onClick={toggleConnection}
-                            className={`py-3 text-[10px] font-bold uppercase tracking-widest rounded-lg transition-colors border ${isConnected
+                            className={`text-label py-3 font-bold uppercase rounded-lg transition-colors border ${isConnected
                                     ? 'border-red-500/30 text-red-500 hover:bg-red-500/10'
                                     : 'border-green-500/30 text-green-500 hover:bg-green-500/10'
                                 }`}

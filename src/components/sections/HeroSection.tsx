@@ -133,7 +133,7 @@ export default function HeroSection() {
                     style={{ opacity: useTransform(scrollYProgress, [0, 0.1], [1, 0]) }}
                     className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
                 >
-                    <span className="text-[10px] uppercase tracking-widest text-text-muted">Scroll</span>
+                    <span className="text-label uppercase text-text-muted">Scroll</span>
                     <div className="w-[1px] h-12 bg-gradient-to-b from-text-muted to-transparent" />
                 </motion.div>
             </div>

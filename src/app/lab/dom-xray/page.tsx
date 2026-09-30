@@ -14,7 +14,7 @@ function SpecimenCard() {
             <header className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-accent" />
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-text-muted">
+                    <span className="text-label font-mono uppercase text-text-muted">
                         specimen.tsx
                     </span>
                 </div>
@@ -43,10 +43,10 @@ function SpecimenCard() {
             </ul>
 
             <footer className="mt-5 pt-4 border-t border-border flex gap-2">
-                <button className="flex-1 text-[10px] font-mono font-bold uppercase tracking-widest border-2 border-text-primary text-text-primary py-2">
+                <button className="text-label flex-1 font-mono font-bold uppercase border-2 border-text-primary text-text-primary py-2">
                     Aksi
                 </button>
-                <button className="flex-1 text-[10px] font-mono font-bold uppercase tracking-widest border-2 border-border text-text-muted py-2">
+                <button className="text-label flex-1 font-mono font-bold uppercase border-2 border-border text-text-muted py-2">
                     Batal
                 </button>
             </footer>
@@ -95,7 +95,7 @@ export default function DomXRayPage() {
 
                     {/* Pembacaan lapisan */}
                     <div className="border-2 border-border bg-bg-primary p-4 font-mono min-h-[128px]">
-                        <p className="text-[10px] uppercase tracking-widest text-text-muted mb-3">
+                        <p className="text-label uppercase text-text-muted mb-3">
                             Inspeksi Lapisan
                         </p>
                         {hovered ? (

@@ -140,7 +140,7 @@ export default function DomXRay({
                 </div>
             </div>
 
-            <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-mono uppercase tracking-widest text-text-muted/60 pointer-events-none">
+            <p className="text-label absolute bottom-4 left-1/2 -translate-x-1/2 font-mono uppercase text-text-muted/60 pointer-events-none">
                 seret untuk memutar
             </p>
         </div>

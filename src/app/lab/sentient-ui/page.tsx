@@ -53,7 +53,7 @@ function SentientDashboard() {
                                     ←
                                 </Link>
                             </MagneticButton>
-                            <span className="text-[10px] uppercase font-mono tracking-widest text-text-muted">EXP_006</span>
+                            <span className="text-label uppercase font-mono text-text-muted">EXP_006</span>
                         </div>
                         <h1 className="text-3xl font-heading uppercase tracking-tighter text-accent mb-2">The Sentient UI</h1>
                         <p className="text-xs text-text-secondary leading-relaxed">
@@ -69,7 +69,7 @@ function SentientDashboard() {
                             <span className="text-xs font-mono uppercase tracking-wider text-text-muted">Digital Brain Status</span>
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                                <span className="text-[10px] uppercase font-bold tracking-widest text-accent">
+                                <span className="text-label uppercase font-bold text-accent">
                                     LEARNING
                                 </span>
                             </div>
@@ -156,7 +156,7 @@ function SentientDashboard() {
                                 hoverInterestWeight={2}
                                 visibilityInterestWeight={0.1}
                             >
-                                <span className="text-[10px] font-mono text-accent uppercase tracking-widest mb-4 inline-block px-2 py-1 bg-accent/10 rounded border border-accent/20">
+                                <span className="text-label font-mono text-accent uppercase mb-4 inline-block px-2 py-1 bg-accent/10 rounded border border-accent/20">
                                     {lib.category}
                                 </span>
                                 <h3 className="text-2xl font-heading text-text-primary mb-2 line-clamp-1">{lib.name}</h3>

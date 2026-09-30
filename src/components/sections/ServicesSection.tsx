@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import ServiceCard from "@/components/ServiceCard";
 import ScrambleText from "@/components/ScrambleText";
+import SectionCommand from "@/components/SectionCommand";
 
 const services = [
     {
@@ -88,16 +89,14 @@ export default function ServicesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-20"
                 >
-                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
-                        <ScrambleText text="What I Build" />
-                    </span>
+                    <SectionCommand command="ls ./services" label="Layanan" />
                     <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-6 cursor-default">
                         <ScrambleText text="Digital" /> <span className="text-accent underline decoration-4 underline-offset-8">
                             <ScrambleText text="Services" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary text-lead max-w-2xl mx-auto" lang="en">
-                        End-to-end solutions from design to deployment. Performance-focused web applications built for real business impact.
+                    <p className="text-text-secondary text-lead max-w-2xl mx-auto">
+                        Solusi menyeluruh dari desain sampai deployment. Aplikasi web yang dibangun untuk performa, dan diukur dari dampaknya ke bisnis.
                     </p>
                 </motion.div>
 

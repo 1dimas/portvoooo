@@ -38,7 +38,7 @@ export default function ChaosDesktopPage() {
                                     ←
                                 </Link>
                             </MagneticButton>
-                            <span className="text-[10px] uppercase font-mono tracking-widest text-text-muted">EXP_004</span>
+                            <span className="text-label uppercase font-mono text-text-muted">EXP_004</span>
                         </div>
                         <h1 className="text-3xl font-heading uppercase text-accent mb-2">Chaos Desktop</h1>
                         <p className="text-xs text-text-secondary leading-relaxed">

@@ -58,10 +58,12 @@
   --text-lead--line-height: 1.65;
   --text-lead--letter-spacing: 0em;
 
-  /* Kapital berukuran kecil butuh lebih renggang, bukan lebih rapat. */
+  /* Kapital berukuran kecil butuh lebih renggang, bukan lebih rapat.
+     Nilai disamakan persis dengan `text-[10px] tracking-widest` yang selama ini
+     dipakai, supaya penggantiannya murni refactor — nol perubahan visual.
+     line-height sengaja tidak diatur agar pewarisan dari induk tetap utuh. */
   --text-label: 0.625rem;
-  --text-label--line-height: 1.4;
-  --text-label--letter-spacing: 0.18em;
+  --text-label--letter-spacing: 0.1em;
 
   /* ---- Animation Durations ---- */
   --duration-fast: 150ms;

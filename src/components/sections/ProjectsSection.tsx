@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 
 import { projects } from "@/data/projects";
+import SectionCommand from "@/components/SectionCommand";
 
 export default function ProjectsSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -68,9 +69,7 @@ export default function ProjectsSection() {
                         transition={{ duration: 0.6 }}
                         className="text-center mb-8 px-6"
                     >
-                        <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary">
-                            Portfolio
-                        </span>
+                        <SectionCommand command="cat projects.json" label="Portfolio" />
                         <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-3">
                             Featured <span className="text-accent underline decoration-4 underline-offset-8">Projects</span>
                         </h2>

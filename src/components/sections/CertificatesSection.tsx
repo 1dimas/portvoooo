@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import ScrambleText from "@/components/ScrambleText";
+import SectionCommand from "@/components/SectionCommand";
 import CertificateModal from "@/components/CertificateModal";
 import { certificates, type Certificate } from "@/data/certificates";
 
@@ -106,7 +107,7 @@ function CertificateCard({
                 <div>
                     {/* Status indicator */}
                     <div className="flex items-center justify-between mb-4">
-                        <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-text-muted group-hover:text-accent transition-colors duration-300">
+                        <span className="text-label font-mono font-bold uppercase text-text-muted group-hover:text-accent transition-colors duration-300">
                             ◈ {cert.category}
                         </span>
                         <div className="flex items-center gap-1.5">
@@ -181,17 +182,15 @@ export default function CertificatesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="text-bg-primary text-sm font-bold uppercase tracking-widest bg-text-primary px-4 py-1.5 border-2 border-text-primary cursor-default" lang="en">
-                        <ScrambleText text="Credentials" />
-                    </span>
+                    <SectionCommand command="cat credential_vault" label="Kredensial" />
                     <h2 lang="en" className="text-h2 font-heading uppercase text-text-primary mt-6 mb-4 cursor-default">
                         <ScrambleText text="Certi" />
                         <span className="text-accent underline decoration-4 underline-offset-8">
                             <ScrambleText text="ficates" />
                         </span>
                     </h2>
-                    <p className="text-text-secondary text-lead max-w-2xl mx-auto" lang="en">
-                        Verified credentials and certifications — click to decrypt and reveal details.
+                    <p className="text-text-secondary text-lead max-w-2xl mx-auto">
+                        Sertifikasi dan kredensial terverifikasi — klik untuk mendekripsi dan melihat detailnya.
                     </p>
                 </motion.div>
 

@@ -260,7 +260,7 @@ function NeuralDashboard() {
                                     ←
                                 </Link>
                             </MagneticButton>
-                            <span className="text-[10px] uppercase font-mono tracking-widest text-text-muted">EXP_007</span>
+                            <span className="text-label uppercase font-mono text-text-muted">EXP_007</span>
                         </div>
                         <h1 className="text-3xl font-heading uppercase tracking-tighter text-accent mb-2 leading-tight">Neural<br />Gesture</h1>
                         <p className="text-xs text-text-secondary leading-relaxed">
@@ -278,21 +278,21 @@ function NeuralDashboard() {
                             {!isReady && !isInitializing && (
                                 <div className="flex items-center gap-2">
                                     <div className="w-2 h-2 rounded-full bg-red-500" />
-                                    <span className="text-[10px] uppercase font-bold tracking-widest text-red-500">OFFLINE</span>
+                                    <span className="text-label uppercase font-bold text-red-500">OFFLINE</span>
                                 </div>
                             )}
 
                             {isInitializing && (
                                 <div className="flex items-center gap-2">
                                     <div className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse" />
-                                    <span className="text-[10px] uppercase font-bold tracking-widest text-yellow-500">BOOTING AI</span>
+                                    <span className="text-label uppercase font-bold text-yellow-500">BOOTING AI</span>
                                 </div>
                             )}
 
                             {isReady && (
                                 <div className="flex items-center gap-2">
                                     <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                    <span className="text-[10px] uppercase font-bold tracking-widest text-green-500">ONLINE</span>
+                                    <span className="text-label uppercase font-bold text-green-500">ONLINE</span>
                                 </div>
                             )}
                         </div>
