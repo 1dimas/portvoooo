@@ -34,6 +34,9 @@
   /* ---- Fonts ---- */
   --font-heading: var(--font-anton), sans-serif;
   --font-body: var(--font-inter), sans-serif;
+  /* Situs bertema terminal tidak boleh bergantung pada mono bawaan OS —
+     hasilnya berbeda di tiap mesin dan tidak satupun dipilih dengan sengaja. */
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
   /* ---- Skala Tipografi ----
      Rasio 1.25, fluid lewat clamp(). Tracking berbanding terbalik dengan ukuran:

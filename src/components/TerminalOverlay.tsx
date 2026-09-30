@@ -3,6 +3,15 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sendAIMessage } from "@/lib/ai/ai";
+import * as vfs from "@/lib/terminal/fs";
+import { ASCII_LOGO, collectSystemInfo } from "@/lib/terminal/neofetch";
+import { SCHEMES, applyScheme, resetScheme, restoreScheme } from "@/lib/terminal/themes";
+
+const COMMAND_NAMES = [
+    "help", "whoami", "skills", "projects", "contact", "lab", "ask",
+    "ls", "cd", "cat", "pwd", "tree", "find", "uname", "neofetch", "theme",
+    "clear", "exit",
+];
 
 export default function TerminalOverlay() {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +24,22 @@ export default function TerminalOverlay() {
     ]);
     const inputRef = useRef<HTMLInputElement>(null);
     const bottomRef = useRef<HTMLDivElement>(null);
+
+    // Shell state
+    const [cwd, setCwd] = useState("");            // "" = ~  (root src/)
+    const commandLog = useRef<string[]>([]);       // riwayat untuk panah atas/bawah
+    const logCursor = useRef(-1);                  // -1 = sedang mengetik baris baru
+    const draft = useRef("");                      // simpan ketikan saat menelusuri riwayat
+    const startedAt = useRef(0);            // diisi saat mount, bukan saat render
+    const tabHits = useRef<{ prefix: string; list: string[]; i: number } | null>(null);
+
+    const prompt = cwd ? `~/${cwd}` : "~";
+
+    // Kembalikan colorscheme pilihan pengunjung dari kunjungan sebelumnya.
+    useEffect(() => {
+        startedAt.current = Date.now();
+        restoreScheme();
+    }, []);
 
     // Handle Ctrl+` (backtick) or Ctrl+J to avoid Chrome URL bar hijacking Ctrl+K
     useEffect(() => {
@@ -53,9 +78,83 @@ export default function TerminalOverlay() {
         }
     }, [history, isOpen]);
 
+
+    /** Tombol-tombol yang dicari orang dalam lima detik pertama di sebuah shell. */
+    const handleInputKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        const log = commandLog.current;
+
+        if (e.key === "ArrowUp") {
+            e.preventDefault();
+            if (!log.length) return;
+            if (logCursor.current === -1) draft.current = input;
+            logCursor.current = Math.min(logCursor.current + 1, log.length - 1);
+            setInput(log[log.length - 1 - logCursor.current]);
+            return;
+        }
+
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            if (logCursor.current <= 0) {
+                logCursor.current = -1;
+                setInput(draft.current);
+                return;
+            }
+            logCursor.current -= 1;
+            setInput(log[log.length - 1 - logCursor.current]);
+            return;
+        }
+
+        if (e.key === "Tab") {
+            e.preventDefault();
+            const parts = input.split(" ");
+            const last = parts[parts.length - 1];
+
+            // Argumen pertama = nama perintah; sisanya = path.
+            const candidates =
+                parts.length === 1
+                    ? COMMAND_NAMES.filter((c) => c.startsWith(last))
+                    : vfs.completePath(cwd, last);
+
+            if (!candidates.length) return;
+
+            // Tab berulang menelusuri kandidat, seperti shell sungguhan.
+            if (tabHits.current && tabHits.current.prefix === last) {
+                tabHits.current.i = (tabHits.current.i + 1) % tabHits.current.list.length;
+            } else {
+                tabHits.current = { prefix: last, list: candidates, i: 0 };
+            }
+
+            parts[parts.length - 1] = tabHits.current.list[tabHits.current.i];
+            setInput(parts.join(" "));
+            return;
+        }
+
+        if (e.ctrlKey && e.key === "l") {
+            e.preventDefault();
+            setHistory([]);
+            return;
+        }
+
+        if (e.ctrlKey && e.key === "c") {
+            e.preventDefault();
+            setHistory((prev) => [...prev, { command: input + "^C", output: "" }]);
+            setInput("");
+            logCursor.current = -1;
+            return;
+        }
+
+        tabHits.current = null;
+    };
+
     const handleCommand = (e: React.FormEvent) => {
         e.preventDefault();
         const cmd = input.trim().toLowerCase();
+
+        if (cmd) {
+            commandLog.current.push(cmd);
+        }
+        logCursor.current = -1;
+        tabHits.current = null;
 
         let output: React.ReactNode = "";
 
@@ -64,15 +163,29 @@ export default function TerminalOverlay() {
         } else if (cmd === "help") {
             output = (
                 <div className="flex flex-col gap-1">
-                    <span>Available commands:</span>
-                    <span className="text-accent">whoami <span className="text-text-muted">- Display owner info</span></span>
-                    <span className="text-accent">skills <span className="text-text-muted">- List technical stack</span></span>
-                    <span className="text-accent">projects <span className="text-text-muted">- Highlighted works</span></span>
-                    <span className="text-accent">contact <span className="text-text-muted">- How to reach me</span></span>
-                    <span className="text-accent">ask &lt;question&gt; <span className="text-text-muted">- Ask the AI assistant</span></span>
-                    <span className="text-accent">lab <span className="text-text-muted">- Enter the experimental UI zone</span></span>
-                    <span className="text-accent">clear <span className="text-text-muted">- Clear terminal</span></span>
-                    <span className="text-accent">exit <span className="text-text-muted">- Close terminal</span></span>
+                    <span className="text-text-muted">INFO</span>
+                    <span className="text-accent">whoami <span className="text-text-muted">- Siapa pemilik situs ini</span></span>
+                    <span className="text-accent">skills <span className="text-text-muted">- Tech stack</span></span>
+                    <span className="text-accent">projects <span className="text-text-muted">- Karya pilihan</span></span>
+                    <span className="text-accent">contact <span className="text-text-muted">- Cara menghubungi</span></span>
+                    <span className="text-accent">neofetch <span className="text-text-muted">- Spesifikasi mesin ANDA</span></span>
+                    <span className="text-accent">uname -a <span className="text-text-muted">- Info kernel</span></span>
+
+                    <span className="text-text-muted mt-2">FILESYSTEM <span className="text-text-muted/60">(source code asli)</span></span>
+                    <span className="text-accent">ls [path] <span className="text-text-muted">- Daftar isi direktori</span></span>
+                    <span className="text-accent">cd &lt;path&gt; <span className="text-text-muted">- Pindah direktori</span></span>
+                    <span className="text-accent">cat &lt;file&gt; <span className="text-text-muted">- Info sebuah file</span></span>
+                    <span className="text-accent">tree [path] <span className="text-text-muted">- Pohon direktori</span></span>
+                    <span className="text-accent">find &lt;teks&gt; <span className="text-text-muted">- Cari file</span></span>
+                    <span className="text-accent">pwd <span className="text-text-muted">- Direktori saat ini</span></span>
+
+                    <span className="text-text-muted mt-2">LAINNYA</span>
+                    <span className="text-accent">theme [nama] <span className="text-text-muted">- Ganti colorscheme</span></span>
+                    <span className="text-accent">lab <span className="text-text-muted">- Buka halaman Lab</span></span>
+                    <span className="text-accent">ask &lt;tanya&gt; <span className="text-text-muted">- Tanya asisten AI</span></span>
+                    <span className="text-accent">clear / exit</span>
+
+                    <span className="text-text-muted mt-2">↑ ↓ riwayat · Tab autocomplete · Ctrl+L clear · Ctrl+C batal</span>
                 </div>
             );
         } else if (cmd === "whoami") {
@@ -184,8 +297,124 @@ export default function TerminalOverlay() {
                 });
             });
             return;
+        } else if (cmd === "pwd") {
+            output = `~/${cwd}`.replace(/\/$/, "");
+        } else if (cmd === "ls" || cmd.startsWith("ls ")) {
+            const target = vfs.resolvePath(cwd, cmd.slice(2).trim());
+            if (!vfs.isDir(target)) {
+                output = `ls: cannot access '${cmd.slice(2).trim()}': No such file or directory`;
+            } else {
+                const { dirs, files } = vfs.listDir(target);
+                output = (
+                    <div className="flex flex-wrap gap-x-6 gap-y-1">
+                        {dirs.map((d) => (
+                            <span key={d} className="text-blue-400 font-bold">{d}/</span>
+                        ))}
+                        {files.map((f) => (
+                            <span key={f.path} className="text-gray-300">{f.name}</span>
+                        ))}
+                    </div>
+                );
+            }
+        } else if (cmd.startsWith("cd")) {
+            const arg = cmd.slice(2).trim();
+            const target = vfs.resolvePath(cwd, arg);
+            if (vfs.isDir(target)) {
+                setCwd(target);
+                output = "";
+            } else {
+                output = `cd: ${arg}: Not a directory`;
+            }
+        } else if (cmd.startsWith("cat ")) {
+            const arg = cmd.slice(4).trim();
+            const target = vfs.resolvePath(cwd, arg);
+            const f = vfs.getFile(target);
+            if (!f) {
+                output = vfs.isDir(target)
+                    ? `cat: ${arg}: Is a directory`
+                    : `cat: ${arg}: No such file or directory`;
+            } else {
+                output = (
+                    <div className="flex flex-col gap-1">
+                        <span className="text-accent">{f.path}</span>
+                        <span className="text-text-muted">
+                            {f.sizeKb} KB · {f.extension || "no extension"}
+                        </span>
+                        <span className="text-gray-400 mt-1">
+                            Isi file tidak disertakan di bundle — buka di GitHub untuk membacanya.
+                        </span>
+                    </div>
+                );
+            }
+        } else if (cmd === "tree" || cmd.startsWith("tree ")) {
+            const target = vfs.resolvePath(cwd, cmd.slice(4).trim());
+            output = vfs.isDir(target)
+                ? <span className="text-gray-300">{vfs.treeString(target).join("\n")}</span>
+                : `tree: ${cmd.slice(4).trim()}: No such directory`;
+        } else if (cmd.startsWith("find ")) {
+            const needle = cmd.slice(5).trim();
+            const hits = vfs.allPaths().filter((p) => p.includes(needle));
+            output = hits.length
+                ? <span className="text-gray-300">{hits.slice(0, 40).join("\n")}</span>
+                : `find: tidak ada yang cocok dengan '${needle}'`;
+        } else if (cmd === "uname" || cmd === "uname -a") {
+            output = "portfolio 1.0.0-next16 #1 SMP PREEMPT_DYNAMIC x86_64 GNU/Web";
+        } else if (cmd === "neofetch") {
+            setHistory((prev) => [...prev, { command: cmd, output: "collecting…" }]);
+            setInput("");
+            collectSystemInfo(Date.now() - startedAt.current).then((info) => {
+                const rows = Math.max(ASCII_LOGO.length, info.length);
+                setHistory((prev) => {
+                    const updated = [...prev];
+                    updated[updated.length - 1] = {
+                        command: cmd,
+                        output: (
+                            <div className="flex gap-6">
+                                <pre className="text-accent leading-tight">{ASCII_LOGO.join("\n")}</pre>
+                                <div className="flex flex-col leading-tight">
+                                    <span className="text-accent font-bold">visitor@portfolio</span>
+                                    <span className="text-text-muted">─────────────────</span>
+                                    {Array.from({ length: rows - ASCII_LOGO.length + info.length })
+                                        .slice(0, info.length)
+                                        .map((_, i) => (
+                                            <span key={info[i].label}>
+                                                <span className="text-accent font-bold">{info[i].label}</span>
+                                                <span className="text-text-muted">: </span>
+                                                <span className="text-gray-300">{info[i].value}</span>
+                                            </span>
+                                        ))}
+                                </div>
+                            </div>
+                        ),
+                    };
+                    return updated;
+                });
+            });
+            return;
+        } else if (cmd === "theme" || cmd.startsWith("theme ")) {
+            const arg = cmd.slice(5).trim();
+            if (!arg) {
+                output = (
+                    <div className="flex flex-col gap-1">
+                        <span className="text-text-muted">Usage: theme &lt;nama&gt; | theme reset</span>
+                        {Object.values(SCHEMES).map((sc) => (
+                            <span key={sc.name}>
+                                <span className="text-accent">{sc.name.padEnd(10)}</span>
+                                <span className="text-text-muted">{sc.blurb}</span>
+                            </span>
+                        ))}
+                    </div>
+                );
+            } else if (arg === "reset" || arg === "default") {
+                resetScheme();
+                output = "Colorscheme dikembalikan ke bawaan.";
+            } else if (applyScheme(arg)) {
+                output = `Colorscheme diganti ke '${arg}'. Tersimpan untuk kunjungan berikutnya.`;
+            } else {
+                output = `theme: '${arg}' tidak dikenal. Jalankan 'theme' untuk melihat daftarnya.`;
+            }
         } else {
-            output = `Command not found: ${cmd}. Type 'help' for available commands, or 'ask <question>' to use AI.`;
+            output = `bash: ${cmd.split(" ")[0]}: command not found`;
         }
 
         if (cmd !== "") {
@@ -216,7 +445,7 @@ export default function TerminalOverlay() {
                                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                                 <div className="w-3 h-3 rounded-full bg-green-500" />
                             </div>
-                            <div className="text-text-muted text-xs mx-auto">dimas@portfolio: ~</div>
+                            <div className="text-text-muted text-xs mx-auto">dimas@portfolio: {prompt}</div>
                         </div>
 
                         {/* Terminal Body */}
@@ -226,7 +455,7 @@ export default function TerminalOverlay() {
                                     {item.command && (
                                         <div className="flex gap-2">
                                             <span className="text-accent">➜</span>
-                                            <span className="text-blue-400">~</span>
+                                            <span className="text-blue-400">{prompt}</span>
                                             <span className="text-white">{item.command}</span>
                                         </div>
                                     )}
@@ -236,12 +465,13 @@ export default function TerminalOverlay() {
 
                             <form onSubmit={handleCommand} className="flex gap-2 mt-2">
                                 <span className="text-accent">➜</span>
-                                <span className="text-blue-400">~</span>
+                                <span className="text-blue-400">{prompt}</span>
                                 <input
                                     ref={inputRef}
                                     type="text"
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
+                                    onKeyDown={handleInputKey}
                                     className="flex-1 bg-transparent border-none outline-none text-white focus:ring-0 p-0"
                                     autoComplete="off"
                                     spellCheck="false"

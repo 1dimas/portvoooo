@@ -32,7 +32,9 @@ function parseDirectory(dirPath, relativePath = '') {
         if (IGNORED_DIRS.includes(item)) continue;
 
         const fullPath = path.join(dirPath, item);
-        const itemRelativePath = path.join(relativePath, item);
+        // Normalisasi ke '/': path.join mengikuti OS, jadi hasil build di Windows
+        // dan di Vercel (Linux) akan berbeda. Situs ini juga bertema Linux.
+        const itemRelativePath = path.posix.join(relativePath, item);
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
