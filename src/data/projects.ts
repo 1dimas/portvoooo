@@ -20,16 +20,16 @@ export const projects: Project[] = [
         slug: "company-profile",
         title: "Company Profile",
         category: "Daya Tarik Instan untuk UMKM",
-        role: "Frontend Developer",
+        role: "Frontend Developer (Modul Berita)",
         timeline: "2023",
         description:
-            "Website company profile modern dengan desain responsif dan animasi smooth. Dirancang untuk memberikan kesan profesional dan meningkatkan kredibilitas bisnis di mata calon pelanggan.",
+            "Website company profile modern dengan desain responsif. Berfokus pada pengembangan modul dan kanal berita/artikel untuk kebutuhan publikasi informasi serta pembaruan perusahaan.",
         problem:
-            "Banyak UMKM memiliki profil perusahaan yang terlihat kaku dan tertinggal zaman, sehingga sulit membangun kepercayaan awal dari calon klien potensial melalui ranah online.",
+            "Perusahaan membutuhkan kanal publikasi informasi dan pembaruan berita yang terstruktur, cepat, dan mudah diakses untuk menjaga transparansi dan kredibilitas di mata publik.",
         solution:
-            "Membangun ulang struktur presentasi perusahaan dengan pendekatan desain Brutalist-Minimalis yang mengutamakan tipografi rapi dan interaksi smooth menggunakan Framer Motion. Struktur konten dioptimasi untuk storytelling yang menarik.",
+            "Mengembangkan modul berita interaktif dan responsif menggunakan Next.js dan Tailwind CSS, mempermudah penyajian artikel/rilis pers perusahaan dengan navigasi yang intuitif dan loading cepat.",
         impact:
-            "Meningkatkan engagement rate pengunjung website sebesar 40% dan memberikan image profesional yang membedakan perusahaan dari kompetitor di industri lokal.",
+            "Meningkatkan efisiensi penyampaian informasi dan publikasi artikel perusahaan dengan antarmuka berita yang terstruktur dan responsif.",
         tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
         gradient: "bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700",
         liveUrl: "#",
@@ -75,6 +75,26 @@ export const projects: Project[] = [
         liveUrl: "https://solit03.com",
         githubUrl: "#",
         image: "/image/Solit03.webp",
+    },
+    {
+        slug: "simari-menu",
+        title: "SIMARI Menu",
+        category: "Sistem Pemesanan QR & POS",
+        role: "Full Stack Developer",
+        timeline: "2024",
+        description:
+            "Aplikasi pemesanan menu digital berbasis scan QR code meja yang terhubung langsung ke dashboard admin/kasir, dilengkapi status pesanan real-time dan verifikasi pembayaran manual.",
+        problem:
+            "Proses pemesanan manual di restoran rentan terhadap antrean panjang, pesanan salah catat, serta lambatnya konfirmasi pembayaran non-tunai pada jam sibuk.",
+        solution:
+            "Membangun sistem pemesanan via scan QR meja menggunakan Next.js dan NestJS. Pesanan langsung terbaca oleh kasir/admin secara real-time dan pelanggan dapat memantau status pesanan. Mendukung metode pembayaran Cash dan QR Statis dengan mekanisme upload foto bukti transfer yang wajib di-ACC oleh kasir sebelum diproses.",
+        impact:
+            "Mempercepat alur pemesanan meja ke dapur, menghilangkan risiko salah catat pesanan, dan memastikan validitas pembayaran non-tunai melalui approval kasir.",
+        tech: ["Next.js", "NestJS", "TypeScript", "Tailwind CSS"],
+        gradient: "bg-gradient-to-br from-amber-600 via-orange-600 to-red-600",
+        liveUrl: "https://simari-menu.vercel.app/",
+        githubUrl: "#",
+        image: "/image/simari.png",
     },
 ];
 

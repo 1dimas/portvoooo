@@ -212,10 +212,13 @@ export default function TerminalOverlay() {
                     <span className="font-bold text-white">FEATURED PROJECTS:</span>
                     <div className="grid grid-cols-1 gap-4">
                         <div className="border border-border p-3">
-                            <span className="text-accent font-bold">1. Website Company Profile</span> - Brutalist design untuk memukau calon klien UMKM.
+                            <span className="text-accent font-bold">1. Website Company Profile</span> - Pengembangan modul & kanal berita dinamis untuk publikasi perusahaan.
                         </div>
                         <div className="border border-border p-3">
-                            <span className="text-accent font-bold">2. SportZone</span> - Platform E-Commerce dengan interaktivitas tinggi.
+                            <span className="text-accent font-bold">2. SIMARI Menu</span> - Sistem pemesanan QR, tracking pesanan real-time, dan verifikasi kasir (Next.js & NestJS).
+                        </div>
+                        <div className="border border-border p-3">
+                            <span className="text-accent font-bold">3. SportZone</span> - Platform E-Commerce dengan interaktivitas tinggi.
                         </div>
                         <div className="border border-border p-3">
                             <span className="text-accent font-bold">3. Yomu</span> - Sistem Perpustakaan Digital dengan real-time chat & notifikasi.
